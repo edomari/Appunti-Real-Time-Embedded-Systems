@@ -1,2 +1,3 @@
 # Appunti Real-Time Embedded Systems
- Appunti riguardanti il corso Real-Time Embedded Systems
+ Appunti riguardanti la parte teorica del corso **Real-Time Embedded Systems**.
+ _P.S. Sono presenti piccoli errori grammaticali sorvolabili._
