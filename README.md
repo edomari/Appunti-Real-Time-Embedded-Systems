@@ -4,3 +4,4 @@ Appunti riguardanti il corso Real-Time Embedded Systems. I file sono ordinati in
 Argomenti trattati:
 1. Processes and Threads
 2. Concurrency
+3. Pthreads
