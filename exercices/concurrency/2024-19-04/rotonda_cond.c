@@ -3,8 +3,8 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-#define N 20 // Numero di auto
-#define S 6 // Numero di sezioni della rotonda
+#define N 20    // Numero di auto
+#define S 6     // Numero di sezioni della rotonda
 
 // Struttura per rappresentare la rotonda
 typedef struct {
@@ -108,14 +108,14 @@ void pausetta(int quanto)
 void *auto_thread(void *arg) {
     int numeroauto = *((int *)arg);
     int sezionediingresso = rand()%S;  // Sezione di ingresso casuale
-    int destinazione = rand()%S;       // Destinazione casuale
+    int destinazione = (sezionediingresso + rand())%S;       // Destinazione casuale
 
     // Entra nella rotonda
     entra(&r, numeroauto, sezionediingresso);
     printf("Auto %d, da %d a %d.\n", numeroauto, sezionediingresso, destinazione);
     do {
         // Simula il passaggio nella sezione corrente
-        pausetta(1000);
+        pausetta(1000000);
     } while (sonoarrivato(&r, numeroauto, destinazione));
 
     // Esce dalla rotonda
