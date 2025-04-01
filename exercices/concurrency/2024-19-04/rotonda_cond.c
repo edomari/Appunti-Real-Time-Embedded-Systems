@@ -110,7 +110,7 @@ void *auto_thread(void *arg) {
     int sezionediingresso = rand()%S;  // Sezione di ingresso casuale
     int destinazione = (sezionediingresso + rand())%S;       // Destinazione casuale
 
-    // Entra nella rotonda
+    // Entra nella rotondas
     entra(&r, numeroauto, sezionediingresso);
     printf("Auto %d, da %d a %d.\n", numeroauto, sezionediingresso, destinazione);
     do {
