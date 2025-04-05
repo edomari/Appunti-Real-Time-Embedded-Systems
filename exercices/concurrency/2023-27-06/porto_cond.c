@@ -17,6 +17,11 @@ struct porto_t {
 
 // Inizializza la struttura del porto
 void init_porto(struct porto_t *porto) {
+    pthread_mutexattr_t m_attr;
+	pthread_condattr_t c_attr;
+	pthread_mutexattr_init(&m_attr);
+	pthread_condattr_init(&c_attr);
+
     pthread_mutex_init(&porto->mutex, NULL);
     pthread_cond_init(&porto->cond, NULL);
     porto->numero_barche_porto = 0;
@@ -155,5 +160,8 @@ int main() {
     }
 
     pthread_attr_destroy(&p_attr);
+
+    sleep(1);
+
     return 0;
 }

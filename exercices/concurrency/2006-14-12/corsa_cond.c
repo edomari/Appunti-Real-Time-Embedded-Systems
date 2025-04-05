@@ -8,7 +8,6 @@
 /* la struttura condivisa */
 struct corsa_t {
 	pthread_mutex_t mutex;
-  
 	pthread_cond_t scorridore;
 	int ccorridore;
   
@@ -20,8 +19,7 @@ struct corsa_t {
   
   } corsa;
   
-  void init_corsa(struct corsa_t *in)
-  {
+  void init_corsa(struct corsa_t *in){
 	pthread_mutexattr_t m_attr;
 	pthread_condattr_t c_attr;
   

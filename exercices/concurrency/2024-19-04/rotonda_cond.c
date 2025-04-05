@@ -32,15 +32,13 @@ void init_rotonda(rotonda_t *r) {
 void entra(rotonda_t *r, int numeroauto, int sezione) {
     pthread_mutex_lock(&r->mutex[sezione]);
 
-    // Aspetta che la sezione sia libera
+    // Attende finché la sezione è occupata
     while (r->sezioni[sezione]) {
         pthread_cond_wait(&r->condition[sezione], &r->mutex[sezione]);
     }
 
-    // Occupa la sezione
-    r->sezioni[sezione] = 1;
-    r->posizioni_auto[numeroauto] = sezione; // Aggiorna la posizione dell'auto
-    //printf("Sono %d ed entro nella sezione %d\n", numeroauto, sezione);
+    r->sezioni[sezione] = 1; // Imposta la sezione come occupata (1)
+    r->posizioni_auto[numeroauto] = sezione; // Aggiorna la posizione dell'auto nell'array posizioni_auto
 
     pthread_mutex_unlock(&r->mutex[sezione]);
 }
@@ -59,14 +57,13 @@ int sonoarrivato(rotonda_t *r, int numeroauto, int destinazione) {
         return 0; // L'auto è arrivata alla destinazione
     }
 
-    // Non è arrivato, quindi rilascia la sezione corrente
+    // Non è arrivato
+    // quindi vado avanti e rilascio la sezione corrente
     r->sezioni[sezionecorrente] = 0;
+    int nuovasezione = (sezionecorrente + 1) % S;
     pthread_cond_signal(&r->condition[sezionecorrente]);  // Segnala che la sezione è libera
     pthread_mutex_unlock(&r->mutex[sezionecorrente]);
 
-    // Sposta l'auto alla sezione successiva
-    int nuovasezione = (sezionecorrente + 1) % S;
-    
     // Entra nella nuova sezione
     pthread_mutex_lock(&r->mutex[nuovasezione]);
     
@@ -92,7 +89,7 @@ void esci(rotonda_t *r, int numeroauto) {
     printf("----------Auto %d è uscita dalla sezione %d----------\n", numeroauto, r->posizioni_auto[numeroauto]);
     r->sezioni[r->posizioni_auto[numeroauto]] = 0;
     // Segnala che la sezione è libera
-    pthread_cond_signal(&r->condition[r->posizioni_auto[numeroauto]]);
+    pthread_cond_signal(&r->condition[r->posizioni_auto[numeroauto]]); //sveglio le auto bloccate in quella sezione
     pthread_mutex_unlock(&r->mutex[r->posizioni_auto[numeroauto]]);
 }
 

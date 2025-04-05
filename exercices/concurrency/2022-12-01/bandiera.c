@@ -1,38 +1,29 @@
-//
-// Created by giba on 14/04/23.
-//
-
 #include <pthread.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <stdbool.h>
 
-#define NONE -1
-#define RUNNERS 2
-
-typedef enum {false, true} bool;
-
+/* la struttura condivisa */
 struct bandierine_t{
 	pthread_mutex_t mutex;
+	pthread_cond_t attesa, via, fine;
 
-	pthread_cond_t attendi, via, fine;
-
-	int pronti;
+	int n_giocatori;
 	int giocatore_con_bandiera;
-	bool salvo;
 	int vincitore;
+	bool salvo;
 
 } bandierine;
 
-void microPause(void) {
+void pausetta(void){
 	struct timespec t;
 	t.tv_sec = 0;
 	t.tv_nsec = (rand() % + 1) * 1000000;
 	nanosleep(&t, NULL);
 }
 
-void init_bandierine(struct bandierine_t *b)
-{
+void init_bandierine(struct bandierine_t *b){
 	pthread_mutexattr_t mutex_attr;
 	pthread_condattr_t cond_attr;
 
@@ -40,36 +31,29 @@ void init_bandierine(struct bandierine_t *b)
 	pthread_condattr_init(&cond_attr);
 
 	pthread_mutex_init(&b->mutex, &mutex_attr);
-	pthread_cond_init(&b->attendi, &cond_attr);
+	pthread_cond_init(&b->attesa, &cond_attr);
 	pthread_cond_init(&b->via, &cond_attr);
 	pthread_cond_init(&b->fine, &cond_attr);
 
 	pthread_mutexattr_destroy(&mutex_attr);
 	pthread_condattr_destroy(&cond_attr);
 
-	b->pronti = 0;
-	b->giocatore_con_bandiera = b->vincitore = NONE;
+	b->n_giocatori = 0;
+	b->giocatore_con_bandiera = b->vincitore = -1;
 	b->salvo = false;
 }
 
-/*
-    Da il via al gioco sbloccando i giocatori in attesa
-*/
-void via(struct bandierine_t *b)
-{
+void via(struct bandierine_t *b){
 	pthread_cond_broadcast(&b->via);
 }
 
-/*
-    Blocca i giocatori che attendono il via
-*/
-void attendi_il_via(struct bandierine_t *b, int n)
-{
+void attendi_il_via(struct bandierine_t *b, int n){
 	pthread_mutex_lock(&b->mutex);
 
-	while (b->pronti != 2) {
-		if (b->pronti++ == 2) {
-			pthread_cond_signal(&b->attendi);
+	while (b->n_giocatori != 2) {
+		b->n_giocatori++;
+		if (b->n_giocatori == 2) {
+			pthread_cond_signal(&b->attesa);
 		}
 		pthread_cond_wait(&b->via, &b->mutex);
 	}
@@ -77,127 +61,92 @@ void attendi_il_via(struct bandierine_t *b, int n)
 	pthread_mutex_unlock(&b->mutex);
 }
 
-/*
-    Prende la bandierina (se disponibile).
-        1 -> Se il Giocatore prende la bandierina
-        0 -> Se il Giocatore NON prende la bandierina
-*/
-int bandierina_presa(struct bandierine_t *b, int n)
-{
-	int retr;
+int bandierina_presa(struct bandierine_t *b, int n){
+	int res = 0;
 	pthread_mutex_lock(&b->mutex);
 
-	if (b->giocatore_con_bandiera == NONE) {
+	if (b->giocatore_con_bandiera == -1) {
 		b->giocatore_con_bandiera = n;
-		retr = 1;
-	} else {
-		retr = 0;
+		res = 1;
 	}
 
 	pthread_mutex_unlock(&b->mutex);
 
-	return retr;
+	return res;
 }
 
-/*
-    1 -> Se il Giocatore NON è stato preso
-    0 -> Se il Giocatore è stato preso
-*/
-int sono_salvo(struct bandierine_t *b, int n)
-{
-	int retr = 0;
+int sono_salvo(struct bandierine_t *b, int n){
+	int res = 0;
 
 	pthread_mutex_lock(&b->mutex);
 
 	if (b->salvo == false) {
-		b->salvo = true;
-		retr = 1;
+		res = 1;
 		b->vincitore = n;
+		b->salvo = true;
 	}
 
-	pthread_cond_signal(&b->fine);
+	pthread_cond_signal(&b->fine); // segnalo che il gioco è finito
 
 	pthread_mutex_unlock(&b->mutex);
 
-	return retr;
+	return res;
 }
 
-/*
-    1 -> Se il Giocatore NON si è ancora salvato
-    0 -> Se il Giocatore si è già salvato
-*/
-int ti_ho_preso(struct bandierine_t *b, int n)
-{
-	int retr = 0;
+int ti_ho_preso(struct bandierine_t *b, int n){
+	int res = 0;
 
 	pthread_mutex_lock(&b->mutex);
 
 	if (b->salvo == false) {
-		retr = 1;
+		res = 1;
 		b->vincitore = n;
 		b->salvo = true;
 	}
-
-	pthread_cond_signal(&b->fine);
+	pthread_cond_signal(&b->fine); // segnalo che il gioco è finito
 
 	pthread_mutex_unlock(&b->mutex);
 
-	return retr;
+	return res;
 }
 
-/*
-    Ritorna il Numero del Vincitore
-*/
-int risultato_gioco(struct bandierine_t *b)
-{
-	int retr;
+int risultato_gioco(struct bandierine_t *b){
+	int res;
 	pthread_mutex_lock(&b->mutex);
 
-	while (b->vincitore == NONE) {
+	while (b->vincitore == -1) {
+		printf("Giudice: aspetto il vincitore\n");
 		pthread_cond_wait(&b->fine, &b->mutex);
 	}
 
-	retr = b->vincitore;
+	res = b->vincitore;
 
 	pthread_mutex_unlock(&b->mutex);
 
-	return retr;
+	return res;
 }
 
-/*
-    Attende che entrambi i giocatori siano pronti in attesa prima di dare il via
-*/
-void attendi_giocatori(struct bandierine_t *b)
-{
+void attendi_giocatori(struct bandierine_t *b){
 	pthread_mutex_lock(&b->mutex);
-
-	while (b->pronti != 2) {
-		pthread_cond_wait(&b->attendi, &b->mutex);
+	while (b->n_giocatori != 2) {
+		pthread_cond_wait(&b->attesa, &b->mutex);
 	}
-
 	pthread_mutex_unlock(&b->mutex);
 }
 
 void *giocatore(void *arg){
 	int numero_giocatore = (int) arg;
 	attendi_il_via(&bandierine, numero_giocatore);
-	// corri e tenta di prendere la bandierina
 	if (bandierina_presa(&bandierine, numero_giocatore)){
 		printf("P%d: Ho preso la bandierina!\n", numero_giocatore);
-		// corri alla base
-		microPause();
+		pausetta();
 		if (sono_salvo(&bandierine, numero_giocatore))
 			printf("P%d: Sono Salvo!\n", numero_giocatore);
-		else
-			printf("P%d: Non sono riuscito a salvarmi!\n", numero_giocatore);
 	} else {
 		printf("P%d: Non sono riuscito a prendere la bandierina!\n", numero_giocatore);
-		// cerca di acchiappare l'altro giocatore
-		microPause();
+		pausetta();
 		if (ti_ho_preso(&bandierine, numero_giocatore))
 			printf("P%d: Ti ho preso!\n", numero_giocatore);
-		else
-			printf("P%d: Non sono riuscito a prenderti!\n", numero_giocatore);
 	}
 
 	pthread_exit(0);
@@ -205,9 +154,8 @@ void *giocatore(void *arg){
 
 void *giudice(void *arg){
 	attendi_giocatori(&bandierine);
-	// pronti, attenti
 	via(&bandierine);
-	printf("G: Il Vincitore è %d\n", risultato_gioco(&bandierine));
+	printf("Giudice: il vincitore è %d\n", risultato_gioco(&bandierine));
 	pthread_exit(0);
 }
 

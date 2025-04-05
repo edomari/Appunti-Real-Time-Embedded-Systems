@@ -2,7 +2,9 @@
 !/**/
 !*.*
 *.pdf
-*.png
 *.jpeg
+*.png
 .DS_Store
 *.vscode
+!images/*/*.png
+!images/*/*.jpeg
