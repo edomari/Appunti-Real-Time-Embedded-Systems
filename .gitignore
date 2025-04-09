@@ -3,6 +3,7 @@
 !*.*
 *.pdf
 *.jpeg
+*.JPG
 *.png
 .DS_Store
 *.vscode

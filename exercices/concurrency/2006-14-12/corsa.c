@@ -108,6 +108,7 @@ void arbitro_via(struct corsa_t *corsa)
 void arbitro_risultato(struct corsa_t *corsa, int *primo, int *ultimo)
 {
   sem_wait(&corsa->mutex);
+
   if (corsa->corridoriarrivati != N) {
     printf("A  : aspetto corridori al traguardo\n");
     corsa->carbitro_fine++;
