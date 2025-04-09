@@ -12,6 +12,7 @@ void cuoco_fine_torta(struct pasticceria_t *p);
 void commesso_prendo_torta(struct pasticceria_t *p); 
 void commesso_vendo_torta(struct pasticceria_t *p); 
 void cliente_acquisto(struct pasticceria_t *p);
+
 void *cuoco(void *arg)
 {
     while(1) {
@@ -29,6 +30,7 @@ void *commesso(void *arg)
         commesso_vendo_torta(&pasticceria);             // 1 torta; bloccante
     }
 }
+
 void *un_cliente(void *arg)
 {
     while (1) {
