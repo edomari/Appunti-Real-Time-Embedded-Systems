@@ -1,4 +1,4 @@
-# La pasticceria - 8/6/2006
+# La pasticceria - 8/6/2006
 
 Una pasticceria produce e vende al dettaglio delle torte. La pasticceria è gestita da un cuoco, che cucina le torte con arte, e da un commesso, che prende le torte prodotte, le incarta e le vende al dettaglio. Il pasticcere evita di iniziare a produrre torte se in pasticceria ci sono piu' di N torte invendute. I clienti acquistano una torta alla volta. La vendita di una torta da parte del commesso coincide con l'acquisto da parte del cliente.
 
@@ -12,6 +12,7 @@ void cuoco_fine_torta(struct pasticceria_t *p);
 void commesso_prendo_torta(struct pasticceria_t *p); 
 void commesso_vendo_torta(struct pasticceria_t *p); 
 void cliente_acquisto(struct pasticceria_t *p);
+
 void *cuoco(void *arg)
 {
     while(1) {
@@ -29,6 +30,7 @@ void *commesso(void *arg)
         commesso_vendo_torta(&pasticceria);             // 1 torta; bloccante
     }
 }
+
 void *un_cliente(void *arg)
 {
     while (1) {
