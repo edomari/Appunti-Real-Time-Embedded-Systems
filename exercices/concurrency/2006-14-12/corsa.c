@@ -37,7 +37,7 @@ void corridore_attendivia(struct corsa_t *corsa, int numerocorridore)
   sem_wait(&corsa->mutex);
   corsa->ccorridore++;
 
-  printf("%2d : attendivia\n", numerocorridore);
+  printf("%2d : Sono arrivato e attendo il via dall'arbitro.\n", numerocorridore);
 
   if (corsa->ccorridore == N && corsa->carbitro_via) {
     printf("%2d : sveglio arbitro\n", numerocorridore);

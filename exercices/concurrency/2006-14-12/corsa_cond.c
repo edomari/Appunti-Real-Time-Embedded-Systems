@@ -34,7 +34,6 @@ struct corsa_t {
   
 	in->ccorridore = in->carbitro_via = in->carbitro_fine = 0;
 	in->primo = in->ultimo = -1;
-  
   }
   
   void corridore_attendivia(struct corsa_t *corsa, int numerocorridore)

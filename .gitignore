@@ -10,3 +10,4 @@
 !images/*/*.png
 !images/*/*.jpeg
 !makefile
+practice.c

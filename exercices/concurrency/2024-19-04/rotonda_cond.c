@@ -105,7 +105,7 @@ void pausetta(int quanto)
 void *auto_thread(void *arg) {
     int numeroauto = *((int *)arg);
     int sezionediingresso = rand()%S;  // Sezione di ingresso casuale
-    int destinazione = (sezionediingresso + rand())%S;       // Destinazione casuale
+    int destinazione = rand()%S;       // Destinazione casuale
 
     // Entra nella rotondas
     entra(&r, numeroauto, sezionediingresso);
