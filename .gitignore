@@ -9,3 +9,4 @@
 *.vscode
 !images/*/*.png
 !images/*/*.jpeg
+!makefile
