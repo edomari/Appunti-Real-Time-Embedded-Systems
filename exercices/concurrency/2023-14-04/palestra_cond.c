@@ -1,22 +1,27 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <pthread.h>
+#include <unistd.h>
 
 #define N 5  // Numero di tipologie di attrezzi
 #define M 3  // Numero di copie di ciascun attrezzo
 #define P 10 // Numero di persone
 #define E 10 // Numero di esercizi per persona
 
-typedef struct {
+struct palestra_t{
     int attrezzi_liberi[N]; // Numero di attrezzi liberi per ciascun tipo
     int attrezzi_prenotati[N]; // Numero di attrezzi prenotati per ciascun tipo
     pthread_mutex_t mutex[N];  // Mutex per ciascun tipo di attrezzo
     pthread_cond_t cond[N];    // Condition variable per ciascun tipo di attrezzo
-} palestra_t ;
+} palestra;
 
-palestra_t palestra;
+void init_palestra(struct palestra_t *p) {
+    pthread_mutexattr_t m_attr;
+    pthread_condattr_t c_attr;
 
-void init_palestra(palestra_t *p) {
+    pthread_mutexattr_init(&m_attr);
+    pthread_condattr_init(&c_attr);
+
     for (int i = 0; i < N; i++) {
         p->attrezzi_liberi[i] = M;      // Tutti gli attrezzi sono inizialmente liberi
         p->attrezzi_prenotati[i] = 0;   // Nessun attrezzo è inizialmente prenotato
@@ -25,11 +30,13 @@ void init_palestra(palestra_t *p) {
     }
 }
 
-void usaattrezzo(palestra_t *p, int numeropersona, int tipoattrezzo) {
+void usaattrezzo(struct palestra_t *p, int numeropersona, int tipoattrezzo) {
     pthread_mutex_lock(&p->mutex[tipoattrezzo]);
+    printf("Persona %d cerca di usare attrezzo di tipo %d\n", numeropersona, tipoattrezzo);
 
     while (p->attrezzi_liberi[tipoattrezzo] == 0 && p->attrezzi_prenotati[tipoattrezzo] == 0) {
         // Aspetta che un attrezzo del tipo richiesto sia disponibile
+        printf("Persona %d attende l'attrezzo di tipo %d\n", numeropersona, tipoattrezzo);
         pthread_cond_wait(&p->cond[tipoattrezzo], &p->mutex[tipoattrezzo]);
     }
 
@@ -46,7 +53,7 @@ void usaattrezzo(palestra_t *p, int numeropersona, int tipoattrezzo) {
     pthread_mutex_unlock(&p->mutex[tipoattrezzo]);
 }
 
-void prenota(palestra_t *p, int numeropersona, int tipoattrezzo) {
+void prenota(struct palestra_t *p, int numeropersona, int tipoattrezzo) {
     pthread_mutex_lock(&p->mutex[tipoattrezzo]);
 
     if (p->attrezzi_liberi[tipoattrezzo] > 0) {
@@ -61,7 +68,7 @@ void prenota(palestra_t *p, int numeropersona, int tipoattrezzo) {
     pthread_mutex_unlock(&p->mutex[tipoattrezzo]);
 }
 
-void fineuso(palestra_t *p, int numeropersona, int tipoattrezzo) {
+void fineuso(struct palestra_t *p, int numeropersona, int tipoattrezzo) {
     pthread_mutex_lock(&p->mutex[tipoattrezzo]);
 
     // Rilascia l'attrezzo e segnala agli altri thread che è libero
@@ -74,7 +81,7 @@ void fineuso(palestra_t *p, int numeropersona, int tipoattrezzo) {
 }
 
 void *persona(void *arg) {
-    int numeropersona = *(int *)arg;
+    int numeropersona = (int)arg;
     int attrezzocorrente = rand() % N;
     int prossimoattrezzo = rand() % N;
 
@@ -98,23 +105,23 @@ void *persona(void *arg) {
 
 
 int main() {
-    pthread_t persone[P];
-    int numeri[P];
-    srand(time(NULL));
+    int i=0;
+    pthread_attr_t a;
+    pthread_t pa;
 
-    // Inizializza la palestra
     init_palestra(&palestra);
 
-    // Crea i thread per le persone
-    for (int i = 0; i < P; i++) {
-        numeri[i] = i;
-        pthread_create(&persone[i], NULL, persona, &numeri[i]);
-    }
+    srand(55);
 
-    // Attende la terminazione di tutti i thread
-    for (int i = 0; i < P; i++) {
-        pthread_join(persone[i], NULL);
+    pthread_attr_init(&a);
+    pthread_attr_setdetachstate(&a, PTHREAD_CREATE_DETACHED);
+
+    for (i = 0; i < P; i++) {
+        pthread_create(&pa, &a, persona, (void *)i);
     }
+    pthread_attr_destroy(&a);
+
+    sleep(1);
 
     return 0;
 }

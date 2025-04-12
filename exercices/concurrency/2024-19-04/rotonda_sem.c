@@ -4,103 +4,96 @@
 #include <unistd.h>
 #include <semaphore.h>
 
-#define N 20    // Numero di auto
+#define N 7  // Numero di auto
 #define S 6     // Numero di sezioni della rotonda
 
 // Struttura per rappresentare la rotonda
 typedef struct {
-    sem_t mutex[S];       // Semafori per ciascuna sezione (mutex)
-    sem_t condition[S];   // Semafori per l'attesa su ciascuna sezione
-    int sezioni[S];       // 0 = sezione libera, 1 = sezione occupata
-    int posizioni_auto[N]; // Posizione corrente di ciascuna auto
+    sem_t mutex[S];           // Mutex globale per proteggere le sezioni
+    sem_t condition[S];         // Semafori privati per ogni auto
+    int sezioni[S];        // 0 = libera, 1 = occupata
+    int posizioni_auto[N]; // Posizione corrente di ogni auto (-1 se non in rotonda)
 } rotonda_t;
 
 rotonda_t r;
 
 // Funzione di inizializzazione della rotonda
 void init_rotonda(rotonda_t *r) {
-    for (int i = 0; i < S; i++) {
-        sem_init(&r->mutex[i], 0, 1);      // Inizializza i mutex per ogni sezione
-        sem_init(&r->condition[i], 0, 0);  // Inizializza i semafori di attesa per ogni sezione
-        r->sezioni[i] = 0;                 // Tutte le sezioni sono libere
-    }
     for (int i = 0; i < N; i++) {
-        r->posizioni_auto[i] = -1;         // Posizione iniziale non definita
+        sem_init(&r->mutex[i], 0, 1);
+        sem_init(&r->condition[i], 0, 0);  // Semafori privati inizializzati a 0
+        r->posizioni_auto[i] = -1;
+    }
+    for (int i = 0; i < S; i++) {
+        r->sezioni[i] = 0;  // Tutte le sezioni inizialmente libere
     }
 }
 
 // Funzione per entrare nella rotonda
 void entra(rotonda_t *r, int numeroauto, int sezione) {
-    sem_wait(&r->mutex[sezione]);          // Acquisisci il mutex per la sezione
+    sem_wait(&r->mutex[sezione]);  // Acquisisco il mutex della sezione
+    
+    if (r->sezioni[sezione] == 1) {
+        sem_post(&r->mutex[sezione]);
+        printf("Sono %d e aspetto che la sezione %d sia libera.\n", numeroauto, sezione);
+        sem_wait(&r->condition[sezione]);
+    } 
 
-    // Attende finché la sezione è occupata
-    while (r->sezioni[sezione]) {
-        sem_post(&r->mutex[sezione]);      // Rilascia il mutex prima di bloccarsi
-        sem_wait(&r->condition[sezione]);  // Blocca l'auto sulla sezione
-        sem_wait(&r->mutex[sezione]);      // Ri-acquisisci il mutex dopo essere stato risvegliato
-    }
-
-    r->sezioni[sezione] = 1;               // Imposta la sezione come occupata (1)
-    r->posizioni_auto[numeroauto] = sezione; // Aggiorna la posizione dell'auto nell'array posizioni_auto
-
-    sem_post(&r->mutex[sezione]);          // Rilascia il mutex
+    r->sezioni[sezione] = 1; // la sezione ora è occupata
+    r->posizioni_auto[numeroauto] = sezione;
+    printf("Sono %d ed entro nella sezione %d.\n", numeroauto, sezione);
+    sem_post(&r->mutex[sezione]);
 }
 
 // Funzione per verificare se l'auto ha raggiunto la destinazione
 int sonoarrivato(rotonda_t *r, int numeroauto, int destinazione) {
     int sezionecorrente = r->posizioni_auto[numeroauto];
-
-    sem_wait(&r->mutex[sezionecorrente]);  // Acquisisci il mutex per la sezione corrente
-    printf("Sono %d e devo uscire alla sezione %d. Sono arrivato?\n", numeroauto, destinazione);
-
-    // Verifica se la sezione corrente è la destinazione dell'auto
+    
+    sem_wait(&r->mutex[sezionecorrente]);  // Blocco il mutex
+    
+    printf("Sono %d, sono in %d e devo uscire alla sezione %d. Sono arrivato?\n", numeroauto, sezionecorrente, destinazione);
+    
+    // Se è arrivato a destinazione, esce
     if (sezionecorrente == destinazione) {
         printf("SI! Sono %d e sono arrivato alla sezione %d. Esco...\n", numeroauto, destinazione);
-        sem_post(&r->mutex[sezionecorrente]); // Rilascia il mutex
-        return 0; // L'auto è arrivata alla destinazione
+        sem_post(&r->mutex[sezionecorrente]);  // Rilascio il mutex (l'uscita vera è gestita da `esci`)
+        return 0;
     }
-
-    // Non è arrivato
-    // Quindi va avanti e rilascia la sezione corrente
-    r->sezioni[sezionecorrente] = 0;
+    // Se NON è arrivato, rilascia la sezione corrente e avanza
     int nuovasezione = (sezionecorrente + 1) % S;
-    sem_post(&r->condition[sezionecorrente]); // Segnala che la sezione è libera
-    sem_post(&r->mutex[sezionecorrente]);    // Rilascia il mutex per la sezione corrente
+    r->sezioni[sezionecorrente] = 0;
+    sem_post(&r->condition[sezionecorrente]);
+    sem_post(&r->mutex[sezionecorrente]); 
 
-    // Entra nella nuova sezione
-    sem_wait(&r->mutex[nuovasezione]);       // Acquisisci il mutex per la nuova sezione
-
-    while (r->sezioni[nuovasezione]) {
-        sem_post(&r->mutex[nuovasezione]);   // Rilascia il mutex prima di bloccarsi
-        sem_wait(&r->condition[nuovasezione]); // Blocca l'auto sulla nuova sezione
-        sem_wait(&r->mutex[nuovasezione]);   // Ri-acquisisci il mutex dopo essere stato risvegliato
+    sem_wait(&r->mutex[nuovasezione]); 
+    printf("NO! Sono %d e chiedo di avanzare alla sezione %d.\n", numeroauto, nuovasezione); 
+    if(r->sezioni[nuovasezione] == 1){
+        printf("Sono %d e aspetto che la sezione %d si liberi.\n", numeroauto, nuovasezione);
+        sem_wait(&r->condition[nuovasezione]);
     }
-
-    r->sezioni[nuovasezione] = 1;           // Occupa la nuova sezione
+    printf("Sono %d e ho il permesso avanzare alla sezione %d.\n", numeroauto, nuovasezione); 
+    r->sezioni[nuovasezione] = 1; // Occupa la nuova sezione
     r->posizioni_auto[numeroauto] = nuovasezione;
-    printf("NO! Sono %d ed avanzo alla sezione %d.\n", numeroauto, nuovasezione);
-
-    sem_post(&r->mutex[nuovasezione]);      // Rilascia il mutex per la nuova sezione
-
-    return 1; // L'auto non è ancora arrivata
+    sem_post(&r->mutex[nuovasezione]);
+    return 1;     
+    
 }
 
 // Funzione per uscire dalla rotonda
 void esci(rotonda_t *r, int numeroauto) {
-    int sezionecorrente = r->posizioni_auto[numeroauto];
-    sem_wait(&r->mutex[sezionecorrente]);   // Acquisisci il mutex per la sezione corrente
-
-    // Libera la sezione
-    printf("----------Auto %d è uscita dalla sezione %d----------\n", numeroauto, sezionecorrente);
-    r->sezioni[sezionecorrente] = 0;
-    sem_post(&r->condition[sezionecorrente]); // Segnala che la sezione è libera
-    sem_post(&r->mutex[sezionecorrente]);    // Rilascia il mutex per la sezione corrente
+    sem_wait(&r->mutex[r->posizioni_auto[numeroauto]]);  // Acquisisco il mutex
+    
+    // Libero la sezione
+    printf("----------Auto %d è uscita dalla sezione %d----------\n", numeroauto, r->posizioni_auto[numeroauto]);
+    r->sezioni[r->posizioni_auto[numeroauto]] = 0;
+    sem_post(&r->condition[r->posizioni_auto[numeroauto]]);
+    sem_post(&r->mutex[r->posizioni_auto[numeroauto]]);
 }
 
 void pausetta(int quanto) {
     struct timespec t;
     t.tv_sec = 0;
-    t.tv_nsec = (rand() % 100 + 1) * 1000000 + quanto;
+    t.tv_nsec = (rand() % 100 + 1) * 100 + quanto;
     nanosleep(&t, NULL);
 }
 
@@ -109,13 +102,13 @@ void *auto_thread(void *arg) {
     int numeroauto = *((int *)arg);
     int sezionediingresso = rand() % S;  // Sezione di ingresso casuale
     int destinazione = (sezionediingresso + rand()) % S; // Destinazione casuale
+    printf("Auto %d, da %d a %d.\n", numeroauto, sezionediingresso, destinazione);
 
     // Entra nella rotonda
     entra(&r, numeroauto, sezionediingresso);
-    printf("Auto %d, da %d a %d.\n", numeroauto, sezionediingresso, destinazione);
     do {
         // Simula il passaggio nella sezione corrente
-        pausetta(1000000);
+        pausetta(10);
     } while (sonoarrivato(&r, numeroauto, destinazione));
 
     // Esce dalla rotonda
@@ -130,7 +123,7 @@ int main() {
     pthread_attr_t p_attr;
 
     pthread_attr_init(&p_attr);
-    srand(100);
+    srand(1000);
 
     // Inizializza la rotonda
     init_rotonda(&r);

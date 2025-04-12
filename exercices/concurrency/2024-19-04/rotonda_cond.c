@@ -34,9 +34,11 @@ void entra(rotonda_t *r, int numeroauto, int sezione) {
 
     // Attende finché la sezione è occupata
     while (r->sezioni[sezione]) {
+        printf("Sono %d ed aspetto che la sezione %d sia libera.\n", numeroauto, sezione);
         pthread_cond_wait(&r->condition[sezione], &r->mutex[sezione]);
     }
 
+    printf("Sono %d ed entro nella sezione %d.\n", numeroauto, sezione);
     r->sezioni[sezione] = 1; // Imposta la sezione come occupata (1)
     r->posizioni_auto[numeroauto] = sezione; // Aggiorna la posizione dell'auto nell'array posizioni_auto
 
