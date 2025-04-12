@@ -113,7 +113,7 @@ struct corsa_t {
   void arbitro_risultato(struct corsa_t *corsa, int *primo, int *ultimo)
   {
 	pthread_mutex_lock(&corsa->mutex);
-  
+
 	while (corsa->corridoriarrivati != N) {
 	  printf("A  : aspetto corridori al traguardo\n");
 	  corsa->carbitro_fine++;

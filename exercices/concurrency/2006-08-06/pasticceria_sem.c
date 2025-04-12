@@ -5,6 +5,7 @@
 #include <semaphore.h>
 
 #define N 10 // max. torte invendute
+#define CLIENTI 5
 
 struct pasticceria_t {
     sem_t mutex;        // Semaforo per l'accesso mutuamente esclusivo
@@ -34,11 +35,9 @@ void cuoco_inizio_torta(struct pasticceria_t* p) {
     sem_wait(&p->mutex);             // Acquisisce il mutex per accedere alle risorse condivise
 
     // Aspetta se ci sono troppe torte invendute
-    while (p->num_torte_da_vendere >= N) {
+    if (p->num_torte_da_vendere == N) {
         printf("CUOCO: aspetto che ci siano torte da produrre.\n");
-        //sem_post(&p->mutex);         // Rilascia il mutex prima di bloccarsi
         sem_wait(&p->cuoco);         // Blocca il cuoco finché un commesso lo sveglia
-        //sem_wait(&p->mutex);         // Ri-acquisisce il mutex dopo essere stato risvegliato
     }
 
     printf("CUOCO: inizio a produrre un'altra torta, attualmente ce ne sono %d.\n", p->num_torte_da_vendere);
@@ -63,17 +62,17 @@ void commesso_prendo_torta(struct pasticceria_t* p) {
 
     if (!p->torta_richiesta) {
         printf("COMMESSO: aspetto che qualcuno chieda una torta.\n");
-        sem_post(&p->mutex);         // Rilascia il mutex prima di bloccarsi
+        sem_post(&p->mutex); 
         sem_wait(&p->richiesta);     // Blocca il commesso finché un cliente fa una richiesta
-        sem_wait(&p->mutex);         // Ri-acquisisce il mutex dopo essere stato risvegliato
+        printf("1\n");
     }
     printf("COMMESSO: salve, prenderò il suo ordine!\n");
 
-    if (p->num_torte_da_vendere <= 0) {
+    if (p->num_torte_da_vendere == 0) {
         printf("COMMESSO: aspetto che il cuoco prepari una torta.\n");
-        sem_post(&p->mutex);         // Rilascia il mutex prima di bloccarsi
+        sem_post(&p->mutex); 
         sem_wait(&p->commesso);      // Blocca il commesso finché il cuoco produce una torta
-        sem_wait(&p->mutex);         // Ri-acquisisce il mutex dopo essere stato risvegliato
+        printf("2\n");
     }
     printf("COMMESSO: procedo a vendere la torta numero %d.\n", p->num_torte_da_vendere);
 
@@ -88,8 +87,11 @@ void commesso_vendo_torta(struct pasticceria_t* p) {
     p->num_torte_da_vendere--;       // Diminuisce il numero di torte invendute
     printf("COMMESSO: la sua torta è pronta!\n");
     sem_post(&p->consegna);          // Sveglia il cliente in attesa
+    
     printf("COMMESSO: cuoco, produca altre torte!\n");
-    sem_post(&p->cuoco);             // Sveglia il cuoco per produrre una nuova torta
+    if(p->num_torte_da_vendere < N){
+        sem_post(&p->cuoco);             // Sveglia il cuoco per produrre una nuova torta
+    }
 
     sem_post(&p->mutex);             // Rilascia il mutex
 }
@@ -97,21 +99,29 @@ void commesso_vendo_torta(struct pasticceria_t* p) {
 // Il cliente acquista una torta
 void cliente_acquisto(struct pasticceria_t* p) {
     sem_wait(&p->mutex);             // Acquisisce il mutex per accedere alle risorse condivise
-    printf("CLIENTE: salve, vorrei ordinare una torta!\n");
+    printf("CLIENTE %ld: salve, vorrei ordinare una torta!\n", pthread_self());
 
     p->torta_richiesta = 1;          // Richiede una torta
     sem_post(&p->richiesta);         // Sveglia un commesso in attesa di una richiesta
     sem_post(&p->mutex);             // Rilascia il mutex prima di bloccarsi
 
     sem_wait(&p->consegna);          // Blocca il cliente finché la torta è pronta
-    printf("CLIENTE: arrivederci!\n");
+    printf("CLIENTE %ld: arrivederci!\n", pthread_self());
+}
+
+void pausetta(int quanto)
+{
+  struct timespec t;
+  t.tv_sec = 0;
+  t.tv_nsec = (rand()%100+1)*1000000 + quanto;
+  nanosleep(&t,NULL);
 }
 
 // Thread del cuoco
 void* cuoco(void* arg) {
     while (1) {
         cuoco_inizio_torta(&g_pasticceria);
-        sleep(rand() % 2);           // Simula il tempo di produzione
+        pausetta(1000000);
         cuoco_fine_torta(&g_pasticceria);
     }
 }
@@ -120,7 +130,7 @@ void* cuoco(void* arg) {
 void* commesso(void* arg) {
     while (1) {
         commesso_prendo_torta(&g_pasticceria);
-        sleep(rand() % 2);           // Simula il tempo di gestione dell'ordine
+        pausetta(1000000);
         commesso_vendo_torta(&g_pasticceria);
     }
 }
@@ -128,21 +138,23 @@ void* commesso(void* arg) {
 // Thread del cliente
 void* un_cliente(void* arg) {
     while (1) {
+        pausetta(1000000);
         cliente_acquisto(&g_pasticceria);
-        sleep(rand() % 2);           // Simula il tempo tra un acquisto e l'altro
     }
 }
 
 int main(int argc, char* argv[]) {
     pthread_t thread_cuoco;
     pthread_t thread_commesso;
-    pthread_t thread_cliente;
+    pthread_t thread_cliente[CLIENTI];
 
     pasticceria_init(&g_pasticceria);
 
     pthread_create(&thread_cuoco, NULL, cuoco, NULL);
     pthread_create(&thread_commesso, NULL, commesso, NULL);
-    pthread_create(&thread_cliente, NULL, un_cliente, NULL);
+    for(int i = 0; i<CLIENTI; i++){
+        pthread_create(&thread_cliente[i], NULL, un_cliente, NULL);
+    }
 
     pthread_join(thread_cuoco, NULL);
     pthread_join(thread_commesso, NULL);

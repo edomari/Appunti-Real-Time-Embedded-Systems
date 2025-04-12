@@ -4,7 +4,6 @@
 #include <unistd.h>
 #include <stdbool.h>
 
-/* la struttura condivisa */
 struct bandierine_t{
 	pthread_mutex_t mutex;
 	pthread_cond_t attesa, via, fine;

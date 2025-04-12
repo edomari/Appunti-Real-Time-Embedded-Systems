@@ -1,9 +1,12 @@
+// FUNZIONANTE
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
 #include <pthread.h>
 
 #define N 10 // max. torte invendute
+#define CLIENTI 5
 
 struct pasticceria_t{
     pthread_mutex_t mutex;
@@ -16,7 +19,7 @@ struct pasticceria_t{
     int torta_richiesta;
     int num_torte_da_vendere;
 
-} g_pasticceria;
+} pasticceria;
 
 void pasticceria_init(struct pasticceria_t* p){
     pthread_mutexattr_t mutexattr;
@@ -47,6 +50,7 @@ void cuoco_inizio_torta(struct pasticceria_t* p){
     }
 
     printf("CUOCO: inizio a produrre un altra torta, attualmente ce ne sono %d.\n", p->num_torte_da_vendere);
+
     pthread_mutex_unlock(&p->mutex);
 }
 
@@ -73,6 +77,7 @@ void commesso_prendo_torta(struct pasticceria_t* p){
         pthread_cond_wait(&p->commesso, &p->mutex); // ... aspetto che il cuoco produca una torta
     }
     printf("COMMESSO: procedo a vendere la torta.\n");
+
     pthread_mutex_unlock(&p->mutex);
 }
 
@@ -91,57 +96,59 @@ void commesso_vendo_torta(struct pasticceria_t* p){
 
 void cliente_acquisto(struct pasticceria_t* p){
     pthread_mutex_lock(&p->mutex);
-    printf("CLIENTE: salve vorrei ordinare una torta!.\n");
-    p->torta_richiesta = 1; // richiedo una rorta
+    printf("CLIENTE %ld: salve vorrei ordinare una torta!.\n", pthread_self());
+    p->torta_richiesta = 1; // richiedo una torta
     pthread_cond_signal(&p->richiesta); // sveglio un commesso in attesa di una richiesta
     pthread_cond_wait(&p->consegna, &p->mutex); // aspetto che la torta sua pronta
-    printf("CLIENTE: arrivederci!.\n");
+    printf("CLIENTE %ld: arrivederci!.\n", pthread_self());
     pthread_mutex_unlock(&p->mutex);
+}
+
+void pausetta(int quanto)
+{
+  struct timespec t;
+  t.tv_sec = 0;
+  t.tv_nsec = (rand()%100+1)*1000000 + quanto;
+  nanosleep(&t,NULL);
 }
 
 void* cuoco(void* arg){
     while (1){
-        cuoco_inizio_torta(&g_pasticceria);
-
-        pthread_mutex_lock(&g_pasticceria.mutex);
-        pthread_mutex_unlock(&g_pasticceria.mutex);
-
-        cuoco_fine_torta(&g_pasticceria);
-        
-        sleep(rand() % 2);
+        cuoco_inizio_torta(&pasticceria);
+        pausetta(100000);
+        cuoco_fine_torta(&pasticceria);
+        pausetta(100000);
     }
 }
 
 void* commesso(void* arg){
     while (1){
-
-        commesso_prendo_torta(&g_pasticceria);
-        commesso_vendo_torta(&g_pasticceria);
-
-        sleep(rand() % 2);
+        commesso_prendo_torta(&pasticceria);
+        pausetta(100000);
+        commesso_vendo_torta(&pasticceria);
+        pausetta(100000);
     }
 }
 
 void* un_cliente(void* arg){
     while (1){
-
-        cliente_acquisto(&g_pasticceria);
-
-        sleep(rand() % 2);
+        pausetta(100000);
+        cliente_acquisto(&pasticceria);
     }
 }
 
 int main(int argc, char* argv[]){
     pthread_t thread_cuoco;
     pthread_t thread_commesso;
-    pthread_t thread_cliente;
+    pthread_t thread_cliente[CLIENTI];
 
-    pasticceria_init(&g_pasticceria);
+    pasticceria_init(&pasticceria);
 
     pthread_create(&thread_cuoco, NULL, cuoco, NULL);
     pthread_create(&thread_commesso, NULL, commesso, NULL);
-    pthread_create(&thread_cliente, NULL, un_cliente, NULL);
-
+    for(int i = 0; i<CLIENTI; i++){
+        pthread_create(&thread_cliente[i], NULL, un_cliente, NULL);
+    }
     pthread_join(thread_cuoco, NULL);
     pthread_join(thread_commesso, NULL);
     pthread_join(thread_cliente, NULL);
