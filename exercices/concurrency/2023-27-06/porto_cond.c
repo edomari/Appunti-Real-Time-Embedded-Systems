@@ -151,24 +151,23 @@ void *barca(void *arg) {
 }
 
 int main() {
-    pthread_t threads[BARCHE];
-    pthread_attr_t p_attr;
-    int barca_id[BARCHE];
-    
-    pthread_attr_init(&p_attr);
-    srand(100);
+    int i=0;
+    pthread_attr_t a;
+    pthread_t pa;
 
     init_porto(&porto);
 
-    for (int i = 0; i < BARCHE; i++) {
-        barca_id[i] = i;
-        pthread_create(&threads[i], &p_attr, barca, &barca_id[i]);
-    }
+    srand(55);
 
-    for (int i = 0; i < BARCHE; i++) {
-        pthread_join(threads[i], NULL);
-    }
+    pthread_attr_init(&a);
+    pthread_attr_setdetachstate(&a, PTHREAD_CREATE_DETACHED);
 
-    pthread_attr_destroy(&p_attr);
+    for (i = 0; i < BARCHE; i++) {
+        pthread_create(&pa, &a, barca, (void *)i);
+    }
+    pthread_attr_destroy(&a);
+
+    sleep(1);
+
     return 0;
 }

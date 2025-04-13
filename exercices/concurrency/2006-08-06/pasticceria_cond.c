@@ -96,11 +96,11 @@ void commesso_vendo_torta(struct pasticceria_t* p){
 
 void cliente_acquisto(struct pasticceria_t* p){
     pthread_mutex_lock(&p->mutex);
-    printf("CLIENTE %ld: salve vorrei ordinare una torta!.\n", pthread_self());
+    printf("CLIENTE %lu: salve vorrei ordinare una torta!.\n", pthread_self());
     p->torta_richiesta = 1; // richiedo una torta
     pthread_cond_signal(&p->richiesta); // sveglio un commesso in attesa di una richiesta
     pthread_cond_wait(&p->consegna, &p->mutex); // aspetto che la torta sua pronta
-    printf("CLIENTE %ld: arrivederci!.\n", pthread_self());
+    printf("CLIENTE %lu: arrivederci!.\n", pthread_self());
     pthread_mutex_unlock(&p->mutex);
 }
 
@@ -138,20 +138,23 @@ void* un_cliente(void* arg){
 }
 
 int main(int argc, char* argv[]){
-    pthread_t thread_cuoco;
-    pthread_t thread_commesso;
-    pthread_t thread_cliente[CLIENTI];
+    pthread_attr_t a;
+    pthread_t pa;
 
     pasticceria_init(&pasticceria);
 
-    pthread_create(&thread_cuoco, NULL, cuoco, NULL);
-    pthread_create(&thread_commesso, NULL, commesso, NULL);
+    pthread_attr_init(&a);
+    pthread_attr_setdetachstate(&a, PTHREAD_CREATE_DETACHED);
+
+    pthread_create(&pa, &a, cuoco, NULL);
+    pthread_create(&pa, &a, commesso, NULL);
     for(int i = 0; i<CLIENTI; i++){
-        pthread_create(&thread_cliente[i], NULL, un_cliente, NULL);
+        pthread_create(&pa, &a, un_cliente, NULL);
     }
-    pthread_join(thread_cuoco, NULL);
-    pthread_join(thread_commesso, NULL);
-    pthread_join(thread_cliente, NULL);
+
+    pthread_attr_destroy(&a);
+
+    sleep(10);
 
     return 0;
 }

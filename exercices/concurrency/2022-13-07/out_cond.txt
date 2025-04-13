@@ -1,0 +1,197 @@
+Il cliente 281473563357472 arriva fuori dalla discoteca
+Cliente 281473563357472 > Sono entrato
+Il cliente 281473563357472 arriva dentro la discoteca
+Cliente 281473563357472 > appena arrivato la cassa è 1
+Cliente 281473563357472 > Sveglio la cassiera 
+Il cliente 281473563357472 è in cassa e sta pagando il biglietto
+Il cliente 281473563357472 è in pista!!!
+Il cliente 281473537995040 arriva fuori dalla discoteca
+Cliente 281473537995040 > Sono entrato
+Il cliente 281473537995040 arriva dentro la discoteca
+Cliente 281473537995040 > appena arrivato la cassa è 0
+Il cliente 281473597174048 arriva fuori dalla discoteca
+Cliente 281473597174048 > Sono entrato
+Il cliente 281473597174048 arriva dentro la discoteca
+Cliente 281473597174048 > appena arrivato la cassa è 0
+Il cliente 281473512632608 arriva fuori dalla discoteca
+Cliente 281473512632608 > Sono entrato
+Il cliente 281473512632608 arriva dentro la discoteca
+Cliente 281473512632608 > appena arrivato la cassa è 0
+Il cliente 281473546449184 arriva fuori dalla discoteca
+Cliente 281473546449184 > Sono entrato
+Il cliente 281473546449184 arriva dentro la discoteca
+Cliente 281473546449184 > appena arrivato la cassa è 0
+Il cliente 281473588719904 arriva fuori dalla discoteca
+Cliente 281473588719904 > Aspetto fuori
+Il cliente 281473554903328 arriva fuori dalla discoteca
+Cliente 281473554903328 > Aspetto fuori
+Il cliente 281473630990624 arriva fuori dalla discoteca
+Cliente 281473630990624 > Aspetto fuori
+Il cliente 281473614082336 arriva fuori dalla discoteca
+Cliente 281473614082336 > Aspetto fuori
+Il cliente 281473521086752 arriva fuori dalla discoteca
+Cliente 281473521086752 > Aspetto fuori
+Il cliente 281473495724320 arriva fuori dalla discoteca
+Cliente 281473495724320 > Aspetto fuori
+Il cliente 281473656353056 arriva fuori dalla discoteca
+Cliente 281473656353056 > Aspetto fuori
+Il cliente 281473639444768 arriva fuori dalla discoteca
+Cliente 281473639444768 > Aspetto fuori
+Il cliente 281473529540896 arriva fuori dalla discoteca
+Cliente 281473529540896 > Aspetto fuori
+Cassiera > Cliente servito
+Il cliente 281473571811616 arriva fuori dalla discoteca
+Cliente 281473571811616 > Aspetto fuori
+Il cliente 281473622536480 arriva fuori dalla discoteca
+Cliente 281473622536480 > Aspetto fuori
+Il cliente 281473580265760 arriva fuori dalla discoteca
+Cliente 281473580265760 > Aspetto fuori
+Il cliente 281473647898912 arriva fuori dalla discoteca
+Cliente 281473647898912 > Aspetto fuori
+Il cliente 281473605628192 arriva fuori dalla discoteca
+Cliente 281473605628192 > Aspetto fuori
+Il cliente 281473504178464 arriva fuori dalla discoteca
+Cliente 281473504178464 > Aspetto fuori
+Cliente 281473597174048 > Sveglio la cassiera 
+Il cliente 281473597174048 è in cassa e sta pagando il biglietto
+Il cliente 281473597174048 è in pista!!!
+Cassiera > Cliente servito
+Cliente 281473546449184 > Sveglio la cassiera 
+Il cliente 281473546449184 è in cassa e sta pagando il biglietto
+Il cliente 281473546449184 è in pista!!!
+Cassiera > Cliente servito
+Cliente 281473512632608 > Sveglio la cassiera 
+Il cliente 281473512632608 è in cassa e sta pagando il biglietto
+Il cliente 281473512632608 è in pista!!!
+Cassiera > Cliente servito
+Cliente 281473537995040 > Sveglio la cassiera 
+Il cliente 281473537995040 è in cassa e sta pagando il biglietto
+Il cliente 281473537995040 è in pista!!!
+Cliente 281473588719904 > Sono entrato
+Il cliente 281473588719904 arriva dentro la discoteca
+Cliente 281473588719904 > appena arrivato la cassa è 0
+Cliente 281473495724320 > Sono entrato
+Il cliente 281473495724320 arriva dentro la discoteca
+Cliente 281473495724320 > appena arrivato la cassa è 0
+Cliente 281473639444768 > Sono entrato
+Il cliente 281473639444768 arriva dentro la discoteca
+Cliente 281473639444768 > appena arrivato la cassa è 0
+Cliente 281473580265760 > Sono entrato
+Il cliente 281473580265760 arriva dentro la discoteca
+Cliente 281473580265760 > appena arrivato la cassa è 0
+Cliente 281473605628192 > Aspetto fuori
+Cliente 281473630990624 > Aspetto fuori
+Cliente 281473554903328 > Aspetto fuori
+Cliente 281473529540896 > Aspetto fuori
+Cliente 281473622536480 > Aspetto fuori
+Cliente 281473647898912 > Aspetto fuori
+Cliente 281473504178464 > Aspetto fuori
+Cliente 281473571811616 > Aspetto fuori
+Cliente 281473521086752 > Aspetto fuori
+Cliente 281473656353056 > Aspetto fuori
+Cliente 281473614082336 > Aspetto fuori
+Cassiera > Cliente servito
+Cliente 281473495724320 > Sveglio la cassiera 
+Il cliente 281473495724320 è in cassa e sta pagando il biglietto
+Il cliente 281473495724320 è in pista!!!
+Cassiera > Cliente servito
+Cliente 281473580265760 > Sveglio la cassiera 
+Il cliente 281473580265760 è in cassa e sta pagando il biglietto
+Il cliente 281473580265760 è in pista!!!
+Cassiera > Cliente servito
+Cliente 281473639444768 > Sveglio la cassiera 
+Il cliente 281473639444768 è in cassa e sta pagando il biglietto
+Il cliente 281473639444768 è in pista!!!
+Cassiera > Cliente servito
+Cliente 281473588719904 > Sveglio la cassiera 
+Il cliente 281473588719904 è in cassa e sta pagando il biglietto
+Il cliente 281473588719904 è in pista!!!
+Cliente 281473605628192 > Sono entrato
+Il cliente 281473605628192 arriva dentro la discoteca
+Cliente 281473605628192 > appena arrivato la cassa è 0
+Cliente 281473630990624 > Sono entrato
+Il cliente 281473630990624 arriva dentro la discoteca
+Cliente 281473630990624 > appena arrivato la cassa è 0
+Cliente 281473554903328 > Sono entrato
+Il cliente 281473554903328 arriva dentro la discoteca
+Cliente 281473554903328 > appena arrivato la cassa è 0
+Cliente 281473529540896 > Sono entrato
+Il cliente 281473529540896 arriva dentro la discoteca
+Cliente 281473529540896 > appena arrivato la cassa è 0
+Cliente 281473571811616 > Aspetto fuori
+Cliente 281473656353056 > Aspetto fuori
+Cliente 281473647898912 > Aspetto fuori
+Cliente 281473521086752 > Aspetto fuori
+Cliente 281473504178464 > Aspetto fuori
+Cliente 281473614082336 > Aspetto fuori
+Cliente 281473622536480 > Aspetto fuori
+Cassiera > Cliente servito
+Cliente 281473630990624 > Sveglio la cassiera 
+Il cliente 281473630990624 è in cassa e sta pagando il biglietto
+Il cliente 281473630990624 è in pista!!!
+Cassiera > Cliente servito
+Cliente 281473529540896 > Sveglio la cassiera 
+Il cliente 281473529540896 è in cassa e sta pagando il biglietto
+Il cliente 281473529540896 è in pista!!!
+Cassiera > Cliente servito
+Cliente 281473554903328 > Sveglio la cassiera 
+Il cliente 281473554903328 è in cassa e sta pagando il biglietto
+Il cliente 281473554903328 è in pista!!!
+Cassiera > Cliente servito
+Cliente 281473605628192 > Sveglio la cassiera 
+Il cliente 281473605628192 è in cassa e sta pagando il biglietto
+Il cliente 281473605628192 è in pista!!!
+Cliente 281473521086752 > Sono entrato
+Il cliente 281473521086752 arriva dentro la discoteca
+Cliente 281473521086752 > appena arrivato la cassa è 0
+Cliente 281473622536480 > Sono entrato
+Il cliente 281473622536480 arriva dentro la discoteca
+Cliente 281473622536480 > appena arrivato la cassa è 0
+Cliente 281473647898912 > Sono entrato
+Il cliente 281473647898912 arriva dentro la discoteca
+Cliente 281473647898912 > appena arrivato la cassa è 0
+Cliente 281473656353056 > Sono entrato
+Il cliente 281473656353056 arriva dentro la discoteca
+Cliente 281473656353056 > appena arrivato la cassa è 0
+Cliente 281473571811616 > Aspetto fuori
+Cliente 281473504178464 > Aspetto fuori
+Cliente 281473614082336 > Aspetto fuori
+Cassiera > Cliente servito
+Cliente 281473622536480 > Sveglio la cassiera 
+Il cliente 281473622536480 è in cassa e sta pagando il biglietto
+Il cliente 281473622536480 è in pista!!!
+Cassiera > Cliente servito
+Cliente 281473656353056 > Sveglio la cassiera 
+Il cliente 281473656353056 è in cassa e sta pagando il biglietto
+Il cliente 281473656353056 è in pista!!!
+Cassiera > Cliente servito
+Cliente 281473647898912 > Sveglio la cassiera 
+Il cliente 281473647898912 è in cassa e sta pagando il biglietto
+Il cliente 281473647898912 è in pista!!!
+Cassiera > Cliente servito
+Cliente 281473521086752 > Sveglio la cassiera 
+Il cliente 281473521086752 è in cassa e sta pagando il biglietto
+Il cliente 281473521086752 è in pista!!!
+Cliente 281473614082336 > Sono entrato
+Il cliente 281473614082336 arriva dentro la discoteca
+Cliente 281473614082336 > appena arrivato la cassa è 0
+Cliente 281473571811616 > Sono entrato
+Il cliente 281473571811616 arriva dentro la discoteca
+Cliente 281473571811616 > appena arrivato la cassa è 0
+Cliente 281473504178464 > Sono entrato
+Il cliente 281473504178464 arriva dentro la discoteca
+Cliente 281473504178464 > appena arrivato la cassa è 0
+Cassiera > Cliente servito
+Cliente 281473571811616 > Sveglio la cassiera 
+Il cliente 281473571811616 è in cassa e sta pagando il biglietto
+Il cliente 281473571811616 è in pista!!!
+Cassiera > Cliente servito
+Cliente 281473614082336 > Sveglio la cassiera 
+Il cliente 281473614082336 è in cassa e sta pagando il biglietto
+Il cliente 281473614082336 è in pista!!!
+Cassiera > Cliente servito
+Cliente 281473504178464 > Sveglio la cassiera 
+Il cliente 281473504178464 è in cassa e sta pagando il biglietto
+Il cliente 281473504178464 è in pista!!!
+Cassiera > Cliente servito
+Chiusura!

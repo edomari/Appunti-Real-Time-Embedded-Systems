@@ -85,21 +85,20 @@ void *persona(void *arg) {
     int attrezzocorrente = rand() % N;
     int prossimoattrezzo = rand() % N;
 
-    for (int i = 0; i < E; i++) {
+    for (int i = E; i > 0; i--) {
         usaattrezzo(&palestra, numeropersona, attrezzocorrente);
 
-        if (i < E - 1) {
+        if (i != 0) {
             prenota(&palestra, numeropersona, prossimoattrezzo);
         }
 
         fineuso(&palestra, numeropersona, attrezzocorrente);
 
-        if (i < E - 1) {
+        if (i != 0) {
             attrezzocorrente = prossimoattrezzo;
             prossimoattrezzo = rand() % N;
         }
     }
-
     return NULL;
 }
 

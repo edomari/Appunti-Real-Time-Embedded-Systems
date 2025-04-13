@@ -15,11 +15,12 @@ struct bandierine_t{
 
 } bandierine;
 
-void pausetta(void){
+void pausetta(int quanto)
+{
 	struct timespec t;
 	t.tv_sec = 0;
-	t.tv_nsec = (rand() % + 1) * 1000000;
-	nanosleep(&t, NULL);
+	t.tv_nsec = (rand()%100+1)*1000000 + quanto;
+	nanosleep(&t,NULL);
 }
 
 void init_bandierine(struct bandierine_t *b){
@@ -47,6 +48,7 @@ void via(struct bandierine_t *b){
 }
 
 void attendi_il_via(struct bandierine_t *b, int n){
+	
 	pthread_mutex_lock(&b->mutex);
 
 	while (b->n_giocatori != 2) {
@@ -58,6 +60,7 @@ void attendi_il_via(struct bandierine_t *b, int n){
 	}
 
 	pthread_mutex_unlock(&b->mutex);
+	
 }
 
 int bandierina_presa(struct bandierine_t *b, int n){
@@ -134,47 +137,51 @@ void attendi_giocatori(struct bandierine_t *b){
 }
 
 void *giocatore(void *arg){
-	int numero_giocatore = (int) arg;
+	int numero_giocatore = (int)arg;
 	attendi_il_via(&bandierine, numero_giocatore);
+	pausetta(10000);
 	if (bandierina_presa(&bandierine, numero_giocatore)){
-		printf("P%d: Ho preso la bandierina!\n", numero_giocatore);
-		pausetta();
-		if (sono_salvo(&bandierine, numero_giocatore))
-			printf("P%d: Sono Salvo!\n", numero_giocatore);
+		printf("Giocatore %d: Ho preso la bandierina!\n", numero_giocatore);
+		pausetta(10000);
+		if (sono_salvo(&bandierine, numero_giocatore)){
+			printf("Giocatore %d: Sono Salvo!\n", numero_giocatore);
+		}
 	} else {
-		printf("P%d: Non sono riuscito a prendere la bandierina!\n", numero_giocatore);
-		pausetta();
-		if (ti_ho_preso(&bandierine, numero_giocatore))
-			printf("P%d: Ti ho preso!\n", numero_giocatore);
+		printf("Giocatore %d: Non sono riuscito a prendere la bandierina!\n", numero_giocatore);
+		pausetta(10000);
+		if (ti_ho_preso(&bandierine, numero_giocatore)){
+			printf("Giocatore %d: Ti ho preso!\n", numero_giocatore);
+		}
 	}
 
-	pthread_exit(0);
+	return 0;
 }
 
 void *giudice(void *arg){
 	attendi_giocatori(&bandierine);
 	via(&bandierine);
 	printf("Giudice: il vincitore è %d\n", risultato_gioco(&bandierine));
-	pthread_exit(0);
+	return 0;
 }
 
 int main(){
-	pthread_t t_giocatore1, t_giocatore2, t_giudice;
-	pthread_attr_t p_attr;
-
-	pthread_attr_init(&p_attr);
+	pthread_attr_t a;
+	pthread_t pa;
 
 	init_bandierine(&bandierine);
 
-	pthread_create(&t_giocatore1, &p_attr, giocatore, (void *) 1);
-	pthread_create(&t_giocatore2, &p_attr, giocatore, (void *) 2);
-	pthread_create(&t_giudice, &p_attr, giudice, NULL);
+	srand(55);
 
-	pthread_join(t_giocatore1, NULL);
-	pthread_join(t_giocatore2, NULL);
-	pthread_join(t_giudice, NULL);
+	pthread_attr_init(&a);
+	pthread_attr_setdetachstate(&a, PTHREAD_CREATE_DETACHED);
 
-	pthread_attr_destroy(&p_attr);
+	pthread_create(&pa, &a, giocatore, (void *) 1);
+	pthread_create(&pa, &a, giocatore, (void *) 2);
+	pthread_create(&pa, &a, giudice, NULL);
+
+	pthread_attr_destroy(&a);
+
+	sleep(1);
 
 	return 0;
 }
