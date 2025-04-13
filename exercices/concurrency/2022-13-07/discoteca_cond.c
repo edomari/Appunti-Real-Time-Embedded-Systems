@@ -4,18 +4,18 @@
 #include <semaphore.h>
 #include <pthread.h>
 
-#define CLIENTI 20 // il numero di thread
+#define CLIENTI 20   // il numero di clienti
 #define CAPACITA 4   // la capacità interna della biglietteria
 
 struct discoteca_t
 {
-    pthread_mutex_t mutex;   // per l'accesso m.esclusivo delle risorse manipolate
-    pthread_cond_t porta;  // per l'eventuale attesa dovuta al fatto che dentro ci sono persone = capacità
+    pthread_mutex_t mutex;   // per l'accesso esclusivo delle risorse manipolate
+    pthread_cond_t porta;    // per l'eventuale attesa dovuta al fatto che dentro ci sono persone = capacità
     pthread_cond_t cassa;    // per l'eventuale attesa dovuta al fatto che c'è la fila alla cassa
     pthread_cond_t cassiera; // per l'attesa della cassiera di eventuali clienti
 
-    int n_clienti_cassa, bcassa, cassa_disponibile;
-    int cassiera_b;
+    int n_clienti_cassa, cassa_bloccata, cassa_disponibile;
+    int cassiera_bloccata;
     int cliente_presente;
 
 } discoteca;
@@ -33,9 +33,9 @@ void init_discoteca(struct discoteca_t *d)
     pthread_cond_init(&d->cassa, &c);
     pthread_cond_init(&d->cassiera, &c);
 
-    d->n_clienti_cassa = d->bcassa = d->cassa_disponibile = 0;
+    d->n_clienti_cassa = d->cassa_bloccata = d->cassa_disponibile = 0;
     d->cliente_presente = 0;
-    d->cassiera_b = 0;
+    d->cassiera_bloccata = 0;
 
     pthread_mutexattr_destroy(&m);
     pthread_condattr_destroy(&c);
@@ -67,12 +67,12 @@ void cliente_coda_dentro(struct discoteca_t *d)
     printf("Cliente %ld > appena arrivato la cassa è %d\n", pthread_self(), d->cassa_disponibile);
     while (!d->cassa_disponibile)
     {
-        d->bcassa++;
+        d->cassa_bloccata++;
         pthread_cond_wait(&d->cassa, &d->mutex); // qui mi sveglia la cassiera che controlla se c'è qualcuno bloccato in cassa prima di sospendersi.
-        d->bcassa--;
+        d->cassa_bloccata--;
     }
     d->cliente_presente = 1;
-    if (d->cassiera_b)
+    if (d->cassiera_bloccata)
     {
         printf("Cliente %ld > Sveglio la cassiera \n", pthread_self());
         pthread_cond_signal(&d->cassiera);
@@ -104,9 +104,9 @@ void cassiera_attesa_cliente(struct discoteca_t *d)
     pthread_cond_signal(&d->cassa);
     while (d->cliente_presente == 0)
     {
-        d->cassiera_b++;
+        d->cassiera_bloccata++;
         pthread_cond_wait(&d->cassiera, &d->mutex);
-        d->cassiera_b--;
+        d->cassiera_bloccata--;
     }
     d->cliente_presente = 0;
     pthread_mutex_unlock(&d->mutex);
@@ -117,7 +117,7 @@ void cassiera_cliente_servito(struct discoteca_t *d)
     pthread_mutex_lock(&d->mutex);
 
     printf("Cassiera > Cliente servito\n");
-    if (d->bcassa != 0)
+    if (d->cassa_bloccata != 0)
     {
         pthread_cond_signal(&d->cassa);
     }
