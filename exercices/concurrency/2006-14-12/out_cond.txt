@@ -1,26 +1,26 @@
- 5 : attendivia
- 1 : attendivia
- 4 : attendivia
  2 : attendivia
+ 4 : attendivia
+ 1 : attendivia
 A  : aspetto corridori
- 0 : attendivia
  3 : attendivia
- 3 : sveglio arbitro
+ 5 : attendivia
+ 0 : attendivia
+ 0 : sveglio arbitro
 A  : corridori arrivati alla partenza
 A  : via!!!
 A  : sveglio corridori!!!
- 5 : svegliato!
- 1 : svegliato!
  3 : svegliato!
+ 5 : svegliato!
+ 4 : svegliato!
+ 1 : svegliato!
  2 : svegliato!
  0 : svegliato!
- 4 : svegliato!
- 5 : arrivo...primo!!!
+ 3 : arrivo...primo!!!
+ 2 : arrivo
  0 : arrivo
  4 : arrivo
- 3 : arrivo
 A  : aspetto corridori al traguardo
- 1 : arrivo
- 2 : arrivo...ultimo :-(
- 2 : sveglio arbitro
-A  : risultato: 5 primo, 2 ultimo
+ 5 : arrivo
+ 1 : arrivo...ultimo :-(
+ 1 : sveglio arbitro
+A  : risultato: 3 primo, 1 ultimo

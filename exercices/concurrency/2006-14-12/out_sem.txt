@@ -1,19 +1,18 @@
  3 : Sono arrivato e attendo il via dall'arbitro.
-A  : aspetto corridori
- 0 : Sono arrivato e attendo il via dall'arbitro.
- 2 : Sono arrivato e attendo il via dall'arbitro.
- 4 : Sono arrivato e attendo il via dall'arbitro.
  5 : Sono arrivato e attendo il via dall'arbitro.
  1 : Sono arrivato e attendo il via dall'arbitro.
- 1 : sveglio arbitro
+A  : aspetto corridori
+ 0 : Sono arrivato e attendo il via dall'arbitro.
+ 4 : Sono arrivato e attendo il via dall'arbitro.
+ 2 : Sono arrivato e attendo il via dall'arbitro.
+ 2 : sveglio arbitro
 A  : via!!!
 A  : sveglio corridori!!!
- 3 : arrivo...primo!!!
- 5 : arrivo
+ 0 : arrivo...primo!!!
+ 3 : arrivo
  2 : arrivo
- 1 : arrivo
 A  : aspetto corridori al traguardo
- 0 : arrivo
- 4 : arrivo...ultimo :-(
- 4 : sveglio arbitro
-A  : risultato: 3 primo, 4 ultimo
+ 1 : arrivo
+ 4 : arrivo
+ 5 : arrivo...ultimo :-(
+ 5 : sveglio arbitro

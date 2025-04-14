@@ -101,7 +101,6 @@ void *cliente(void *arg) {
     int r = rand() % N;
     cliente_arrivo(&o, r);
     cliente_attesafineservizio(&o);
-    return 0;
 }
 
 void *operaio(void *arg) {
@@ -111,7 +110,6 @@ void *operaio(void *arg) {
         sleep(1); // Simula il tempo per eseguire il servizio
         operaio_fineservizio(&o);
     }
-    return 0;
 }
 
 int main() {
@@ -135,7 +133,7 @@ int main() {
     }
 
     pthread_attr_destroy(&a);
-    sleep(50);
+    sleep(10);
     printf("Chiusura!\n");
 
     return 0;

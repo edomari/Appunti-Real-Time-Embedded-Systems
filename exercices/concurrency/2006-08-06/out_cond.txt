@@ -1,23 +1,23 @@
-COMMESSO: aspetto che qualcuno chieda una torta.
 CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 0.
-CLIENTE 281473139470624: salve vorrei ordinare una torta!.
+COMMESSO: aspetto che qualcuno chieda una torta.
+CLIENTE 281473609429280: salve vorrei ordinare una torta!.
 COMMESSO: salve prenderò il suo ordine!.
 COMMESSO: aspetto che il cuoco prepari una torta.
-CLIENTE 281473122562336: salve vorrei ordinare una torta!.
-CLIENTE 281473147924768: salve vorrei ordinare una torta!.
+CLIENTE 281473600975136: salve vorrei ordinare una torta!.
+CLIENTE 281473475211552: salve vorrei ordinare una torta!.
 CUOCO: inizio a produrre la torta numero 1.
 CUOCO: Commesso! la torta numero 1 è pronta!
 COMMESSO: procedo a vendere la torta.
-CLIENTE 281473156378912: salve vorrei ordinare una torta!.
-CLIENTE 281473131016480: salve vorrei ordinare una torta!.
+CLIENTE 281473617883424: salve vorrei ordinare una torta!.
+CLIENTE 281473626337568: salve vorrei ordinare una torta!.
 CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 1.
 COMMESSO: la sua torta è pronta!.
 COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473139470624: arrivederci!.
+CLIENTE 281473609429280: arrivederci!.
 COMMESSO: aspetto che qualcuno chieda una torta.
 CUOCO: inizio a produrre la torta numero 1.
 CUOCO: Commesso! la torta numero 1 è pronta!
-CLIENTE 281473139470624: salve vorrei ordinare una torta!.
+CLIENTE 281473609429280: salve vorrei ordinare una torta!.
 COMMESSO: salve prenderò il suo ordine!.
 COMMESSO: procedo a vendere la torta.
 CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 1.
@@ -25,16 +25,16 @@ CUOCO: inizio a produrre la torta numero 2.
 CUOCO: Commesso! la torta numero 2 è pronta!
 COMMESSO: la sua torta è pronta!.
 COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473122562336: arrivederci!.
+CLIENTE 281473600975136: arrivederci!.
 COMMESSO: aspetto che qualcuno chieda una torta.
-CLIENTE 281473122562336: salve vorrei ordinare una torta!.
+CLIENTE 281473600975136: salve vorrei ordinare una torta!.
 COMMESSO: salve prenderò il suo ordine!.
 COMMESSO: procedo a vendere la torta.
 CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 1.
 COMMESSO: la sua torta è pronta!.
 COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473147924768: arrivederci!.
-CLIENTE 281473147924768: salve vorrei ordinare una torta!.
+CLIENTE 281473475211552: arrivederci!.
+CLIENTE 281473475211552: salve vorrei ordinare una torta!.
 COMMESSO: salve prenderò il suo ordine!.
 COMMESSO: aspetto che il cuoco prepari una torta.
 CUOCO: inizio a produrre la torta numero 1.
@@ -42,59 +42,19 @@ CUOCO: Commesso! la torta numero 1 è pronta!
 COMMESSO: procedo a vendere la torta.
 COMMESSO: la sua torta è pronta!.
 COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473156378912: arrivederci!.
+CLIENTE 281473617883424: arrivederci!.
 CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 0.
 COMMESSO: aspetto che qualcuno chieda una torta.
 CUOCO: inizio a produrre la torta numero 1.
 CUOCO: Commesso! la torta numero 1 è pronta!
-CLIENTE 281473156378912: salve vorrei ordinare una torta!.
+CLIENTE 281473617883424: salve vorrei ordinare una torta!.
 COMMESSO: salve prenderò il suo ordine!.
 COMMESSO: procedo a vendere la torta.
 CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 1.
 COMMESSO: la sua torta è pronta!.
 COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473131016480: arrivederci!.
-CLIENTE 281473131016480: salve vorrei ordinare una torta!.
-COMMESSO: salve prenderò il suo ordine!.
-COMMESSO: aspetto che il cuoco prepari una torta.
-CUOCO: inizio a produrre la torta numero 1.
-CUOCO: Commesso! la torta numero 1 è pronta!
-COMMESSO: procedo a vendere la torta.
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 1.
-COMMESSO: la sua torta è pronta!.
-COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473139470624: arrivederci!.
-CUOCO: inizio a produrre la torta numero 1.
-CUOCO: Commesso! la torta numero 1 è pronta!
-CLIENTE 281473139470624: salve vorrei ordinare una torta!.
-COMMESSO: salve prenderò il suo ordine!.
-COMMESSO: procedo a vendere la torta.
-COMMESSO: la sua torta è pronta!.
-COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473122562336: arrivederci!.
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 0.
-COMMESSO: aspetto che qualcuno chieda una torta.
-CUOCO: inizio a produrre la torta numero 1.
-CUOCO: Commesso! la torta numero 1 è pronta!
-CLIENTE 281473122562336: salve vorrei ordinare una torta!.
-COMMESSO: salve prenderò il suo ordine!.
-COMMESSO: procedo a vendere la torta.
-COMMESSO: la sua torta è pronta!.
-COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473147924768: arrivederci!.
-COMMESSO: aspetto che qualcuno chieda una torta.
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 0.
-CLIENTE 281473147924768: salve vorrei ordinare una torta!.
-CUOCO: inizio a produrre la torta numero 1.
-CUOCO: Commesso! la torta numero 1 è pronta!
-COMMESSO: salve prenderò il suo ordine!.
-COMMESSO: procedo a vendere la torta.
-COMMESSO: la sua torta è pronta!.
-COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473156378912: arrivederci!.
-COMMESSO: aspetto che qualcuno chieda una torta.
-CLIENTE 281473156378912: salve vorrei ordinare una torta!.
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 0.
+CLIENTE 281473626337568: arrivederci!.
+CLIENTE 281473626337568: salve vorrei ordinare una torta!.
 COMMESSO: salve prenderò il suo ordine!.
 COMMESSO: aspetto che il cuoco prepari una torta.
 CUOCO: inizio a produrre la torta numero 1.
@@ -103,509 +63,194 @@ COMMESSO: procedo a vendere la torta.
 CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 1.
 COMMESSO: la sua torta è pronta!.
 COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473131016480: arrivederci!.
+CLIENTE 281473609429280: arrivederci!.
 CUOCO: inizio a produrre la torta numero 1.
 CUOCO: Commesso! la torta numero 1 è pronta!
-COMMESSO: aspetto che qualcuno chieda una torta.
-CLIENTE 281473131016480: salve vorrei ordinare una torta!.
-COMMESSO: salve prenderò il suo ordine!.
-COMMESSO: procedo a vendere la torta.
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 1.
-COMMESSO: la sua torta è pronta!.
-COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473139470624: arrivederci!.
-CLIENTE 281473139470624: salve vorrei ordinare una torta!.
-CUOCO: inizio a produrre la torta numero 1.
-CUOCO: Commesso! la torta numero 1 è pronta!
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 1.
+CLIENTE 281473609429280: salve vorrei ordinare una torta!.
 COMMESSO: salve prenderò il suo ordine!.
 COMMESSO: procedo a vendere la torta.
 COMMESSO: la sua torta è pronta!.
 COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473122562336: arrivederci!.
-CLIENTE 281473122562336: salve vorrei ordinare una torta!.
-CUOCO: inizio a produrre la torta numero 1.
-CUOCO: Commesso! la torta numero 1 è pronta!
-COMMESSO: salve prenderò il suo ordine!.
-COMMESSO: procedo a vendere la torta.
-COMMESSO: la sua torta è pronta!.
-COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473147924768: arrivederci!.
+CLIENTE 281473600975136: arrivederci!.
 CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 0.
 COMMESSO: aspetto che qualcuno chieda una torta.
 CUOCO: inizio a produrre la torta numero 1.
 CUOCO: Commesso! la torta numero 1 è pronta!
-CLIENTE 281473147924768: salve vorrei ordinare una torta!.
+CLIENTE 281473600975136: salve vorrei ordinare una torta!.
 COMMESSO: salve prenderò il suo ordine!.
 COMMESSO: procedo a vendere la torta.
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 1.
 COMMESSO: la sua torta è pronta!.
 COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473156378912: arrivederci!.
+CLIENTE 281473475211552: arrivederci!.
 COMMESSO: aspetto che qualcuno chieda una torta.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 0.
+CLIENTE 281473475211552: salve vorrei ordinare una torta!.
+COMMESSO: salve prenderò il suo ordine!.
+COMMESSO: aspetto che il cuoco prepari una torta.
 CUOCO: inizio a produrre la torta numero 1.
 CUOCO: Commesso! la torta numero 1 è pronta!
-CLIENTE 281473156378912: salve vorrei ordinare una torta!.
-COMMESSO: salve prenderò il suo ordine!.
 COMMESSO: procedo a vendere la torta.
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 1.
-CUOCO: inizio a produrre la torta numero 2.
-CUOCO: Commesso! la torta numero 2 è pronta!
 COMMESSO: la sua torta è pronta!.
 COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473131016480: arrivederci!.
-CLIENTE 281473131016480: salve vorrei ordinare una torta!.
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 1.
-COMMESSO: salve prenderò il suo ordine!.
-COMMESSO: procedo a vendere la torta.
-CUOCO: inizio a produrre la torta numero 2.
-CUOCO: Commesso! la torta numero 2 è pronta!
-COMMESSO: la sua torta è pronta!.
-COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473139470624: arrivederci!.
-CLIENTE 281473139470624: salve vorrei ordinare una torta!.
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 1.
-COMMESSO: salve prenderò il suo ordine!.
-COMMESSO: procedo a vendere la torta.
-CUOCO: inizio a produrre la torta numero 2.
-CUOCO: Commesso! la torta numero 2 è pronta!
-COMMESSO: la sua torta è pronta!.
-COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473122562336: arrivederci!.
+CLIENTE 281473617883424: arrivederci!.
 COMMESSO: aspetto che qualcuno chieda una torta.
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 1.
-CLIENTE 281473122562336: salve vorrei ordinare una torta!.
+CLIENTE 281473617883424: salve vorrei ordinare una torta!.
 COMMESSO: salve prenderò il suo ordine!.
-COMMESSO: procedo a vendere la torta.
-CUOCO: inizio a produrre la torta numero 2.
-CUOCO: Commesso! la torta numero 2 è pronta!
-COMMESSO: la sua torta è pronta!.
-COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473147924768: arrivederci!.
-COMMESSO: aspetto che qualcuno chieda una torta.
-CLIENTE 281473147924768: salve vorrei ordinare una torta!.
-COMMESSO: salve prenderò il suo ordine!.
+COMMESSO: aspetto che il cuoco prepari una torta.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 0.
+CUOCO: inizio a produrre la torta numero 1.
+CUOCO: Commesso! la torta numero 1 è pronta!
 COMMESSO: procedo a vendere la torta.
 CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 1.
 COMMESSO: la sua torta è pronta!.
 COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473156378912: arrivederci!.
+CLIENTE 281473626337568: arrivederci!.
 CUOCO: inizio a produrre la torta numero 1.
 CUOCO: Commesso! la torta numero 1 è pronta!
 COMMESSO: aspetto che qualcuno chieda una torta.
+CLIENTE 281473626337568: salve vorrei ordinare una torta!.
+COMMESSO: salve prenderò il suo ordine!.
+COMMESSO: procedo a vendere la torta.
 CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 1.
-CLIENTE 281473156378912: salve vorrei ordinare una torta!.
-COMMESSO: salve prenderò il suo ordine!.
-COMMESSO: procedo a vendere la torta.
-CUOCO: inizio a produrre la torta numero 2.
-CUOCO: Commesso! la torta numero 2 è pronta!
 COMMESSO: la sua torta è pronta!.
 COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473131016480: arrivederci!.
+CLIENTE 281473609429280: arrivederci!.
+CLIENTE 281473609429280: salve vorrei ordinare una torta!.
+CUOCO: inizio a produrre la torta numero 1.
+CUOCO: Commesso! la torta numero 1 è pronta!
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 1.
+COMMESSO: salve prenderò il suo ordine!.
+COMMESSO: procedo a vendere la torta.
+COMMESSO: la sua torta è pronta!.
+COMMESSO: cuoco produca altre torte!.
+CLIENTE 281473600975136: arrivederci!.
+CLIENTE 281473600975136: salve vorrei ordinare una torta!.
+CUOCO: inizio a produrre la torta numero 1.
+CUOCO: Commesso! la torta numero 1 è pronta!
+COMMESSO: salve prenderò il suo ordine!.
+COMMESSO: procedo a vendere la torta.
+COMMESSO: la sua torta è pronta!.
+COMMESSO: cuoco produca altre torte!.
+CLIENTE 281473475211552: arrivederci!.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 0.
 COMMESSO: aspetto che qualcuno chieda una torta.
+CUOCO: inizio a produrre la torta numero 1.
+CUOCO: Commesso! la torta numero 1 è pronta!
+CLIENTE 281473475211552: salve vorrei ordinare una torta!.
+COMMESSO: salve prenderò il suo ordine!.
+COMMESSO: procedo a vendere la torta.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 1.
+COMMESSO: la sua torta è pronta!.
+COMMESSO: cuoco produca altre torte!.
+CLIENTE 281473617883424: arrivederci!.
+COMMESSO: aspetto che qualcuno chieda una torta.
+CUOCO: inizio a produrre la torta numero 1.
+CUOCO: Commesso! la torta numero 1 è pronta!
+CLIENTE 281473617883424: salve vorrei ordinare una torta!.
+COMMESSO: salve prenderò il suo ordine!.
+COMMESSO: procedo a vendere la torta.
 CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 1.
 CUOCO: inizio a produrre la torta numero 2.
 CUOCO: Commesso! la torta numero 2 è pronta!
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 2.
-CLIENTE 281473131016480: salve vorrei ordinare una torta!.
-COMMESSO: salve prenderò il suo ordine!.
-COMMESSO: procedo a vendere la torta.
-CUOCO: inizio a produrre la torta numero 3.
-CUOCO: Commesso! la torta numero 3 è pronta!
 COMMESSO: la sua torta è pronta!.
 COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473139470624: arrivederci!.
-COMMESSO: aspetto che qualcuno chieda una torta.
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 2.
-CLIENTE 281473139470624: salve vorrei ordinare una torta!.
+CLIENTE 281473626337568: arrivederci!.
+CLIENTE 281473626337568: salve vorrei ordinare una torta!.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 1.
 COMMESSO: salve prenderò il suo ordine!.
 COMMESSO: procedo a vendere la torta.
-CUOCO: inizio a produrre la torta numero 3.
-CUOCO: Commesso! la torta numero 3 è pronta!
-COMMESSO: la sua torta è pronta!.
-COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473122562336: arrivederci!.
-CLIENTE 281473122562336: salve vorrei ordinare una torta!.
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 2.
-CUOCO: inizio a produrre la torta numero 3.
-CUOCO: Commesso! la torta numero 3 è pronta!
-COMMESSO: salve prenderò il suo ordine!.
-COMMESSO: procedo a vendere la torta.
-COMMESSO: la sua torta è pronta!.
-COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473147924768: arrivederci!.
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 2.
-CLIENTE 281473147924768: salve vorrei ordinare una torta!.
-COMMESSO: salve prenderò il suo ordine!.
-COMMESSO: procedo a vendere la torta.
-CUOCO: inizio a produrre la torta numero 3.
-CUOCO: Commesso! la torta numero 3 è pronta!
-COMMESSO: la sua torta è pronta!.
-COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473156378912: arrivederci!.
-CLIENTE 281473156378912: salve vorrei ordinare una torta!.
-COMMESSO: salve prenderò il suo ordine!.
-COMMESSO: procedo a vendere la torta.
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 2.
-COMMESSO: la sua torta è pronta!.
-COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473131016480: arrivederci!.
 CUOCO: inizio a produrre la torta numero 2.
 CUOCO: Commesso! la torta numero 2 è pronta!
-COMMESSO: aspetto che qualcuno chieda una torta.
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 2.
-CLIENTE 281473131016480: salve vorrei ordinare una torta!.
-COMMESSO: salve prenderò il suo ordine!.
-COMMESSO: procedo a vendere la torta.
 COMMESSO: la sua torta è pronta!.
 COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473139470624: arrivederci!.
-COMMESSO: aspetto che qualcuno chieda una torta.
+CLIENTE 281473609429280: arrivederci!.
+CLIENTE 281473609429280: salve vorrei ordinare una torta!.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 1.
 CUOCO: inizio a produrre la torta numero 2.
 CUOCO: Commesso! la torta numero 2 è pronta!
+COMMESSO: salve prenderò il suo ordine!.
+COMMESSO: procedo a vendere la torta.
 CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 2.
 CUOCO: inizio a produrre la torta numero 3.
 CUOCO: Commesso! la torta numero 3 è pronta!
-CLIENTE 281473139470624: salve vorrei ordinare una torta!.
-COMMESSO: salve prenderò il suo ordine!.
-COMMESSO: procedo a vendere la torta.
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 3.
-CUOCO: inizio a produrre la torta numero 4.
-CUOCO: Commesso! la torta numero 4 è pronta!
 COMMESSO: la sua torta è pronta!.
 COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473122562336: arrivederci!.
+CLIENTE 281473600975136: arrivederci!.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 2.
+CLIENTE 281473600975136: salve vorrei ordinare una torta!.
+COMMESSO: salve prenderò il suo ordine!.
+COMMESSO: procedo a vendere la torta.
+COMMESSO: la sua torta è pronta!.
+COMMESSO: cuoco produca altre torte!.
+CUOCO: inizio a produrre la torta numero 2.
+CUOCO: Commesso! la torta numero 2 è pronta!
+CLIENTE 281473475211552: arrivederci!.
 COMMESSO: aspetto che qualcuno chieda una torta.
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 3.
-CLIENTE 281473122562336: salve vorrei ordinare una torta!.
-COMMESSO: salve prenderò il suo ordine!.
-COMMESSO: procedo a vendere la torta.
-CUOCO: inizio a produrre la torta numero 4.
-CUOCO: Commesso! la torta numero 4 è pronta!
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 4.
-COMMESSO: la sua torta è pronta!.
-COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473147924768: arrivederci!.
-CUOCO: inizio a produrre la torta numero 4.
-CUOCO: Commesso! la torta numero 4 è pronta!
-COMMESSO: aspetto che qualcuno chieda una torta.
-CLIENTE 281473147924768: salve vorrei ordinare una torta!.
-COMMESSO: salve prenderò il suo ordine!.
-COMMESSO: procedo a vendere la torta.
-COMMESSO: la sua torta è pronta!.
-COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473156378912: arrivederci!.
-COMMESSO: aspetto che qualcuno chieda una torta.
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 3.
-CLIENTE 281473156378912: salve vorrei ordinare una torta!.
-COMMESSO: salve prenderò il suo ordine!.
-COMMESSO: procedo a vendere la torta.
-CUOCO: inizio a produrre la torta numero 4.
-CUOCO: Commesso! la torta numero 4 è pronta!
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 4.
-COMMESSO: la sua torta è pronta!.
-COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473131016480: arrivederci!.
-CUOCO: inizio a produrre la torta numero 4.
-CUOCO: Commesso! la torta numero 4 è pronta!
-COMMESSO: aspetto che qualcuno chieda una torta.
-CLIENTE 281473131016480: salve vorrei ordinare una torta!.
-COMMESSO: salve prenderò il suo ordine!.
-COMMESSO: procedo a vendere la torta.
-COMMESSO: la sua torta è pronta!.
-COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473139470624: arrivederci!.
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 3.
-COMMESSO: aspetto che qualcuno chieda una torta.
-CLIENTE 281473139470624: salve vorrei ordinare una torta!.
-COMMESSO: salve prenderò il suo ordine!.
-COMMESSO: procedo a vendere la torta.
-COMMESSO: la sua torta è pronta!.
-COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473122562336: arrivederci!.
-COMMESSO: aspetto che qualcuno chieda una torta.
-CUOCO: inizio a produrre la torta numero 3.
-CUOCO: Commesso! la torta numero 3 è pronta!
-CLIENTE 281473122562336: salve vorrei ordinare una torta!.
-COMMESSO: salve prenderò il suo ordine!.
-COMMESSO: procedo a vendere la torta.
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 3.
-COMMESSO: la sua torta è pronta!.
-COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473147924768: arrivederci!.
-CLIENTE 281473147924768: salve vorrei ordinare una torta!.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 2.
+CLIENTE 281473475211552: salve vorrei ordinare una torta!.
 COMMESSO: salve prenderò il suo ordine!.
 COMMESSO: procedo a vendere la torta.
 CUOCO: inizio a produrre la torta numero 3.
 CUOCO: Commesso! la torta numero 3 è pronta!
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 3.
 COMMESSO: la sua torta è pronta!.
 COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473156378912: arrivederci!.
+CLIENTE 281473617883424: arrivederci!.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 2.
+COMMESSO: aspetto che qualcuno chieda una torta.
 CUOCO: inizio a produrre la torta numero 3.
 CUOCO: Commesso! la torta numero 3 è pronta!
-CLIENTE 281473156378912: salve vorrei ordinare una torta!.
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 3.
+CLIENTE 281473617883424: salve vorrei ordinare una torta!.
 COMMESSO: salve prenderò il suo ordine!.
 COMMESSO: procedo a vendere la torta.
-COMMESSO: la sua torta è pronta!.
-COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473131016480: arrivederci!.
-CUOCO: inizio a produrre la torta numero 3.
-CUOCO: Commesso! la torta numero 3 è pronta!
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 3.
-COMMESSO: aspetto che qualcuno chieda una torta.
-CLIENTE 281473131016480: salve vorrei ordinare una torta!.
-COMMESSO: salve prenderò il suo ordine!.
-COMMESSO: procedo a vendere la torta.
-CUOCO: inizio a produrre la torta numero 4.
-CUOCO: Commesso! la torta numero 4 è pronta!
-COMMESSO: la sua torta è pronta!.
-COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473139470624: arrivederci!.
-CLIENTE 281473139470624: salve vorrei ordinare una torta!.
 CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 3.
 CUOCO: inizio a produrre la torta numero 4.
 CUOCO: Commesso! la torta numero 4 è pronta!
-COMMESSO: salve prenderò il suo ordine!.
-COMMESSO: procedo a vendere la torta.
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 4.
-CUOCO: inizio a produrre la torta numero 5.
-CUOCO: Commesso! la torta numero 5 è pronta!
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 5.
-COMMESSO: la sua torta è pronta!.
-COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473122562336: arrivederci!.
-COMMESSO: aspetto che qualcuno chieda una torta.
-CUOCO: inizio a produrre la torta numero 5.
-CUOCO: Commesso! la torta numero 5 è pronta!
-CLIENTE 281473122562336: salve vorrei ordinare una torta!.
-COMMESSO: salve prenderò il suo ordine!.
-COMMESSO: procedo a vendere la torta.
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 5.
-CUOCO: inizio a produrre la torta numero 6.
-CUOCO: Commesso! la torta numero 6 è pronta!
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 6.
-COMMESSO: la sua torta è pronta!.
-COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473147924768: arrivederci!.
-COMMESSO: aspetto che qualcuno chieda una torta.
-CLIENTE 281473147924768: salve vorrei ordinare una torta!.
-COMMESSO: salve prenderò il suo ordine!.
-COMMESSO: procedo a vendere la torta.
-COMMESSO: la sua torta è pronta!.
-COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473156378912: arrivederci!.
-CLIENTE 281473156378912: salve vorrei ordinare una torta!.
-CUOCO: inizio a produrre la torta numero 5.
-CUOCO: Commesso! la torta numero 5 è pronta!
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 5.
-COMMESSO: salve prenderò il suo ordine!.
-COMMESSO: procedo a vendere la torta.
-CUOCO: inizio a produrre la torta numero 6.
-CUOCO: Commesso! la torta numero 6 è pronta!
-COMMESSO: la sua torta è pronta!.
-COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473131016480: arrivederci!.
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 5.
-CLIENTE 281473131016480: salve vorrei ordinare una torta!.
-COMMESSO: salve prenderò il suo ordine!.
-COMMESSO: procedo a vendere la torta.
-COMMESSO: la sua torta è pronta!.
-COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473139470624: arrivederci!.
-COMMESSO: aspetto che qualcuno chieda una torta.
-CUOCO: inizio a produrre la torta numero 5.
-CUOCO: Commesso! la torta numero 5 è pronta!
-CLIENTE 281473139470624: salve vorrei ordinare una torta!.
-COMMESSO: salve prenderò il suo ordine!.
-COMMESSO: procedo a vendere la torta.
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 5.
-COMMESSO: la sua torta è pronta!.
-COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473122562336: arrivederci!.
-CLIENTE 281473122562336: salve vorrei ordinare una torta!.
-COMMESSO: salve prenderò il suo ordine!.
-COMMESSO: procedo a vendere la torta.
-CUOCO: inizio a produrre la torta numero 5.
-CUOCO: Commesso! la torta numero 5 è pronta!
-COMMESSO: la sua torta è pronta!.
-COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473147924768: arrivederci!.
-COMMESSO: aspetto che qualcuno chieda una torta.
-CLIENTE 281473147924768: salve vorrei ordinare una torta!.
-COMMESSO: salve prenderò il suo ordine!.
-COMMESSO: procedo a vendere la torta.
 CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 4.
 COMMESSO: la sua torta è pronta!.
 COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473156378912: arrivederci!.
-CUOCO: inizio a produrre la torta numero 4.
-CUOCO: Commesso! la torta numero 4 è pronta!
-COMMESSO: aspetto che qualcuno chieda una torta.
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 4.
-CLIENTE 281473156378912: salve vorrei ordinare una torta!.
-COMMESSO: salve prenderò il suo ordine!.
-COMMESSO: procedo a vendere la torta.
-CUOCO: inizio a produrre la torta numero 5.
-CUOCO: Commesso! la torta numero 5 è pronta!
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 5.
-COMMESSO: la sua torta è pronta!.
-COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473131016480: arrivederci!.
-COMMESSO: aspetto che qualcuno chieda una torta.
-CUOCO: inizio a produrre la torta numero 5.
-CUOCO: Commesso! la torta numero 5 è pronta!
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 5.
-CLIENTE 281473131016480: salve vorrei ordinare una torta!.
-COMMESSO: salve prenderò il suo ordine!.
-COMMESSO: procedo a vendere la torta.
-CUOCO: inizio a produrre la torta numero 6.
-CUOCO: Commesso! la torta numero 6 è pronta!
-COMMESSO: la sua torta è pronta!.
-COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473139470624: arrivederci!.
-COMMESSO: aspetto che qualcuno chieda una torta.
-CLIENTE 281473139470624: salve vorrei ordinare una torta!.
-COMMESSO: salve prenderò il suo ordine!.
-COMMESSO: procedo a vendere la torta.
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 5.
-COMMESSO: la sua torta è pronta!.
-COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473122562336: arrivederci!.
-CUOCO: inizio a produrre la torta numero 5.
-CUOCO: Commesso! la torta numero 5 è pronta!
-CLIENTE 281473122562336: salve vorrei ordinare una torta!.
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 5.
-COMMESSO: salve prenderò il suo ordine!.
-COMMESSO: procedo a vendere la torta.
-COMMESSO: la sua torta è pronta!.
-COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473147924768: arrivederci!.
-CUOCO: inizio a produrre la torta numero 5.
-CUOCO: Commesso! la torta numero 5 è pronta!
-CLIENTE 281473147924768: salve vorrei ordinare una torta!.
-COMMESSO: salve prenderò il suo ordine!.
-COMMESSO: procedo a vendere la torta.
-COMMESSO: la sua torta è pronta!.
-COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473156378912: arrivederci!.
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 4.
-COMMESSO: aspetto che qualcuno chieda una torta.
-CLIENTE 281473156378912: salve vorrei ordinare una torta!.
-COMMESSO: salve prenderò il suo ordine!.
-COMMESSO: procedo a vendere la torta.
-CUOCO: inizio a produrre la torta numero 5.
-CUOCO: Commesso! la torta numero 5 è pronta!
-COMMESSO: la sua torta è pronta!.
-COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473131016480: arrivederci!.
-CLIENTE 281473131016480: salve vorrei ordinare una torta!.
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 4.
-CUOCO: inizio a produrre la torta numero 5.
-CUOCO: Commesso! la torta numero 5 è pronta!
-COMMESSO: salve prenderò il suo ordine!.
-COMMESSO: procedo a vendere la torta.
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 5.
-COMMESSO: la sua torta è pronta!.
-COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473139470624: arrivederci!.
-CUOCO: inizio a produrre la torta numero 5.
-CUOCO: Commesso! la torta numero 5 è pronta!
-COMMESSO: aspetto che qualcuno chieda una torta.
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 5.
-CUOCO: inizio a produrre la torta numero 6.
-CUOCO: Commesso! la torta numero 6 è pronta!
-CLIENTE 281473139470624: salve vorrei ordinare una torta!.
-COMMESSO: salve prenderò il suo ordine!.
-COMMESSO: procedo a vendere la torta.
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 6.
-COMMESSO: la sua torta è pronta!.
-COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473122562336: arrivederci!.
-CLIENTE 281473122562336: salve vorrei ordinare una torta!.
-CUOCO: inizio a produrre la torta numero 6.
-CUOCO: Commesso! la torta numero 6 è pronta!
-COMMESSO: salve prenderò il suo ordine!.
-COMMESSO: procedo a vendere la torta.
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 6.
-COMMESSO: la sua torta è pronta!.
-COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473147924768: arrivederci!.
-COMMESSO: aspetto che qualcuno chieda una torta.
-CUOCO: inizio a produrre la torta numero 6.
-CUOCO: Commesso! la torta numero 6 è pronta!
-CLIENTE 281473147924768: salve vorrei ordinare una torta!.
-COMMESSO: salve prenderò il suo ordine!.
-COMMESSO: procedo a vendere la torta.
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 6.
-COMMESSO: la sua torta è pronta!.
-COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473156378912: arrivederci!.
-CLIENTE 281473156378912: salve vorrei ordinare una torta!.
-COMMESSO: salve prenderò il suo ordine!.
-COMMESSO: procedo a vendere la torta.
-CUOCO: inizio a produrre la torta numero 6.
-CUOCO: Commesso! la torta numero 6 è pronta!
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 6.
-COMMESSO: la sua torta è pronta!.
-COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473131016480: arrivederci!.
-CLIENTE 281473131016480: salve vorrei ordinare una torta!.
-CUOCO: inizio a produrre la torta numero 6.
-CUOCO: Commesso! la torta numero 6 è pronta!
-COMMESSO: salve prenderò il suo ordine!.
-COMMESSO: procedo a vendere la torta.
-COMMESSO: la sua torta è pronta!.
-COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473139470624: arrivederci!.
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 5.
-COMMESSO: aspetto che qualcuno chieda una torta.
-CLIENTE 281473139470624: salve vorrei ordinare una torta!.
-COMMESSO: salve prenderò il suo ordine!.
-COMMESSO: procedo a vendere la torta.
-COMMESSO: la sua torta è pronta!.
-COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473122562336: arrivederci!.
-CUOCO: inizio a produrre la torta numero 5.
-CUOCO: Commesso! la torta numero 5 è pronta!
-COMMESSO: aspetto che qualcuno chieda una torta.
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 5.
-CLIENTE 281473122562336: salve vorrei ordinare una torta!.
-COMMESSO: salve prenderò il suo ordine!.
-COMMESSO: procedo a vendere la torta.
-CUOCO: inizio a produrre la torta numero 6.
-CUOCO: Commesso! la torta numero 6 è pronta!
-COMMESSO: la sua torta è pronta!.
-COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473147924768: arrivederci!.
-CLIENTE 281473147924768: salve vorrei ordinare una torta!.
-COMMESSO: salve prenderò il suo ordine!.
-COMMESSO: procedo a vendere la torta.
-COMMESSO: la sua torta è pronta!.
-COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473156378912: arrivederci!.
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 4.
-COMMESSO: aspetto che qualcuno chieda una torta.
-CLIENTE 281473156378912: salve vorrei ordinare una torta!.
-COMMESSO: salve prenderò il suo ordine!.
-COMMESSO: procedo a vendere la torta.
-COMMESSO: la sua torta è pronta!.
-COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473131016480: arrivederci!.
-CLIENTE 281473131016480: salve vorrei ordinare una torta!.
+CLIENTE 281473626337568: arrivederci!.
 CUOCO: inizio a produrre la torta numero 4.
 CUOCO: Commesso! la torta numero 4 è pronta!
 CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 4.
+COMMESSO: aspetto che qualcuno chieda una torta.
+CLIENTE 281473626337568: salve vorrei ordinare una torta!.
+COMMESSO: salve prenderò il suo ordine!.
+COMMESSO: procedo a vendere la torta.
+CUOCO: inizio a produrre la torta numero 5.
+CUOCO: Commesso! la torta numero 5 è pronta!
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 5.
+COMMESSO: la sua torta è pronta!.
+COMMESSO: cuoco produca altre torte!.
+CLIENTE 281473609429280: arrivederci!.
+CLIENTE 281473609429280: salve vorrei ordinare una torta!.
+CUOCO: inizio a produrre la torta numero 5.
+CUOCO: Commesso! la torta numero 5 è pronta!
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 5.
+COMMESSO: salve prenderò il suo ordine!.
+COMMESSO: procedo a vendere la torta.
+COMMESSO: la sua torta è pronta!.
+COMMESSO: cuoco produca altre torte!.
+CLIENTE 281473600975136: arrivederci!.
+CUOCO: inizio a produrre la torta numero 5.
+CUOCO: Commesso! la torta numero 5 è pronta!
+CLIENTE 281473600975136: salve vorrei ordinare una torta!.
+COMMESSO: salve prenderò il suo ordine!.
+COMMESSO: procedo a vendere la torta.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 5.
+COMMESSO: la sua torta è pronta!.
+COMMESSO: cuoco produca altre torte!.
+CLIENTE 281473475211552: arrivederci!.
+CLIENTE 281473475211552: salve vorrei ordinare una torta!.
 COMMESSO: salve prenderò il suo ordine!.
 COMMESSO: procedo a vendere la torta.
 CUOCO: inizio a produrre la torta numero 5.
 CUOCO: Commesso! la torta numero 5 è pronta!
 COMMESSO: la sua torta è pronta!.
 COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473139470624: arrivederci!.
+CLIENTE 281473617883424: arrivederci!.
 CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 4.
-CLIENTE 281473139470624: salve vorrei ordinare una torta!.
+COMMESSO: aspetto che qualcuno chieda una torta.
+CLIENTE 281473617883424: salve vorrei ordinare una torta!.
 COMMESSO: salve prenderò il suo ordine!.
 COMMESSO: procedo a vendere la torta.
 CUOCO: inizio a produrre la torta numero 5.
@@ -613,41 +258,96 @@ CUOCO: Commesso! la torta numero 5 è pronta!
 CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 5.
 CUOCO: inizio a produrre la torta numero 6.
 CUOCO: Commesso! la torta numero 6 è pronta!
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 6.
 COMMESSO: la sua torta è pronta!.
 COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473122562336: arrivederci!.
+CLIENTE 281473626337568: arrivederci!.
+COMMESSO: aspetto che qualcuno chieda una torta.
+CLIENTE 281473626337568: salve vorrei ordinare una torta!.
+COMMESSO: salve prenderò il suo ordine!.
+COMMESSO: procedo a vendere la torta.
+COMMESSO: la sua torta è pronta!.
+COMMESSO: cuoco produca altre torte!.
+CLIENTE 281473609429280: arrivederci!.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 4.
+CLIENTE 281473609429280: salve vorrei ordinare una torta!.
+CUOCO: inizio a produrre la torta numero 5.
+CUOCO: Commesso! la torta numero 5 è pronta!
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 5.
+COMMESSO: salve prenderò il suo ordine!.
+COMMESSO: procedo a vendere la torta.
 CUOCO: inizio a produrre la torta numero 6.
 CUOCO: Commesso! la torta numero 6 è pronta!
+COMMESSO: la sua torta è pronta!.
+COMMESSO: cuoco produca altre torte!.
+CLIENTE 281473600975136: arrivederci!.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 5.
 COMMESSO: aspetto che qualcuno chieda una torta.
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 6.
-CLIENTE 281473122562336: salve vorrei ordinare una torta!.
+CLIENTE 281473600975136: salve vorrei ordinare una torta!.
+COMMESSO: salve prenderò il suo ordine!.
+COMMESSO: procedo a vendere la torta.
+CUOCO: inizio a produrre la torta numero 6.
+CUOCO: Commesso! la torta numero 6 è pronta!
+COMMESSO: la sua torta è pronta!.
+COMMESSO: cuoco produca altre torte!.
+CLIENTE 281473475211552: arrivederci!.
+CLIENTE 281473475211552: salve vorrei ordinare una torta!.
 COMMESSO: salve prenderò il suo ordine!.
 COMMESSO: procedo a vendere la torta.
 COMMESSO: la sua torta è pronta!.
 COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473147924768: arrivederci!.
+CLIENTE 281473617883424: arrivederci!.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 4.
+CUOCO: inizio a produrre la torta numero 5.
+CUOCO: Commesso! la torta numero 5 è pronta!
 COMMESSO: aspetto che qualcuno chieda una torta.
-CLIENTE 281473147924768: salve vorrei ordinare una torta!.
+CLIENTE 281473617883424: salve vorrei ordinare una torta!.
 COMMESSO: salve prenderò il suo ordine!.
 COMMESSO: procedo a vendere la torta.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 5.
 COMMESSO: la sua torta è pronta!.
 COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473156378912: arrivederci!.
+CLIENTE 281473626337568: arrivederci!.
+CLIENTE 281473626337568: salve vorrei ordinare una torta!.
+CUOCO: inizio a produrre la torta numero 5.
+CUOCO: Commesso! la torta numero 5 è pronta!
+COMMESSO: salve prenderò il suo ordine!.
+COMMESSO: procedo a vendere la torta.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 5.
+COMMESSO: la sua torta è pronta!.
+COMMESSO: cuoco produca altre torte!.
+CLIENTE 281473609429280: arrivederci!.
+COMMESSO: aspetto che qualcuno chieda una torta.
+CLIENTE 281473609429280: salve vorrei ordinare una torta!.
+COMMESSO: salve prenderò il suo ordine!.
+COMMESSO: procedo a vendere la torta.
 CUOCO: inizio a produrre la torta numero 5.
 CUOCO: Commesso! la torta numero 5 è pronta!
 CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 5.
 CUOCO: inizio a produrre la torta numero 6.
 CUOCO: Commesso! la torta numero 6 è pronta!
-COMMESSO: aspetto che qualcuno chieda una torta.
-CLIENTE 281473156378912: salve vorrei ordinare una torta!.
+COMMESSO: la sua torta è pronta!.
+COMMESSO: cuoco produca altre torte!.
+CLIENTE 281473600975136: arrivederci!.
+CLIENTE 281473600975136: salve vorrei ordinare una torta!.
 COMMESSO: salve prenderò il suo ordine!.
 COMMESSO: procedo a vendere la torta.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 5.
+CUOCO: inizio a produrre la torta numero 6.
+CUOCO: Commesso! la torta numero 6 è pronta!
+COMMESSO: la sua torta è pronta!.
+COMMESSO: cuoco produca altre torte!.
+CLIENTE 281473475211552: arrivederci!.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 5.
+CLIENTE 281473475211552: salve vorrei ordinare una torta!.
+COMMESSO: salve prenderò il suo ordine!.
+COMMESSO: procedo a vendere la torta.
+CUOCO: inizio a produrre la torta numero 6.
+CUOCO: Commesso! la torta numero 6 è pronta!
 CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 6.
 COMMESSO: la sua torta è pronta!.
 COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473131016480: arrivederci!.
-CLIENTE 281473131016480: salve vorrei ordinare una torta!.
+CLIENTE 281473617883424: arrivederci!.
+CLIENTE 281473617883424: salve vorrei ordinare una torta!.
 CUOCO: inizio a produrre la torta numero 6.
 CUOCO: Commesso! la torta numero 6 è pronta!
 COMMESSO: salve prenderò il suo ordine!.
@@ -655,30 +355,31 @@ COMMESSO: procedo a vendere la torta.
 CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 6.
 COMMESSO: la sua torta è pronta!.
 COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473139470624: arrivederci!.
+CLIENTE 281473626337568: arrivederci!.
+CLIENTE 281473626337568: salve vorrei ordinare una torta!.
 CUOCO: inizio a produrre la torta numero 6.
 CUOCO: Commesso! la torta numero 6 è pronta!
-CLIENTE 281473139470624: salve vorrei ordinare una torta!.
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 6.
-COMMESSO: salve prenderò il suo ordine!.
-COMMESSO: procedo a vendere la torta.
-CUOCO: inizio a produrre la torta numero 7.
-CUOCO: Commesso! la torta numero 7 è pronta!
-COMMESSO: la sua torta è pronta!.
-COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473122562336: arrivederci!.
-CLIENTE 281473122562336: salve vorrei ordinare una torta!.
 CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 6.
 COMMESSO: salve prenderò il suo ordine!.
 COMMESSO: procedo a vendere la torta.
 CUOCO: inizio a produrre la torta numero 7.
 CUOCO: Commesso! la torta numero 7 è pronta!
 CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 7.
+CUOCO: inizio a produrre la torta numero 8.
+CUOCO: Commesso! la torta numero 8 è pronta!
 COMMESSO: la sua torta è pronta!.
 COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473147924768: arrivederci!.
+CLIENTE 281473609429280: arrivederci!.
 COMMESSO: aspetto che qualcuno chieda una torta.
-CLIENTE 281473147924768: salve vorrei ordinare una torta!.
+CLIENTE 281473609429280: salve vorrei ordinare una torta!.
+COMMESSO: salve prenderò il suo ordine!.
+COMMESSO: procedo a vendere la torta.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 7.
+COMMESSO: la sua torta è pronta!.
+COMMESSO: cuoco produca altre torte!.
+CLIENTE 281473600975136: arrivederci!.
+COMMESSO: aspetto che qualcuno chieda una torta.
+CLIENTE 281473600975136: salve vorrei ordinare una torta!.
 COMMESSO: salve prenderò il suo ordine!.
 COMMESSO: procedo a vendere la torta.
 CUOCO: inizio a produrre la torta numero 7.
@@ -686,52 +387,226 @@ CUOCO: Commesso! la torta numero 7 è pronta!
 CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 7.
 COMMESSO: la sua torta è pronta!.
 COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473156378912: arrivederci!.
+CLIENTE 281473475211552: arrivederci!.
 CUOCO: inizio a produrre la torta numero 7.
 CUOCO: Commesso! la torta numero 7 è pronta!
-CLIENTE 281473156378912: salve vorrei ordinare una torta!.
+COMMESSO: aspetto che qualcuno chieda una torta.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 7.
+CUOCO: inizio a produrre la torta numero 8.
+CUOCO: Commesso! la torta numero 8 è pronta!
+CLIENTE 281473475211552: salve vorrei ordinare una torta!.
+COMMESSO: salve prenderò il suo ordine!.
+COMMESSO: procedo a vendere la torta.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 8.
+COMMESSO: la sua torta è pronta!.
+COMMESSO: cuoco produca altre torte!.
+CLIENTE 281473617883424: arrivederci!.
+CUOCO: inizio a produrre la torta numero 8.
+CUOCO: Commesso! la torta numero 8 è pronta!
+COMMESSO: aspetto che qualcuno chieda una torta.
+CLIENTE 281473617883424: salve vorrei ordinare una torta!.
 COMMESSO: salve prenderò il suo ordine!.
 COMMESSO: procedo a vendere la torta.
 COMMESSO: la sua torta è pronta!.
 COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473131016480: arrivederci!.
+CLIENTE 281473626337568: arrivederci!.
+COMMESSO: aspetto che qualcuno chieda una torta.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 7.
+CLIENTE 281473626337568: salve vorrei ordinare una torta!.
+COMMESSO: salve prenderò il suo ordine!.
+COMMESSO: procedo a vendere la torta.
+CUOCO: inizio a produrre la torta numero 8.
+CUOCO: Commesso! la torta numero 8 è pronta!
+COMMESSO: la sua torta è pronta!.
+COMMESSO: cuoco produca altre torte!.
+CLIENTE 281473609429280: arrivederci!.
+CLIENTE 281473609429280: salve vorrei ordinare una torta!.
+COMMESSO: salve prenderò il suo ordine!.
+COMMESSO: procedo a vendere la torta.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 7.
+COMMESSO: la sua torta è pronta!.
+COMMESSO: cuoco produca altre torte!.
+CLIENTE 281473600975136: arrivederci!.
+COMMESSO: aspetto che qualcuno chieda una torta.
+CLIENTE 281473600975136: salve vorrei ordinare una torta!.
+COMMESSO: salve prenderò il suo ordine!.
+COMMESSO: procedo a vendere la torta.
+CUOCO: inizio a produrre la torta numero 7.
+CUOCO: Commesso! la torta numero 7 è pronta!
+COMMESSO: la sua torta è pronta!.
+COMMESSO: cuoco produca altre torte!.
+CLIENTE 281473475211552: arrivederci!.
 CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 6.
-CLIENTE 281473131016480: salve vorrei ordinare una torta!.
-CUOCO: inizio a produrre la torta numero 7.
-CUOCO: Commesso! la torta numero 7 è pronta!
+COMMESSO: aspetto che qualcuno chieda una torta.
+CLIENTE 281473475211552: salve vorrei ordinare una torta!.
 COMMESSO: salve prenderò il suo ordine!.
 COMMESSO: procedo a vendere la torta.
+CUOCO: inizio a produrre la torta numero 7.
+CUOCO: Commesso! la torta numero 7 è pronta!
+COMMESSO: la sua torta è pronta!.
+COMMESSO: cuoco produca altre torte!.
+CLIENTE 281473617883424: arrivederci!.
+COMMESSO: aspetto che qualcuno chieda una torta.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 6.
+CUOCO: inizio a produrre la torta numero 7.
+CUOCO: Commesso! la torta numero 7 è pronta!
+CLIENTE 281473617883424: salve vorrei ordinare una torta!.
+COMMESSO: salve prenderò il suo ordine!.
+COMMESSO: procedo a vendere la torta.
+COMMESSO: la sua torta è pronta!.
+COMMESSO: cuoco produca altre torte!.
+CLIENTE 281473626337568: arrivederci!.
+COMMESSO: aspetto che qualcuno chieda una torta.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 6.
+CLIENTE 281473626337568: salve vorrei ordinare una torta!.
+COMMESSO: salve prenderò il suo ordine!.
+COMMESSO: procedo a vendere la torta.
+COMMESSO: la sua torta è pronta!.
+COMMESSO: cuoco produca altre torte!.
+CLIENTE 281473609429280: arrivederci!.
+COMMESSO: aspetto che qualcuno chieda una torta.
+CUOCO: inizio a produrre la torta numero 6.
+CUOCO: Commesso! la torta numero 6 è pronta!
+CLIENTE 281473609429280: salve vorrei ordinare una torta!.
+COMMESSO: salve prenderò il suo ordine!.
+COMMESSO: procedo a vendere la torta.
+COMMESSO: la sua torta è pronta!.
+COMMESSO: cuoco produca altre torte!.
+CLIENTE 281473600975136: arrivederci!.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 5.
+CUOCO: inizio a produrre la torta numero 6.
+CUOCO: Commesso! la torta numero 6 è pronta!
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 6.
+CLIENTE 281473600975136: salve vorrei ordinare una torta!.
+COMMESSO: salve prenderò il suo ordine!.
+COMMESSO: procedo a vendere la torta.
+COMMESSO: la sua torta è pronta!.
+COMMESSO: cuoco produca altre torte!.
+CLIENTE 281473475211552: arrivederci!.
+CLIENTE 281473475211552: salve vorrei ordinare una torta!.
+CUOCO: inizio a produrre la torta numero 6.
+CUOCO: Commesso! la torta numero 6 è pronta!
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 6.
+COMMESSO: salve prenderò il suo ordine!.
+COMMESSO: procedo a vendere la torta.
+CUOCO: inizio a produrre la torta numero 7.
+CUOCO: Commesso! la torta numero 7 è pronta!
 CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 7.
 COMMESSO: la sua torta è pronta!.
 COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473139470624: arrivederci!.
-COMMESSO: aspetto che qualcuno chieda una torta.
+CLIENTE 281473617883424: arrivederci!.
+CLIENTE 281473617883424: salve vorrei ordinare una torta!.
 CUOCO: inizio a produrre la torta numero 7.
 CUOCO: Commesso! la torta numero 7 è pronta!
-CLIENTE 281473139470624: salve vorrei ordinare una torta!.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 7.
 COMMESSO: salve prenderò il suo ordine!.
 COMMESSO: procedo a vendere la torta.
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 7.
+CUOCO: inizio a produrre la torta numero 8.
+CUOCO: Commesso! la torta numero 8 è pronta!
 COMMESSO: la sua torta è pronta!.
 COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473122562336: arrivederci!.
-CUOCO: inizio a produrre la torta numero 7.
-CUOCO: Commesso! la torta numero 7 è pronta!
+CLIENTE 281473626337568: arrivederci!.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 7.
 COMMESSO: aspetto che qualcuno chieda una torta.
-CLIENTE 281473122562336: salve vorrei ordinare una torta!.
+CUOCO: inizio a produrre la torta numero 8.
+CUOCO: Commesso! la torta numero 8 è pronta!
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 8.
+CLIENTE 281473626337568: salve vorrei ordinare una torta!.
 COMMESSO: salve prenderò il suo ordine!.
 COMMESSO: procedo a vendere la torta.
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 7.
+CUOCO: inizio a produrre la torta numero 9.
+CUOCO: Commesso! la torta numero 9 è pronta!
 COMMESSO: la sua torta è pronta!.
 COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473147924768: arrivederci!.
+CLIENTE 281473609429280: arrivederci!.
+CLIENTE 281473609429280: salve vorrei ordinare una torta!.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 8.
+COMMESSO: salve prenderò il suo ordine!.
+COMMESSO: procedo a vendere la torta.
+CUOCO: inizio a produrre la torta numero 9.
+CUOCO: Commesso! la torta numero 9 è pronta!
+COMMESSO: la sua torta è pronta!.
+COMMESSO: cuoco produca altre torte!.
+CLIENTE 281473600975136: arrivederci!.
+COMMESSO: aspetto che qualcuno chieda una torta.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 8.
+CLIENTE 281473600975136: salve vorrei ordinare una torta!.
+COMMESSO: salve prenderò il suo ordine!.
+COMMESSO: procedo a vendere la torta.
+CUOCO: inizio a produrre la torta numero 9.
+CUOCO: Commesso! la torta numero 9 è pronta!
+COMMESSO: la sua torta è pronta!.
+COMMESSO: cuoco produca altre torte!.
+CLIENTE 281473475211552: arrivederci!.
+COMMESSO: aspetto che qualcuno chieda una torta.
+CLIENTE 281473475211552: salve vorrei ordinare una torta!.
+COMMESSO: salve prenderò il suo ordine!.
+COMMESSO: procedo a vendere la torta.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 8.
+CUOCO: inizio a produrre la torta numero 9.
+CUOCO: Commesso! la torta numero 9 è pronta!
+COMMESSO: la sua torta è pronta!.
+COMMESSO: cuoco produca altre torte!.
+CLIENTE 281473617883424: arrivederci!.
+CLIENTE 281473617883424: salve vorrei ordinare una torta!.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 8.
+COMMESSO: salve prenderò il suo ordine!.
+COMMESSO: procedo a vendere la torta.
+COMMESSO: la sua torta è pronta!.
+COMMESSO: cuoco produca altre torte!.
+CLIENTE 281473626337568: arrivederci!.
+CUOCO: inizio a produrre la torta numero 8.
+CUOCO: Commesso! la torta numero 8 è pronta!
+COMMESSO: aspetto che qualcuno chieda una torta.
+CLIENTE 281473626337568: salve vorrei ordinare una torta!.
+COMMESSO: salve prenderò il suo ordine!.
+COMMESSO: procedo a vendere la torta.
+COMMESSO: la sua torta è pronta!.
+COMMESSO: cuoco produca altre torte!.
+CLIENTE 281473609429280: arrivederci!.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 7.
+COMMESSO: aspetto che qualcuno chieda una torta.
+CUOCO: inizio a produrre la torta numero 8.
+CUOCO: Commesso! la torta numero 8 è pronta!
+CLIENTE 281473609429280: salve vorrei ordinare una torta!.
+COMMESSO: salve prenderò il suo ordine!.
+COMMESSO: procedo a vendere la torta.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 8.
+COMMESSO: la sua torta è pronta!.
+COMMESSO: cuoco produca altre torte!.
+CLIENTE 281473600975136: arrivederci!.
+CLIENTE 281473600975136: salve vorrei ordinare una torta!.
+COMMESSO: salve prenderò il suo ordine!.
+COMMESSO: procedo a vendere la torta.
+COMMESSO: la sua torta è pronta!.
+COMMESSO: cuoco produca altre torte!.
+CLIENTE 281473475211552: arrivederci!.
 CUOCO: inizio a produrre la torta numero 7.
 CUOCO: Commesso! la torta numero 7 è pronta!
 COMMESSO: aspetto che qualcuno chieda una torta.
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 7.
-CLIENTE 281473147924768: salve vorrei ordinare una torta!.
+CLIENTE 281473475211552: salve vorrei ordinare una torta!.
 COMMESSO: salve prenderò il suo ordine!.
 COMMESSO: procedo a vendere la torta.
+COMMESSO: la sua torta è pronta!.
+COMMESSO: cuoco produca altre torte!.
+CLIENTE 281473617883424: arrivederci!.
+CLIENTE 281473617883424: salve vorrei ordinare una torta!.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 6.
+CUOCO: inizio a produrre la torta numero 7.
+CUOCO: Commesso! la torta numero 7 è pronta!
+COMMESSO: salve prenderò il suo ordine!.
+COMMESSO: procedo a vendere la torta.
+COMMESSO: la sua torta è pronta!.
+COMMESSO: cuoco produca altre torte!.
+CLIENTE 281473626337568: arrivederci!.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 6.
+COMMESSO: aspetto che qualcuno chieda una torta.
+CUOCO: inizio a produrre la torta numero 7.
+CUOCO: Commesso! la torta numero 7 è pronta!
+CLIENTE 281473626337568: salve vorrei ordinare una torta!.
+COMMESSO: salve prenderò il suo ordine!.
+COMMESSO: procedo a vendere la torta.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 7.
 CUOCO: inizio a produrre la torta numero 8.
 CUOCO: Commesso! la torta numero 8 è pronta!
 CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 8.
@@ -739,95 +614,221 @@ CUOCO: inizio a produrre la torta numero 9.
 CUOCO: Commesso! la torta numero 9 è pronta!
 COMMESSO: la sua torta è pronta!.
 COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473156378912: arrivederci!.
-CLIENTE 281473156378912: salve vorrei ordinare una torta!.
+CLIENTE 281473609429280: arrivederci!.
+COMMESSO: aspetto che qualcuno chieda una torta.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 8.
+CUOCO: inizio a produrre la torta numero 9.
+CUOCO: Commesso! la torta numero 9 è pronta!
+CLIENTE 281473609429280: salve vorrei ordinare una torta!.
+COMMESSO: salve prenderò il suo ordine!.
+COMMESSO: procedo a vendere la torta.
+COMMESSO: la sua torta è pronta!.
+COMMESSO: cuoco produca altre torte!.
+CLIENTE 281473600975136: arrivederci!.
+COMMESSO: aspetto che qualcuno chieda una torta.
+CLIENTE 281473600975136: salve vorrei ordinare una torta!.
+COMMESSO: salve prenderò il suo ordine!.
+COMMESSO: procedo a vendere la torta.
+COMMESSO: la sua torta è pronta!.
+COMMESSO: cuoco produca altre torte!.
+CLIENTE 281473475211552: arrivederci!.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 7.
+CUOCO: inizio a produrre la torta numero 8.
+CUOCO: Commesso! la torta numero 8 è pronta!
+COMMESSO: aspetto che qualcuno chieda una torta.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 8.
+CLIENTE 281473475211552: salve vorrei ordinare una torta!.
+COMMESSO: salve prenderò il suo ordine!.
+COMMESSO: procedo a vendere la torta.
+CUOCO: inizio a produrre la torta numero 9.
+CUOCO: Commesso! la torta numero 9 è pronta!
+COMMESSO: la sua torta è pronta!.
+COMMESSO: cuoco produca altre torte!.
+CLIENTE 281473617883424: arrivederci!.
+CLIENTE 281473617883424: salve vorrei ordinare una torta!.
 CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 8.
 COMMESSO: salve prenderò il suo ordine!.
 COMMESSO: procedo a vendere la torta.
 CUOCO: inizio a produrre la torta numero 9.
 CUOCO: Commesso! la torta numero 9 è pronta!
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 9.
-CUOCO: inizio a produrre la torta numero 10.
-CUOCO: Commesso! la torta numero 10 è pronta!
-CUOCO: aspetto che ci siano torte da produrre.
 COMMESSO: la sua torta è pronta!.
 COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473131016480: arrivederci!.
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 9.
-CLIENTE 281473131016480: salve vorrei ordinare una torta!.
-CUOCO: inizio a produrre la torta numero 10.
-CUOCO: Commesso! la torta numero 10 è pronta!
+CLIENTE 281473626337568: arrivederci!.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 8.
+CLIENTE 281473626337568: salve vorrei ordinare una torta!.
+CUOCO: inizio a produrre la torta numero 9.
+CUOCO: Commesso! la torta numero 9 è pronta!
 COMMESSO: salve prenderò il suo ordine!.
 COMMESSO: procedo a vendere la torta.
-CUOCO: aspetto che ci siano torte da produrre.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 9.
 COMMESSO: la sua torta è pronta!.
 COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473139470624: arrivederci!.
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 9.
-CUOCO: inizio a produrre la torta numero 10.
-CUOCO: Commesso! la torta numero 10 è pronta!
-CUOCO: aspetto che ci siano torte da produrre.
-CLIENTE 281473139470624: salve vorrei ordinare una torta!.
+CLIENTE 281473609429280: arrivederci!.
+CLIENTE 281473609429280: salve vorrei ordinare una torta!.
+CUOCO: inizio a produrre la torta numero 9.
+CUOCO: Commesso! la torta numero 9 è pronta!
 COMMESSO: salve prenderò il suo ordine!.
 COMMESSO: procedo a vendere la torta.
-COMMESSO: la sua torta è pronta!.
-COMMESSO: cuoco produca altre torte!.
 CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 9.
-CLIENTE 281473122562336: arrivederci!.
 CUOCO: inizio a produrre la torta numero 10.
 CUOCO: Commesso! la torta numero 10 è pronta!
+COMMESSO: la sua torta è pronta!.
+COMMESSO: cuoco produca altre torte!.
+CLIENTE 281473600975136: arrivederci!.
 COMMESSO: aspetto che qualcuno chieda una torta.
-CLIENTE 281473122562336: salve vorrei ordinare una torta!.
+CLIENTE 281473600975136: salve vorrei ordinare una torta!.
 COMMESSO: salve prenderò il suo ordine!.
 COMMESSO: procedo a vendere la torta.
-COMMESSO: la sua torta è pronta!.
-COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473147924768: arrivederci!.
 CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 9.
-CLIENTE 281473147924768: salve vorrei ordinare una torta!.
-COMMESSO: salve prenderò il suo ordine!.
-COMMESSO: procedo a vendere la torta.
 CUOCO: inizio a produrre la torta numero 10.
 CUOCO: Commesso! la torta numero 10 è pronta!
-CUOCO: aspetto che ci siano torte da produrre.
 COMMESSO: la sua torta è pronta!.
 COMMESSO: cuoco produca altre torte!.
+CLIENTE 281473475211552: arrivederci!.
+CLIENTE 281473475211552: salve vorrei ordinare una torta!.
 CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 9.
-CLIENTE 281473156378912: arrivederci!.
-CUOCO: inizio a produrre la torta numero 10.
-CUOCO: Commesso! la torta numero 10 è pronta!
-COMMESSO: aspetto che qualcuno chieda una torta.
-CLIENTE 281473156378912: salve vorrei ordinare una torta!.
 COMMESSO: salve prenderò il suo ordine!.
 COMMESSO: procedo a vendere la torta.
 COMMESSO: la sua torta è pronta!.
 COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473131016480: arrivederci!.
+CLIENTE 281473617883424: arrivederci!.
+CLIENTE 281473617883424: salve vorrei ordinare una torta!.
+CUOCO: inizio a produrre la torta numero 9.
+CUOCO: Commesso! la torta numero 9 è pronta!
 CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 9.
-COMMESSO: aspetto che qualcuno chieda una torta.
-CLIENTE 281473131016480: salve vorrei ordinare una torta!.
 COMMESSO: salve prenderò il suo ordine!.
 COMMESSO: procedo a vendere la torta.
 CUOCO: inizio a produrre la torta numero 10.
 CUOCO: Commesso! la torta numero 10 è pronta!
 COMMESSO: la sua torta è pronta!.
 COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473139470624: arrivederci!.
+CLIENTE 281473626337568: arrivederci!.
 COMMESSO: aspetto che qualcuno chieda una torta.
-CLIENTE 281473139470624: salve vorrei ordinare una torta!.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 9.
+CLIENTE 281473626337568: salve vorrei ordinare una torta!.
 COMMESSO: salve prenderò il suo ordine!.
 COMMESSO: procedo a vendere la torta.
-CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 9.
+CUOCO: inizio a produrre la torta numero 10.
+CUOCO: Commesso! la torta numero 10 è pronta!
 COMMESSO: la sua torta è pronta!.
 COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473122562336: arrivederci!.
+CLIENTE 281473609429280: arrivederci!.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 9.
+COMMESSO: aspetto che qualcuno chieda una torta.
+CLIENTE 281473609429280: salve vorrei ordinare una torta!.
+COMMESSO: salve prenderò il suo ordine!.
+COMMESSO: procedo a vendere la torta.
+COMMESSO: la sua torta è pronta!.
+COMMESSO: cuoco produca altre torte!.
+CLIENTE 281473600975136: arrivederci!.
 CUOCO: inizio a produrre la torta numero 9.
 CUOCO: Commesso! la torta numero 9 è pronta!
 COMMESSO: aspetto che qualcuno chieda una torta.
-CLIENTE 281473122562336: salve vorrei ordinare una torta!.
+CLIENTE 281473600975136: salve vorrei ordinare una torta!.
 COMMESSO: salve prenderò il suo ordine!.
 COMMESSO: procedo a vendere la torta.
 COMMESSO: la sua torta è pronta!.
 COMMESSO: cuoco produca altre torte!.
-CLIENTE 281473147924768: arrivederci!.
+CLIENTE 281473475211552: arrivederci!.
 CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 8.
+CUOCO: inizio a produrre la torta numero 9.
+CUOCO: Commesso! la torta numero 9 è pronta!
+COMMESSO: aspetto che qualcuno chieda una torta.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 9.
+CLIENTE 281473475211552: salve vorrei ordinare una torta!.
+COMMESSO: salve prenderò il suo ordine!.
+COMMESSO: procedo a vendere la torta.
+CUOCO: inizio a produrre la torta numero 10.
+CUOCO: Commesso! la torta numero 10 è pronta!
+CUOCO: aspetto che ci siano torte da produrre.
+COMMESSO: la sua torta è pronta!.
+COMMESSO: cuoco produca altre torte!.
+CLIENTE 281473617883424: arrivederci!.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 9.
+CUOCO: inizio a produrre la torta numero 10.
+CUOCO: Commesso! la torta numero 10 è pronta!
+CUOCO: aspetto che ci siano torte da produrre.
+CLIENTE 281473617883424: salve vorrei ordinare una torta!.
+COMMESSO: salve prenderò il suo ordine!.
+COMMESSO: procedo a vendere la torta.
+COMMESSO: la sua torta è pronta!.
+COMMESSO: cuoco produca altre torte!.
+CLIENTE 281473626337568: arrivederci!.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 9.
+CLIENTE 281473626337568: salve vorrei ordinare una torta!.
+CUOCO: inizio a produrre la torta numero 10.
+CUOCO: Commesso! la torta numero 10 è pronta!
+COMMESSO: salve prenderò il suo ordine!.
+COMMESSO: procedo a vendere la torta.
+CUOCO: aspetto che ci siano torte da produrre.
+COMMESSO: la sua torta è pronta!.
+COMMESSO: cuoco produca altre torte!.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 9.
+CLIENTE 281473609429280: arrivederci!.
+CLIENTE 281473609429280: salve vorrei ordinare una torta!.
+CUOCO: inizio a produrre la torta numero 10.
+CUOCO: Commesso! la torta numero 10 è pronta!
+COMMESSO: salve prenderò il suo ordine!.
+COMMESSO: procedo a vendere la torta.
+CUOCO: aspetto che ci siano torte da produrre.
+COMMESSO: la sua torta è pronta!.
+COMMESSO: cuoco produca altre torte!.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 9.
+CLIENTE 281473600975136: arrivederci!.
+CUOCO: inizio a produrre la torta numero 10.
+CUOCO: Commesso! la torta numero 10 è pronta!
+COMMESSO: aspetto che qualcuno chieda una torta.
+CLIENTE 281473600975136: salve vorrei ordinare una torta!.
+COMMESSO: salve prenderò il suo ordine!.
+COMMESSO: procedo a vendere la torta.
+COMMESSO: la sua torta è pronta!.
+COMMESSO: cuoco produca altre torte!.
+CLIENTE 281473475211552: arrivederci!.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 9.
+CLIENTE 281473475211552: salve vorrei ordinare una torta!.
+COMMESSO: salve prenderò il suo ordine!.
+COMMESSO: procedo a vendere la torta.
+CUOCO: inizio a produrre la torta numero 10.
+CUOCO: Commesso! la torta numero 10 è pronta!
+CUOCO: aspetto che ci siano torte da produrre.
+COMMESSO: la sua torta è pronta!.
+COMMESSO: cuoco produca altre torte!.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 9.
+CLIENTE 281473617883424: arrivederci!.
+CUOCO: inizio a produrre la torta numero 10.
+CUOCO: Commesso! la torta numero 10 è pronta!
+CLIENTE 281473617883424: salve vorrei ordinare una torta!.
+COMMESSO: salve prenderò il suo ordine!.
+COMMESSO: procedo a vendere la torta.
+COMMESSO: la sua torta è pronta!.
+COMMESSO: cuoco produca altre torte!.
+CLIENTE 281473626337568: arrivederci!.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 9.
+COMMESSO: aspetto che qualcuno chieda una torta.
+CLIENTE 281473626337568: salve vorrei ordinare una torta!.
+COMMESSO: salve prenderò il suo ordine!.
+COMMESSO: procedo a vendere la torta.
+CUOCO: inizio a produrre la torta numero 10.
+CUOCO: Commesso! la torta numero 10 è pronta!
+COMMESSO: la sua torta è pronta!.
+COMMESSO: cuoco produca altre torte!.
+CLIENTE 281473609429280: arrivederci!.
+COMMESSO: aspetto che qualcuno chieda una torta.
+CLIENTE 281473609429280: salve vorrei ordinare una torta!.
+COMMESSO: salve prenderò il suo ordine!.
+COMMESSO: procedo a vendere la torta.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 9.
+COMMESSO: la sua torta è pronta!.
+COMMESSO: cuoco produca altre torte!.
+CLIENTE 281473600975136: arrivederci!.
+COMMESSO: aspetto che qualcuno chieda una torta.
+CUOCO: inizio a produrre la torta numero 9.
+CUOCO: Commesso! la torta numero 9 è pronta!
+CLIENTE 281473600975136: salve vorrei ordinare una torta!.
+COMMESSO: salve prenderò il suo ordine!.
+COMMESSO: procedo a vendere la torta.
+COMMESSO: la sua torta è pronta!.
+COMMESSO: cuoco produca altre torte!.
+CLIENTE 281473475211552: arrivederci!.
+CUOCO: inizio a produrre un altra torta, attualmente ce ne sono 8.
+COMMESSO: aspetto che qualcuno chieda una torta.
