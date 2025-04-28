@@ -1,13 +1,10 @@
-#include <stdio.h>
 #include <stdlib.h>
-#include <pthread.h>
-#include <semaphore.h>
-#include <stdint.h>
+#include <stdio.h>
 #include <unistd.h>
-#include <sys/wait.h>
+#include <pthread.h>
 
-#define N 8
-#define NCLIENTI 20
+#define N 5
+#define NCLIENTI 10
 
 struct officina_t {
     pthread_mutex_t mutex;
@@ -49,7 +46,7 @@ void cliente_arrivo(struct officina_t *officina, int r) {
     // Attende se l'ufficio è occupato
     while (officina->dentro_ufficio) {
         officina->n_clienti_attesa++;
-        printf("%ld > Aspetto fuori per il servizio %d\n", (long)pthread_self(), r);
+        printf("CLIENTE %ld: aspetto fuori l'ufficio %d.\n", pthread_self(), r);
         pthread_cond_wait(&officina->attesa_ufficio, &officina->mutex);
         officina->n_clienti_attesa--;
     }
@@ -57,16 +54,16 @@ void cliente_arrivo(struct officina_t *officina, int r) {
     officina->dentro_ufficio = 1; // Occupa l'ufficio
     officina->servizio_richiesto = r; // Imposta il servizio richiesto
 
-    printf("%ld > Chiedo il servizio %d\n", (long)pthread_self(), r);
+    printf("CLIENTE %ld: chiedo il servizio %d\n", pthread_self(), r);
     pthread_cond_signal(&officina->operaio[r]); // Notifica l'operaio specifico
     pthread_mutex_unlock(&officina->mutex);
 }
 
 void cliente_attesafineservizio(struct officina_t *officina) {
     pthread_mutex_lock(&officina->mutex);
-    printf("%ld > in attesa della fine del servizio\n", (long)pthread_self());
+    printf("CLIENTE %ld: aspetto la fine del servizio\n", pthread_self());
     pthread_cond_wait(&officina->attesa_riparazione, &officina->mutex);
-    printf("%ld > Servizio finito... Vado a casa\n", (long)pthread_self());
+    printf("CLIENTE %ld: vado a casa\n", pthread_self());
     
     officina->dentro_ufficio = 0; // Libera l'ufficio
 
@@ -81,17 +78,17 @@ void operaio_attesacliente(struct officina_t *officina, int r) {
     
     // Attende finché non arriva un cliente che richiede il suo servizio
     while (officina->servizio_richiesto != r) {
-        printf("Operaio %d in attesa di un cliente\n", r);
+        printf("Operaio %d: attendo un cliente\n", r);
         pthread_cond_wait(&officina->operaio[r], &officina->mutex);
     }
     
-    printf("L'operaio %d > Qualcuno ha chiesto la riparazione %d che svolgo solo io\n", r, r);
+    printf("Operaio %d: chiesto il mio tipo di riparazione.\n", r);
     pthread_mutex_unlock(&officina->mutex);
 }
 
 void operaio_fineservizio(struct officina_t *officina) {
     pthread_mutex_lock(&officina->mutex);
-    printf("L'operaio %ld > Ho terminato il servizio richiesto, avviso il cliente\n", (long)pthread_self());
+    printf("Operaio %ld: servizio terminato.\n", pthread_self());
     officina->servizio_richiesto = -1; // Resetta il servizio richiesto
     pthread_cond_signal(&officina->attesa_riparazione);
     pthread_mutex_unlock(&officina->mutex);
@@ -101,15 +98,17 @@ void *cliente(void *arg) {
     int r = rand() % N;
     cliente_arrivo(&o, r);
     cliente_attesafineservizio(&o);
+    return 0;
 }
 
 void *operaio(void *arg) {
-    int r = (int)(intptr_t)arg;
+    int r = (int)arg;
     for(;;) {
         operaio_attesacliente(&o, r);
         sleep(1); // Simula il tempo per eseguire il servizio
         operaio_fineservizio(&o);
     }
+    return 0;
 }
 
 int main() {
@@ -124,7 +123,7 @@ int main() {
 
     // Creazione operai (uno per ogni tipo di servizio)
     for (int i = 0; i < N; i++) {
-        pthread_create(&p, &a, operaio, (void*)(intptr_t)i);
+        pthread_create(&p, &a, operaio, (void*)i);
     }
 
     // Creazione clienti
@@ -133,7 +132,7 @@ int main() {
     }
 
     pthread_attr_destroy(&a);
-    sleep(10);
+    sleep(50);
     printf("Chiusura!\n");
 
     return 0;

@@ -1,85 +1,75 @@
-Operaio 1 in attesa di un cliente
-Operaio 2 in attesa di un cliente
-Operaio 4 in attesa di un cliente
-Operaio 3 in attesa di un cliente
-Operaio 7 in attesa di un cliente
-Operaio 6 in attesa di un cliente
-281472846852384 > Chiedo il servizio 4
-L'operaio 4 > Qualcuno ha chiesto la riparazione 4 che svolgo solo io
-281472838398240 > Aspetto fuori per il servizio 5
-281472846852384 > in attesa della fine del servizio
-281472736751904 > Aspetto fuori per il servizio 7
-281472728297760 > Aspetto fuori per il servizio 5
-281472719843616 > Aspetto fuori per il servizio 4
-281472711389472 > Aspetto fuori per il servizio 1
-281472702935328 > Aspetto fuori per il servizio 5
-281472694481184 > Aspetto fuori per il servizio 4
-281472686027040 > Aspetto fuori per il servizio 2
-281472677572896 > Aspetto fuori per il servizio 0
-281472669118752 > Aspetto fuori per il servizio 5
-281472660664608 > Aspetto fuori per il servizio 0
-281472643756320 > Aspetto fuori per il servizio 2
-Operaio 0 in attesa di un cliente
-281472652210464 > Aspetto fuori per il servizio 7
-281472635302176 > Aspetto fuori per il servizio 1
-281472745206048 > Aspetto fuori per il servizio 3
-281472753660192 > Aspetto fuori per il servizio 0
-281472855306528 > Aspetto fuori per il servizio 5
-Operaio 5 in attesa di un cliente
-281472626848032 > Aspetto fuori per il servizio 1
-281472618393888 > Aspetto fuori per il servizio 3
-L'operaio 281472880668960 > Ho terminato il servizio richiesto, avviso il cliente
-Operaio 4 in attesa di un cliente
-281472846852384 > Servizio finito... Vado a casa
-281472838398240 > Chiedo il servizio 5
-281472838398240 > in attesa della fine del servizio
-L'operaio 5 > Qualcuno ha chiesto la riparazione 5 che svolgo solo io
-L'operaio 281472762114336 > Ho terminato il servizio richiesto, avviso il cliente
-Operaio 5 in attesa di un cliente
-281472838398240 > Servizio finito... Vado a casa
-281472736751904 > Chiedo il servizio 7
-281472736751904 > in attesa della fine del servizio
-L'operaio 7 > Qualcuno ha chiesto la riparazione 7 che svolgo solo io
-L'operaio 281472863760672 > Ho terminato il servizio richiesto, avviso il cliente
-Operaio 7 in attesa di un cliente
-281472736751904 > Servizio finito... Vado a casa
-281472728297760 > Chiedo il servizio 5
-281472728297760 > in attesa della fine del servizio
-L'operaio 5 > Qualcuno ha chiesto la riparazione 5 che svolgo solo io
-L'operaio 281472762114336 > Ho terminato il servizio richiesto, avviso il cliente
-Operaio 5 in attesa di un cliente
-281472728297760 > Servizio finito... Vado a casa
-281472719843616 > Chiedo il servizio 4
-281472719843616 > in attesa della fine del servizio
-L'operaio 4 > Qualcuno ha chiesto la riparazione 4 che svolgo solo io
-L'operaio 281472880668960 > Ho terminato il servizio richiesto, avviso il cliente
-Operaio 4 in attesa di un cliente
-281472719843616 > Servizio finito... Vado a casa
-281472711389472 > Chiedo il servizio 1
-281472711389472 > in attesa della fine del servizio
-L'operaio 1 > Qualcuno ha chiesto la riparazione 1 che svolgo solo io
-L'operaio 281472906031392 > Ho terminato il servizio richiesto, avviso il cliente
-Operaio 1 in attesa di un cliente
-281472711389472 > Servizio finito... Vado a casa
-281472702935328 > Chiedo il servizio 5
-281472702935328 > in attesa della fine del servizio
-L'operaio 5 > Qualcuno ha chiesto la riparazione 5 che svolgo solo io
-L'operaio 281472762114336 > Ho terminato il servizio richiesto, avviso il cliente
-Operaio 5 in attesa di un cliente
-281472702935328 > Servizio finito... Vado a casa
-281472694481184 > Chiedo il servizio 4
-281472694481184 > in attesa della fine del servizio
-L'operaio 4 > Qualcuno ha chiesto la riparazione 4 che svolgo solo io
-L'operaio 281472880668960 > Ho terminato il servizio richiesto, avviso il cliente
-Operaio 4 in attesa di un cliente
-281472694481184 > Servizio finito... Vado a casa
-281472686027040 > Chiedo il servizio 2
-281472686027040 > in attesa della fine del servizio
-L'operaio 2 > Qualcuno ha chiesto la riparazione 2 che svolgo solo io
-L'operaio 281472897577248 > Ho terminato il servizio richiesto, avviso il cliente
-Operaio 2 in attesa di un cliente
-281472686027040 > Servizio finito... Vado a casa
-281472677572896 > Chiedo il servizio 0
-281472677572896 > in attesa della fine del servizio
-L'operaio 0 > Qualcuno ha chiesto la riparazione 0 che svolgo solo io
+Operaio 0: attendo un cliente
+Operaio 3: attendo un cliente
+Operaio 2: attendo un cliente
+Operaio 1: attendo un cliente
+CLIENTE 281473516695840: chiedo il servizio 1
+CLIENTE 281473516695840: aspetto la fine del servizio
+Operaio 1: chiesto il mio tipo di riparazione.
+CLIENTE 281473499787552: aspetto fuori l'ufficio 4.
+CLIENTE 281473491333408: aspetto fuori l'ufficio 0.
+CLIENTE 281473525149984: aspetto fuori l'ufficio 0.
+CLIENTE 281473542058272: aspetto fuori l'ufficio 4.
+CLIENTE 281473550512416: aspetto fuori l'ufficio 4.
+CLIENTE 281473558966560: aspetto fuori l'ufficio 3.
+Operaio 4: attendo un cliente
+CLIENTE 281473508241696: aspetto fuori l'ufficio 0.
+CLIENTE 281473533604128: aspetto fuori l'ufficio 4.
+CLIENTE 281473567420704: aspetto fuori l'ufficio 0.
+Operaio 281473669132576: servizio terminato.
+Operaio 1: attendo un cliente
+CLIENTE 281473516695840: vado a casa
+CLIENTE 281473499787552: chiedo il servizio 4
+CLIENTE 281473499787552: aspetto la fine del servizio
+Operaio 4: chiesto il mio tipo di riparazione.
+Operaio 281473643770144: servizio terminato.
+Operaio 4: attendo un cliente
+CLIENTE 281473499787552: vado a casa
+CLIENTE 281473491333408: chiedo il servizio 0
+CLIENTE 281473491333408: aspetto la fine del servizio
+Operaio 0: chiesto il mio tipo di riparazione.
+Operaio 281473677586720: servizio terminato.
+Operaio 0: attendo un cliente
+CLIENTE 281473491333408: vado a casa
+CLIENTE 281473525149984: chiedo il servizio 0
+CLIENTE 281473525149984: aspetto la fine del servizio
+Operaio 0: chiesto il mio tipo di riparazione.
+Operaio 281473677586720: servizio terminato.
+Operaio 0: attendo un cliente
+CLIENTE 281473525149984: vado a casa
+CLIENTE 281473542058272: chiedo il servizio 4
+CLIENTE 281473542058272: aspetto la fine del servizio
+Operaio 4: chiesto il mio tipo di riparazione.
+Operaio 281473643770144: servizio terminato.
+Operaio 4: attendo un cliente
+CLIENTE 281473542058272: vado a casa
+CLIENTE 281473550512416: chiedo il servizio 4
+CLIENTE 281473550512416: aspetto la fine del servizio
+Operaio 4: chiesto il mio tipo di riparazione.
+Operaio 281473643770144: servizio terminato.
+Operaio 4: attendo un cliente
+CLIENTE 281473550512416: vado a casa
+CLIENTE 281473558966560: chiedo il servizio 3
+CLIENTE 281473558966560: aspetto la fine del servizio
+Operaio 3: chiesto il mio tipo di riparazione.
+Operaio 281473652224288: servizio terminato.
+Operaio 3: attendo un cliente
+CLIENTE 281473558966560: vado a casa
+CLIENTE 281473508241696: chiedo il servizio 0
+CLIENTE 281473508241696: aspetto la fine del servizio
+Operaio 0: chiesto il mio tipo di riparazione.
+Operaio 281473677586720: servizio terminato.
+Operaio 0: attendo un cliente
+CLIENTE 281473508241696: vado a casa
+CLIENTE 281473533604128: chiedo il servizio 4
+CLIENTE 281473533604128: aspetto la fine del servizio
+Operaio 4: chiesto il mio tipo di riparazione.
+Operaio 281473643770144: servizio terminato.
+Operaio 4: attendo un cliente
+CLIENTE 281473533604128: vado a casa
+CLIENTE 281473567420704: chiedo il servizio 0
+CLIENTE 281473567420704: aspetto la fine del servizio
+Operaio 0: chiesto il mio tipo di riparazione.
+Operaio 281473677586720: servizio terminato.
+Operaio 0: attendo un cliente
+CLIENTE 281473567420704: vado a casa
 Chiusura!
