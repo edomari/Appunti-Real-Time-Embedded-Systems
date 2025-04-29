@@ -52,6 +52,6 @@
 
 ### Esercizi real-time scheduling
 
-- [***Questo task-set è schedulabile con Rate Monotonic?***](/exercices/scheduling/scheduling.md#questo-task-set-è-schedulabile-con-rate-monotonic?)
-- [***Questo task-set è schedulabile con Earliest Deadline First?***](/exercices/scheduling/scheduling.md#questo-task-set-è-schedulabile-con-edf?)
-- [***Questo task-set è schedulabile con Deadline Monotonic?***](/exercices/scheduling/scheduling.md#questo-task-set-è-schedulabile-con-Deadline-Monotonic?)
+- [***Questo task-set è schedulabile con Rate Monotonic?***](/exercices/scheduling/scheduling.md#questo-task-set-%C3%A8-schedulabile-con-rate-monotonic)
+- [***Questo task-set è schedulabile con Earliest Deadline First?***](/exercices/scheduling/scheduling.md#questo-task-set-%C3%A8-schedulabile-con-edf)
+- [***Questo task-set è schedulabile con Deadline Monotonic?***](/exercices/scheduling/scheduling.md#questo-task-set-%C3%A8-schedulabile-con-deadline-monotonic)
