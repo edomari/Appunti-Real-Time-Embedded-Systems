@@ -154,7 +154,7 @@ $U = \frac{2}{6}+\frac{2}{8}+\frac{4}{12}=\frac{8 + 6 + 8}{24}=\frac{\not 22^{11
 
 $$L^*= \frac{(T_1-D_1)\frac{C_1}{T_1}+(T_2-D_2)\frac{C_2}{T_2}+(T_3-D_3)\frac{C_3}{T_3}}{1-U} =\\ 
 \frac{(6-5)\frac{2}{6}+(8-4)\frac{2}{4}+(12-8)\frac{4}{12}}{1-\frac{11}{12}}\\ 
-\frac{\frac{\not2^1}{\not6^3}+\not4\cdot\frac{2}{\not4}+ 4\cdot\frac{\not4^1}{\not12^3}}{\frac{1}{12}} = \frac{\frac{1}{3}+2+\frac{4}{3}}{\frac{1}{12}} = \frac{\frac{2+6+8}{6}}{\frac{1}{12}} = \frac{16}{\not 6^1} \cdot \not{12}^2 = 32
+=\frac{\frac{\not2^1}{\not6^3}+\not4\cdot\frac{2}{\not4}+ 4\cdot\frac{\not4^1}{\not12^3}}{\frac{1}{12}} = \frac{\frac{1}{3}+2+\frac{4}{3}}{\frac{1}{12}} = \frac{\frac{2+6+8}{6}}{\frac{1}{12}} = \frac{16}{\not 6^1} \cdot \not{12}^2 = 32
 $$
 
 **Deadlines $D_i + kT_i$** $\rightarrow (4,5,8,11,12,17,20,23)$
@@ -165,18 +165,25 @@ $$G(L)= \sum_{i=1}^n\lfloor\frac{L + T_i - D_i}{T_i}\rfloor C_i$$
 
 $L = 4 \rightarrow \lfloor\frac{4 + 6 - 5}{6}\rfloor 2 + \lfloor\frac{4 + 8 - 4}{8}\rfloor 2 +\lfloor\frac{4 + 12 - 8}{12}\rfloor 4 = 0\cdot 2 + 1 \cdot 2 + 0\cdot 4 = 2 \leq 32 
 $
+
 $L = 5 \rightarrow \lfloor\frac{5 + 6 - 5}{6}\rfloor 2 + \lfloor\frac{5 + 8 - 4}{8}\rfloor 2 +\lfloor\frac{5 + 12 - 8}{12}\rfloor 4 = 1\cdot 2 + 1\cdot 2 + 0\cdot 4 = 4 \leq 32 
 $
+
 $L = 8 \rightarrow \lfloor\frac{8 + 6 - 5}{6}\rfloor 2 + \lfloor\frac{8 + 8 - 4}{8}\rfloor 2 +\lfloor\frac{8 + 12 - 8}{12}\rfloor 4 = 1\cdot 2 + 1\cdot 2 + 1\cdot 4 = 8 \leq 32 
 $
+
 $L = 11 \rightarrow \lfloor\frac{11 + 6 - 5}{6}\rfloor 2 + \lfloor\frac{11 + 8 - 4}{8}\rfloor 2 +\lfloor\frac{11 + 12 - 8}{12}\rfloor 4 = 2\cdot 2 + 1\cdot 2 + 1\cdot 4 = 10 \leq 32 
 $
+
 $L = 12 \rightarrow \lfloor\frac{12 + 6 - 5}{6}\rfloor 2 + \lfloor\frac{12 + 8 - 4}{8}\rfloor 2 +\lfloor\frac{12 + 12 - 8}{12}\rfloor 4 = 2\cdot 2 + 2\cdot 2 + 1\cdot 4 = 12 \leq 32 
 $
+
 $L = 17 \rightarrow \lfloor\frac{17 + 6 - 5}{6}\rfloor 2 + \lfloor\frac{17 + 8 - 4}{8}\rfloor 2 +\lfloor\frac{17 + 12 - 8}{12}\rfloor 4 = 3\cdot 2 + 2\cdot 2 + 1\cdot 4 = 14 \leq 32 
 $
+
 $L = 20 \rightarrow \lfloor\frac{20 + 6 - 5}{6}\rfloor 2 + \lfloor\frac{20 + 8 - 4}{8}\rfloor 2 +\lfloor\frac{20 + 12 - 8}{12}\rfloor 4 = 3\cdot 2 + 3\cdot 2 + 2\cdot 4 = 20 \leq 32 
 $
+
 $L = 23 \rightarrow \lfloor\frac{23 + 6 - 5}{6}\rfloor 2 + \lfloor\frac{23 + 8 - 4}{8}\rfloor 2 +\lfloor\frac{23 + 12 - 8}{12}\rfloor 4 = 4\cdot 2 + 3\cdot 2 + 2\cdot 4 = 22 \leq 32 
 $
 
@@ -193,9 +200,11 @@ Il task-set è schedulabile con EDF!
 $R_2^{(0)} = C_2 + 0 = 2 \lt 4$
 
 $R_1^{(0)} = C_1 + \lceil\frac{C_1}{T_2}\rceil C_2 = 2 + \lceil \frac{2}{8}\rceil 2 = 2 + 1 \cdot 2 = 4 \lt 5$
+
 $R_1^{(1)} = 2 + \lceil\frac{4}{8}\rceil 2 = 2 + 1 \cdot 2 = 4 \lt 5$
 
 $R_3^{(0)} = C_3 + \lceil\frac{C_3}{T_1}\rceil C_1 + \lceil\frac{C_3}{T_2}\rceil C_2 = 4 + \lceil\frac{4}{6}\rceil 2 + \lceil\frac{4}{8}\rceil 2 = 4 + 1 \cdot 2 + 1 \cdot 2 = 8 \lt 12$
+
 $R_3^{(1)} = 8 + \lceil\frac{8}{6}\rceil 2 + \lceil\frac{8}{8}\rceil 2 = 4 + 2 \cdot 2 + 1 \cdot 2 = 10 \not\lt 8 \rightarrow \tau_3$ missa la deadline.
 
 ---
