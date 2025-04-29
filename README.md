@@ -49,3 +49,9 @@
 
 8. [**🌐 Handling hybrid task sets**](/8.%20Handling%20hybrid%20task%20sets.md#handling-hybrid-task-sets)  
    *Scheduling di task set misti (periodici + aperiodici)*
+
+### Esercizi real-time scheduling
+
+- [***Questo task-set è schedulabile con Rate Monotonic?***](/exercices/scheduling/scheduling.md#questo-task-set-è-schedulabile-con-rate-monotonic?)
+- [***Questo task-set è schedulabile con Earliest Deadline First?***](/exercices/scheduling/scheduling.md#questo-task-set-è-schedulabile-con-edf?)
+- [***Questo task-set è schedulabile con Deadline Monotonic?***](/exercices/scheduling/scheduling.md#questo-task-set-è-schedulabile-con-Deadline-Monotonic?)

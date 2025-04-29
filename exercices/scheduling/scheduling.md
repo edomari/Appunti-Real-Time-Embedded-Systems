@@ -1,6 +1,6 @@
 # Esercizi real-time scheduling
 
-***Questo task-set è schedulabile con Rate Monotonic?***
+#### Questo task-set è schedulabile con Rate Monotonic?
 
 |  | $C_i$ | $D_i = T_i$ |
 | --- | --- | --- |
@@ -127,7 +127,7 @@ Il task-set è schedulabile!
 
 ---
 
-***Questo task-set è schedulabile con EDF?***
+#### Questo task-set è schedulabile con EDF?
 |  | $C_i$ | $D_i = T_i$ |
 | --- | --- | --- |
 | $\tau_1$ | 1 | 4 |
@@ -190,6 +190,7 @@ $
 Il task-set è schedulabile con EDF!
 
 ---
+#### Questo task-set è schedulabile con Deadline Monotonic?
 
 |  | $C_i$ | $D_i$ | $T_i$ |
 | --- | --- | --- | --- |
