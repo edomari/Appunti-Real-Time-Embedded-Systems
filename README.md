@@ -55,3 +55,4 @@
 - [***Questo task-set è schedulabile con Rate Monotonic?***](/exercices/scheduling/scheduling.md#questo-task-set-%C3%A8-schedulabile-con-rate-monotonic)
 - [***Questo task-set è schedulabile con Earliest Deadline First?***](/exercices/scheduling/scheduling.md#questo-task-set-%C3%A8-schedulabile-con-edf)
 - [***Questo task-set è schedulabile con Deadline Monotonic?***](/exercices/scheduling/scheduling.md#questo-task-set-%C3%A8-schedulabile-con-deadline-monotonic)
+- [***Bloccaggio con Priority Inheritance e con Priority Ceiling***](/exercices/scheduling/scheduling.md#bloccaggio-con-priority-inheritance-e-con-priority-ceiling)
