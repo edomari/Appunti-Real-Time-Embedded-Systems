@@ -148,7 +148,7 @@ Il task-set è schedulabile con EDF!
 
 Calcolo $H$ e $L^*$:
 
-$H = lcm(6,8,12)=3\cdot2,2^3$,$2^2\cdot 3 = 3 \cdot 2^3 = 24$
+$H = lcm(6,8,12)=3\cdot2,2^3,2^2\cdot 3 = 3 \cdot 2^3 = 24$
 
 $U = \frac{2}{6}+\frac{2}{8}+\frac{4}{12}=\frac{8 + 6 + 8}{24}=\frac{\not 22^{11}}{\not 24^{12}} = \frac{11}{12}$
 
@@ -243,17 +243,13 @@ In PCP non si formano catene di bloccaggio. Ogni task subisce al più un bloccag
 
 In PIP, un task può essere bloccato da ogni risorsa utilizzata da task a priorità inferiore. Per ogni risorsa si considera al massimo un bloccaggio.
 
-- **$\tau_1$**: Bloccabile da $\tau_4$ su $R_1$, $\tau_3$ su $R_2$, $\tau_4$ su $R_3$, $\tau_3$ e $\tau_4$ su $R_5$
-$\rightarrow$ **B<sub>PIP</sub> =** $14 + 8 + 7 = 29$
+- **$\tau_1$**: Bloccabile da $\tau_4$ su $R_1$, $\tau_3$ su $R_2$, $\tau_4$ su $R_3$, $\tau_3$ e $\tau_4$ su $R_5$ $\rightarrow$ **B<sub>PIP</sub> =** $14 + 8 + 7 = 29$
 
-- **$\tau_2$**: Bloccabile da $\tau_4$ su $R_1$ (7), $\tau_3$ su $R_2$, $\tau_4$ e $\tau_3$ su $R_3$ (9), $\tau_3$ su $R_5$ (14)  
-$\rightarrow$ **B<sub>PIP</sub> =** $9 + 14 = 23$
+- **$\tau_2$**: Bloccabile da $\tau_4$ su $R_1$, $\tau_3$ su $R_2$, $\tau_4$ e $\tau_3$ su $R_3$, $\tau_3$ su $R_5$ $\rightarrow$ **B<sub>PIP</sub> =** $9 + 14 = 23$
 
-- **$\tau_3$**: Bloccabile da $\tau_4$ su $R_1$ (7), $\tau_4$ su $R_3$ (9) e $\tau_4$ su $R_5$ (11)  
-$\rightarrow$ **B<sub>PIP</sub> =** $\max{(7,9,11)}= 11$
+- **$\tau_3$**: Bloccabile da $\tau_4$ su $R_1$ (7), $\tau_4$ su $R_3$ e $\tau_4$ su $R_5$ $\rightarrow$ **B<sub>PIP</sub> =** $\max{(7,9,11)}= 11$
 
-- **$\tau_4$**: Nessun task ha priorità inferiore  
-$\rightarrow$ **B<sub>PIP</sub> =** $0$
+- **$\tau_4$**: Nessun task ha priorità inferiore $\rightarrow$ **B<sub>PIP</sub> =** $0$
 
 In PCP, un task subisce al massimo un bloccaggio, corrispondente al valore più alto tra quelli possibili.
 
@@ -267,12 +263,9 @@ In PCP, un task subisce al massimo un bloccaggio, corrispondente al valore più 
 
 In PIP, un task può essere bloccato da ogni risorsa utilizzata da task a priorità inferiore. Per ogni risorsa si considera al massimo un bloccaggio.
 
-- **$\tau_1$**: Bloccabile da $\tau_2$ e $\tau_3$ su $R_1$, $R_3$. 
-$\rightarrow$ **B<sub>PIP</sub> =** $6 + 3 = 9$
-- **$\tau_2$**: Bloccabile da $\tau_3$ su $R_1$ e $R_2$
-$\rightarrow$ **B<sub>PIP</sub> =** $6$ 
-- **$\tau_3$**: Nessun task ha priorità inferiore
-$\rightarrow$ **B<sub>PIP</sub> =** $0$
+- **$\tau_1$**: Bloccabile da $\tau_2$ e $\tau_3$ su $R_1$, $R_3$ $\rightarrow$ **B<sub>PIP</sub> =** $6 + 3 = 9$
+- **$\tau_2$**: Bloccabile da $\tau_3$ su $R_1$ e $R_2$ $\rightarrow$ **B<sub>PIP</sub> =** $6$ 
+- **$\tau_3$**: Nessun task ha priorità inferiore $\rightarrow$ **B<sub>PIP</sub> =** $0$
 
 In PCP si considera solo il bloccaggio più alto tra le risorse a cui il task è esposto.
 
