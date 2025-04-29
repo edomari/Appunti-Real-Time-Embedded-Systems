@@ -209,3 +209,71 @@ $R_3^{(0)} = C_3 + \lceil\frac{C_3}{T_1}\rceil C_1 + \lceil\frac{C_3}{T_2}\rceil
 $R_3^{(1)} = 8 + \lceil\frac{8}{6}\rceil 2 + \lceil\frac{8}{8}\rceil 2 = 4 + 2 \cdot 2 + 1 \cdot 2 = 10 \not\lt 8 \rightarrow \tau_3$ missa la deadline.
 
 ---
+
+### Bloccaggio con Priority Inheritance e con Priority Ceiling
+
+|       | $R_1$  | $R_2$  | $R_3$  | B<sub>PIP</sub> | B<sub>PCP</sub> |
+|-------|-----|-----|-----|-----------------|-----------------|
+| $\tau_1$ |     | 20  |     | 5               | 5               |
+| $\tau_2$ | 5   |     | 10  | 20              | 10              |
+| $\tau_3$ |     | 5   | 5   | 15              | 10              |
+| $\tau_4$ |     |     | 5   | 10              | 10              |
+| $\tau_5$ | 10  | 3   |     |                 |                 |
+
+In PIP, un task può essere bloccato da ogni risorsa utilizzata da task a priorità inferiore. Per ogni risorsa si considera al massimo un bloccaggio.
+
+- **$\tau_5$**: Nessun task ha priorità inferiore → $B_{PIP} = 0$
+- **$\tau_4$**: Può essere bloccato solo da $\tau_5$, su $R_1$ o $R_2$. Il tempo peggiore è 10 → $B_{PIP} = 10$
+- **$\tau_3$**: Bloccabile da $\tau_5$ (su $R_1$: 10) e da $\tau_4$ (su $R_3$: 5) → $B_{PIP} = 10 + 5 = 15$
+- **$\tau_2$**: Bloccabile da $\tau_5$ (su $R_1$: 10), $\tau_3$ (su $R_2$: 5) e $\tau_4$ (su $R_3$: 5) → $B_{PIP} = 10 + 5 + 5 = 20$
+- **$\tau_1$**: Solo $\tau_3$ lo blocca su $R_2$ per 5 → $B_{PIP} = 5$
+
+In PCP non si formano catene di bloccaggio. Ogni task subisce al più un bloccaggio, corrispondente al tempo massimo tra tutti quelli possibili.
+
+---
+
+|          | $R_1$ | $R_2$ | $R_3$ | $R_4$ | $R_5$ |  B<sub>PIP</sub> |  B<sub>PCP</sub> |
+|----------|----|----|----|----|----|------------------|------------------|
+| $\tau_1$ |  3 |  6 | 10 |    |  5 |               29 |               14 |
+| $\tau_2$ |    |    |  8 |    |    |               23 |               14 |
+| $\tau_3$ |    |  4 |    |  8 | 14 |               11 |               11 |
+| $\tau_4$ |  7 |    |  9 |    | 11 |                  |                  |
+
+
+
+In PIP, un task può essere bloccato da ogni risorsa utilizzata da task a priorità inferiore. Per ogni risorsa si considera al massimo un bloccaggio.
+
+- **$\tau_1$**: Bloccabile da $\tau_4$ su $R_1$, $\tau_3$ su $R_2$, $\tau_4$ su $R_3$, $\tau_3$ e $\tau_4$ su $R_5$
+$\rightarrow$ **B<sub>PIP</sub> =** $14 + 8 + 7 = 29$
+
+- **$\tau_2$**: Bloccabile da $\tau_4$ su $R_1$ (7), $\tau_3$ su $R_2$, $\tau_4$ e $\tau_3$ su $R_3$ (9), $\tau_3$ su $R_5$ (14)  
+$\rightarrow$ **B<sub>PIP</sub> =** $9 + 14 = 23$
+
+- **$\tau_3$**: Bloccabile da $\tau_4$ su $R_1$ (7), $\tau_4$ su $R_3$ (9) e $\tau_4$ su $R_5$ (11)  
+$\rightarrow$ **B<sub>PIP</sub> =** $\max{(7,9,11)}= 11$
+
+- **$\tau_4$**: Nessun task ha priorità inferiore  
+$\rightarrow$ **B<sub>PIP</sub> =** $0$
+
+In PCP, un task subisce al massimo un bloccaggio, corrispondente al valore più alto tra quelli possibili.
+
+--- 
+
+|          | $R_1$ | $R_2$ | $R_3$ |  B<sub>PIP</sub>  |  B<sub>PCP</sub> |
+|----------|----|----|----|-------------------|------------------|
+| $\tau_1$ |  3 |  0 |  3 |                 9 |                6 |
+| $\tau_2$ |  3 |  4 |  0 |                 6 |                6 |
+| $\tau_3$ |  4 |  3 |  6 |                 0 |                0 |
+
+In PIP, un task può essere bloccato da ogni risorsa utilizzata da task a priorità inferiore. Per ogni risorsa si considera al massimo un bloccaggio.
+
+- **$\tau_1$**: Bloccabile da $\tau_2$ e $\tau_3$ su $R_1$, $R_3$. 
+$\rightarrow$ **B<sub>PIP</sub> =** $6 + 3 = 9$
+- **$\tau_2$**: Bloccabile da $\tau_3$ su $R_1$ e $R_2$
+$\rightarrow$ **B<sub>PIP</sub> =** $6$ 
+- **$\tau_3$**: Nessun task ha priorità inferiore
+$\rightarrow$ **B<sub>PIP</sub> =** $0$
+
+In PCP si considera solo il bloccaggio più alto tra le risorse a cui il task è esposto.
+
+---
