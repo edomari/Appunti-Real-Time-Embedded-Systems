@@ -203,7 +203,7 @@ $$
 
 $$G(L)= \sum_{i=1}^n\lfloor\frac{L + T_i - D_i}{T_i}\rfloor C_i$$
 
-$L = 3 \rightarrow \lfloor\frac{3 + 4 - 3}{4}\rfloor 1 + \lfloor\frac{3 + 9 - 9}{9}\rfloor 3 +\lfloor\frac{3 + 12 - 10}{12}\rfloor 3 = 1\cdot 1 + 0 \cdot 3 + 0\cdot 3 = 1 \leq 4,5
+$L = 3 \rightarrow \lfloor\frac{3 + 4 - 3}{4}\rfloor 1 + \lfloor\frac{3 + 9 - 9}{9}\rfloor 3 +\lfloor\frac{3 + 12 - 10}{12}\rfloor 3 = 1\cdot 1 + 0 \cdot 3 + 0\cdot 3 = 1 \leq 3
 $
 
 ---
@@ -244,28 +244,28 @@ $$
 - $i=3$ $\rightarrow 8,20$
 $$G(L)= \sum_{i=1}^n\lfloor\frac{L + T_i - D_i}{T_i}\rfloor C_i$$
 
-$L = 4 \rightarrow \lfloor\frac{4 + 6 - 5}{6}\rfloor 2 + \lfloor\frac{4 + 8 - 4}{8}\rfloor 2 +\lfloor\frac{4 + 12 - 8}{12}\rfloor 4 = 0\cdot 2 + 1 \cdot 2 + 0\cdot 4 = 2 \leq 32 
+$L = 4 \rightarrow \lfloor\frac{4 + 6 - 5}{6}\rfloor 2 + \lfloor\frac{4 + 8 - 4}{8}\rfloor 2 +\lfloor\frac{4 + 12 - 8}{12}\rfloor 4 = 0\cdot 2 + 1 \cdot 2 + 0\cdot 4 = 2 \leq 4 
 $
 
-$L = 5 \rightarrow \lfloor\frac{5 + 6 - 5}{6}\rfloor 2 + \lfloor\frac{5 + 8 - 4}{8}\rfloor 2 +\lfloor\frac{5 + 12 - 8}{12}\rfloor 4 = 1\cdot 2 + 1\cdot 2 + 0\cdot 4 = 4 \leq 32 
+$L = 5 \rightarrow \lfloor\frac{5 + 6 - 5}{6}\rfloor 2 + \lfloor\frac{5 + 8 - 4}{8}\rfloor 2 +\lfloor\frac{5 + 12 - 8}{12}\rfloor 4 = 1\cdot 2 + 1\cdot 2 + 0\cdot 4 = 4 \leq 5
 $
 
-$L = 8 \rightarrow \lfloor\frac{8 + 6 - 5}{6}\rfloor 2 + \lfloor\frac{8 + 8 - 4}{8}\rfloor 2 +\lfloor\frac{8 + 12 - 8}{12}\rfloor 4 = 1\cdot 2 + 1\cdot 2 + 1\cdot 4 = 8 \leq 32 
+$L = 8 \rightarrow \lfloor\frac{8 + 6 - 5}{6}\rfloor 2 + \lfloor\frac{8 + 8 - 4}{8}\rfloor 2 +\lfloor\frac{8 + 12 - 8}{12}\rfloor 4 = 1\cdot 2 + 1\cdot 2 + 1\cdot 4 = 8 \leq 8 
 $
 
-$L = 11 \rightarrow \lfloor\frac{11 + 6 - 5}{6}\rfloor 2 + \lfloor\frac{11 + 8 - 4}{8}\rfloor 2 +\lfloor\frac{11 + 12 - 8}{12}\rfloor 4 = 2\cdot 2 + 1\cdot 2 + 1\cdot 4 = 10 \leq 32 
+$L = 11 \rightarrow \lfloor\frac{11 + 6 - 5}{6}\rfloor 2 + \lfloor\frac{11 + 8 - 4}{8}\rfloor 2 +\lfloor\frac{11 + 12 - 8}{12}\rfloor 4 = 2\cdot 2 + 1\cdot 2 + 1\cdot 4 = 10 \leq 11 
 $
 
-$L = 12 \rightarrow \lfloor\frac{12 + 6 - 5}{6}\rfloor 2 + \lfloor\frac{12 + 8 - 4}{8}\rfloor 2 +\lfloor\frac{12 + 12 - 8}{12}\rfloor 4 = 2\cdot 2 + 2\cdot 2 + 1\cdot 4 = 12 \leq 32 
+$L = 12 \rightarrow \lfloor\frac{12 + 6 - 5}{6}\rfloor 2 + \lfloor\frac{12 + 8 - 4}{8}\rfloor 2 +\lfloor\frac{12 + 12 - 8}{12}\rfloor 4 = 2\cdot 2 + 2\cdot 2 + 1\cdot 4 = 12 \leq 12 
 $
 
-$L = 17 \rightarrow \lfloor\frac{17 + 6 - 5}{6}\rfloor 2 + \lfloor\frac{17 + 8 - 4}{8}\rfloor 2 +\lfloor\frac{17 + 12 - 8}{12}\rfloor 4 = 3\cdot 2 + 2\cdot 2 + 1\cdot 4 = 14 \leq 32 
+$L = 17 \rightarrow \lfloor\frac{17 + 6 - 5}{6}\rfloor 2 + \lfloor\frac{17 + 8 - 4}{8}\rfloor 2 +\lfloor\frac{17 + 12 - 8}{12}\rfloor 4 = 3\cdot 2 + 2\cdot 2 + 1\cdot 4 = 14 \leq 17 
 $
 
-$L = 20 \rightarrow \lfloor\frac{20 + 6 - 5}{6}\rfloor 2 + \lfloor\frac{20 + 8 - 4}{8}\rfloor 2 +\lfloor\frac{20 + 12 - 8}{12}\rfloor 4 = 3\cdot 2 + 3\cdot 2 + 2\cdot 4 = 20 \leq 32 
+$L = 20 \rightarrow \lfloor\frac{20 + 6 - 5}{6}\rfloor 2 + \lfloor\frac{20 + 8 - 4}{8}\rfloor 2 +\lfloor\frac{20 + 12 - 8}{12}\rfloor 4 = 3\cdot 2 + 3\cdot 2 + 2\cdot 4 = 20 \leq 20 
 $
 
-$L = 23 \rightarrow \lfloor\frac{23 + 6 - 5}{6}\rfloor 2 + \lfloor\frac{23 + 8 - 4}{8}\rfloor 2 +\lfloor\frac{23 + 12 - 8}{12}\rfloor 4 = 4\cdot 2 + 3\cdot 2 + 2\cdot 4 = 22 \leq 32 
+$L = 23 \rightarrow \lfloor\frac{23 + 6 - 5}{6}\rfloor 2 + \lfloor\frac{23 + 8 - 4}{8}\rfloor 2 +\lfloor\frac{23 + 12 - 8}{12}\rfloor 4 = 4\cdot 2 + 3\cdot 2 + 2\cdot 4 = 22 \leq 23 
 $
 
 ---
@@ -276,6 +276,8 @@ $
 | $\tau_2$ | 2 | 4 | 8 |
 | $\tau_1$ | 2 | 5 | 6 |
 | $\tau_3$ | 4 | 8 | 12 |
+
+L'utilizzazione non è più utile $\rightarrow U_p=\frac{C_1}{D_1}+\frac{C_2}{D_2}+\frac{C_3}{D_3}=\frac{\not2^1}{\not4^2}+\frac{2}{5}+\frac{\not2^1}{\not4^2} = \frac{5+4+5}{10}= \frac{14}{10} \gt 1$. Nonostante $U_p$ sia maggiore di 1, non è detto che il task non sia schedulabile.
 
 $R_2^{(0)} = C_2 + 0 = 2 \lt 4$
 
