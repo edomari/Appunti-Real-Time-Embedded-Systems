@@ -1,5 +1,10 @@
 # Esercizi real-time scheduling
 
+|                | **<code style="color : yellow">D = P</code>**                                      | **<code style="color : yellow">D ≤ P</code>**                                     |
+|----------------|------------------------------------------------|-----------------------------------------------|
+| **Fixed Priority** | **Rate Monotonic Scheduling (RMS)** <br> Utilization bound test <br> Response time analysis | **DM** <br> Response time analysis |
+| **Dynamic Priority** | **EDF** <br> Utilization bound test | **EDF** <br> Processor demand analysis |
+
 ### Questo task-set è schedulabile con Rate Monotonic?
 
 |  | $C_i$ | $D_i = T_i$ |
@@ -32,7 +37,6 @@ Il task-set è schedulabile secondo RM!
 **Invece con EDF?** Si, perchè $U_p\lt 1$.
 
 ---
-
 
 |  | $C_i$ | $D_i = T_i$ |
 | --- | --- | --- |
@@ -269,6 +273,50 @@ $L = 23 \rightarrow \lfloor\frac{23 + 6 - 5}{6}\rfloor 2 + \lfloor\frac{23 + 8 -
 $
 
 ---
+
+[**Fonte**](https://wiki.ubc.ca/images/c/cf/525-EDF-Exact.pdf)
+
+|  | $C_i$ | $D_i$ | $T_i$ |
+| --- | --- | --- | --- |
+| $\tau_1$ | 1 | 2 | 3 |
+| $\tau_2$ | 2 | 5,5 | 7 |
+| $\tau_3$ | 2 | 6 | 10 |
+
+Calcolo $H$ e $L^*$:
+
+$H = lcm(3,7,10)=3,7,2 \cdot 5 = 3 \cdot 7 \cdot 2 \cdot 5 = 210$
+
+$U = \frac{1}{3}+\frac{2}{7}+\frac{\not2^1}{\not10^5}=\frac{35 + 30 + 21}{105}=\frac{86}{105} = 0,81$
+
+$$L^*= \frac{(T_1-D_1)\frac{C_1}{T_1}+(T_2-D_2)\frac{C_2}{T_2}+(T_3-D_3)\frac{C_3}{T_3}}{1-U} =\\ 
+\frac{(3-2)\frac{1}{3}+(7-5,5)\frac{2}{7}+(10-6)\frac{\not2^1}{\not10^5}}{1-\frac{86}{105}}\\ 
+=\frac{\frac{1}{3}+\frac{3}{7}+ \frac{4}{5}}{\frac{19}{105}} = \frac{\frac{35+45+84}{105}}{\frac{19}{105}} = \frac{\frac{164}{105}}{\frac{19}{105}} = \frac{164}{\not105^1} \cdot \frac{\not105^1}{19} = 8,63
+$$
+
+**Deadlines $D_i + kT_i$** $\rightarrow (2,5, 5.5, 6, 8)$
+- $i=1$ $\rightarrow 2,5,8$
+- $i=2$ $\rightarrow 5.5$
+- $i=3$ $\rightarrow 6$
+
+$$G(L)= \sum_{i=1}^n\lfloor\frac{L + T_i - D_i}{T_i}\rfloor C_i$$
+
+$L = 2 \rightarrow \lfloor\frac{2 + 3 - 2}{3}\rfloor 1 + \lfloor\frac{2 + 7 - 5.5}{7}\rfloor 2 +\lfloor\frac{2 + 10 - 6}{10}\rfloor 2 = 1\cdot 1 + 0 \cdot 2 + 0\cdot 2 = 1 \leq 2 
+$
+
+$L = 5 \rightarrow \lfloor\frac{5 + 3 - 2}{3}\rfloor 1 + \lfloor\frac{5 + 7 - 5.5}{7}\rfloor 2 +\lfloor\frac{5 + 10 - 6}{10}\rfloor 2 = 2\cdot 1 + 0 \cdot 2 + 0\cdot 2 = 2 \leq 5 
+$
+
+$L = 5.5 \rightarrow \lfloor\frac{5.5 + 3 - 2}{3}\rfloor 1 + \lfloor\frac{5.5 + 7 - 5.5}{7}\rfloor 2 +\lfloor\frac{5.5 + 10 - 6}{10}\rfloor 2 = 2\cdot 1 + 1 \cdot 2 + 0\cdot 2 = 4 \leq 5.5 
+$
+
+$L = 6 \rightarrow \lfloor\frac{6 + 3 - 2}{3}\rfloor 1 + \lfloor\frac{6 + 7 - 5.5}{7}\rfloor 2 +\lfloor\frac{6 + 10 - 6}{10}\rfloor 2 = 2\cdot 1 + 1 \cdot 2 + 1\cdot 2 = 6 \leq 6
+$
+
+$L = 8 \rightarrow \lfloor\frac{8 + 3 - 2}{3}\rfloor 1 + \lfloor\frac{8 + 7 - 5.5}{7}\rfloor 2 +\lfloor\frac{8 + 10 - 6}{10}\rfloor 2 = 3\cdot 1 + 1 \cdot 2 + 1\cdot 2 = 7 \leq 8 
+$
+
+---
+
 ### Questo task-set è schedulabile con Deadline Monotonic?
 
 |  | $C_i$ | $D_i$ | $T_i$ |
@@ -338,9 +386,9 @@ In PCP, un task subisce al massimo un bloccaggio, corrispondente al valore più 
 
 |          | $R_1$ | $R_2$ | $R_3$ |  B<sub>PIP</sub>  |  B<sub>PCP</sub> |
 |----------|----|----|----|-------------------|------------------|
-| $\tau_1$ |  3 |  0 |  3 |                 9 |                6 |
-| $\tau_2$ |  3 |  4 |  0 |                 6 |                6 |
-| $\tau_3$ |  4 |  3 |  6 |                 0 |                0 |
+| $\tau_1$ |  3 |    |  3 |                 9 |                6 |
+| $\tau_2$ |  3 |  4 |    |                 6 |                6 |
+| $\tau_3$ |  4 |  3 |  6 |                   |                  |
 
 In PIP, un task può essere bloccato da ogni risorsa utilizzata da task a priorità inferiore. Per ogni risorsa si considera al massimo un bloccaggio.
 
@@ -351,3 +399,59 @@ In PIP, un task può essere bloccato da ogni risorsa utilizzata da task a priori
 In PCP si considera solo il bloccaggio più alto tra le risorse a cui il task è esposto.
 
 ---
+
+|  | $C_i$ | $D_i$ | $T_i$ |
+| --- | --- | --- | --- |
+| $\tau_1$ | 1 | 5 | 5 |
+| $\tau_2$ | 4 | 8 | 9 |
+| $\tau_3$ | 2 | 4 | 6 |
+
+> a) Il seguente insieme di task periodici è schedulabile in base a **Rate Monotonic (RM)**?
+
+L'RM utilization bound non è applicabile perché la deadline ≠ periodo nei task. Usiamo la **response time analysis**. L'ordine di priorità (decrescente) sotto RM è: $\tau_1$, $\tau_3$, $\tau_2$.
+
+$R_1^{(0)} = 1 \leq 5$
+
+$R_3^{(0)} = 2 + \lceil \frac{2}{5}\rceil 1 = 2 + 1 \cdot 1 = 3$
+
+$R_3^{(1)} = 2 + \lceil\frac{3}{5}\rceil 2 = 2 + 1 \cdot 1 = 3 \leq 4$
+
+$R_2^{(0)} = 4 + \lceil\frac{4}{5}\rceil 1 + \lceil\frac{4}{9}\rceil 2 = 4 + 1 \cdot 1 + 1 \cdot 2 = 7$
+
+$R_2^{(1)} = 4 + \lceil\frac{7}{5}\rceil 1 + \lceil\frac{7}{6}\rceil 2 = 4 + 2 \cdot 1 + 2 \cdot 2 = 10 \not\leq8 \rightarrow \tau_2$ missa la deadline.
+
+> b) E in base a **Deadline Monotonic (DM)**?
+
+Applichiamo la **response time analysis**. L'ordine di priorità (decrescente) sotto DM è: $\tau_3$, $\tau_1$, $\tau_2$. Nota che $\tau_3$ ha priorità più alta di $\tau_1$ in DM.
+
+$R_3^{(0)} = 2 \leq 5$
+
+$R_1^{(0)} = 1 + \lceil \frac{1}{6}\rceil 2 = 1 + 1 \cdot 2 = 3$
+
+$R_1^{(1)} = 1 + \lceil \frac{3}{6}\rceil 2 = 1 + 1 \cdot 2 = 3 \leq 5$
+
+$R_2^{(0)} = 4 + \lceil\frac{4}{5}\rceil 1 + \lceil\frac{4}{9}\rceil 2 = 4 + 1 \cdot 1 + 1 \cdot 2 = 7$
+
+$R_2^{(1)} = 4 + \lceil\frac{7}{5}\rceil 1 + \lceil\frac{7}{6}\rceil 2 = 4 + 2 \cdot 1 + 2 \cdot 2 = 10 \not\leq8 \rightarrow \tau_2$ missa la deadline.
+
+> c) E in base a **Earliest Deadline First (EDF)**?
+
+L'utilization bound test non è applicabile in questo caso perché le deadline non coincidono con i periodi. In alternativa, va applicato il **processor demand criterion**.
+
+Calcolo $H$ e $L^*$:
+
+$H = lcm(5,9,6)=3,3^2,2 \cdot 3 = 5 \cdot 2 \cdot 3^2 = 90$
+
+$U = \frac{1}{5}+\frac{4}{9}+\frac{\not2^1}{\not6^3}=\frac{9 + 20 + 15}{45}=\frac{44}{45}$
+
+$$L^*= \frac{(T_1-D_1)\frac{C_1}{T_1}+(T_2-D_2)\frac{C_2}{T_2}+(T_3-D_3)\frac{C_3}{T_3}}{1-U} =\\ 
+\frac{(5-5)\frac{1}{5}+(9-8)\frac{4}{9}+(6-4)\frac{\not2^1}{\not6^3}}{1-\frac{44}{45}}\\ 
+=\frac{0+\frac{4}{9}+ \frac{2}{3}}{\frac{1}{45}} = \frac{\frac{4+6}{9}}{\frac{1}{45}} = \frac{\frac{10}{9}}{\frac{1}{45}} = \frac{10}{\not9^1} \cdot \not45^5 = 50
+$$
+
+**Deadlines $D_i + kT_i$** $\rightarrow (4,5,8,10,16,17,20,22,25,26,28, 30,34,35,40,44,45,50)$
+- $i=1$ $\rightarrow 5,10,15,20,25,30,35,40,45, 50$
+- $i=2$ $\rightarrow 8, 17, 26, 35, 44$
+- $i=3$ $\rightarrow 4, 10, 16, 22, 28, 34, 40, 46$
+
+$$G(L)= \sum_{i=1}^n\lfloor\frac{L + T_i - D_i}{T_i}\rfloor C_i$$
