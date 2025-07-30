@@ -32,7 +32,7 @@
 | 🚽 **Il bagno** | 2025-01-07 | [📝 Vai all'esercizio](/exercices/concurrency/2025-01-07/bagno.md#il-bagno---01072025) |
 ---
 
-## ⏱**Sistemi di Tempo Reale**
+## **Sistemi di Tempo Reale**
 *Teoria e algoritmi per lo scheduling in sistemi real-time*
 
 4. [**Introduction to real-time scheduling** ](/4.%20Introduction%20to%20real-time%20scheduling.md#introduction-to-real-time-scheduling)  
@@ -54,7 +54,7 @@
 
 ---
 
-## 🖥️ **Progetto d'Esame: Real-Time Data Center Security Monitor**
+## **Progetto d'Esame: Real-Time Data Center Security Monitor**
 
 Il progetto d'esame consiste nello sviluppo di un sistema embedded implementato su Raspberry Pi Pico con FreeRTOS e micro-ROS.  
 Il mio progetto integra sensori di temperatura/umidità (DHT11), rilevamento movimento (PIR), pulsante e LED RGB per la gestione della presenza di un tecnico.  
