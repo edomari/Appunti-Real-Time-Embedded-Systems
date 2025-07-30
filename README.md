@@ -66,7 +66,7 @@ I dati raccolti vengono pubblicati tramite ROS2 su topic dedicati e visualizzati
 **Aspetti chiave trattati:**
 - Progettazione di task concorrenti e comunicazione tramite code in FreeRTOS
 - Gestione di eventi real-time e sincronizzazione tra sensori e attuatori
-- Pubblicazione dati e stato su topic ROS 2
+- Pubblicazione dati e stato su topic ROS2
 - Integrazione con una dashboard web per la visualizzazione live dei dati e degli eventi
 - Esempio pratico di architettura embedded distribuita per applicazioni di sicurezza
 
