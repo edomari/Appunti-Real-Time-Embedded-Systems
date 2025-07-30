@@ -3,7 +3,7 @@
 
 ---
 
-## 📚 **Programmazione Concorrente**
+## 📚 **Scheduling in sistemi real-time**
 *Fondamenti e tecniche per la gestione di processi e thread in sistemi embedded*
 
 1. [**🧩 Processes and Threads**](/1.%20Processes%20and%20Threads.md#processi)  
