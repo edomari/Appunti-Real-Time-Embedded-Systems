@@ -29,7 +29,7 @@
 | ⚓ **Il porto** | 2023-27-06 | [📝 Vai all'esercizio](/exercices/concurrency/2023-27-06/porto.md#il-porto---27062023) |
 | 🚗 **La rotonda dell'UVA** | 2024-19-04 | [📝 Vai all'esercizio](/exercices/concurrency/2024-19-04/rotonda.md#la-rotonda-delluva---19042024) |
 | 🌉 **La passerella** | 2025-15-04 | [📝 Vai all'esercizio](/exercices/concurrency/2025-15-04/passerella.md#la-passerella---15042025) |
-
+| 🚽 **Il bagno** | 2025-01-07 | [📝 Vai all'esercizio](/exercices/concurrency/2025-01-07/bagno.md#il-bagno---01072025) |
 ---
 
 ## ⏱️ **Sistemi di Tempo Reale**
