@@ -205,21 +205,17 @@ $H = lcm(6,8,12)=2^2,3^2,2^2\cdot 3 = 3^2 \cdot 2^3 = 48$
 
 $U = \frac{1}{4}+\frac{\not3^1}{\not9^3}+\frac{\not3^1}{\not12^4} = \frac{3+4+3}{12} = \frac{10}{12}=\frac{5}{6}=0,83$
 
-$$
-L^*= \frac{(T_1-D_1)\frac{C_1}{T_1}+(T_2-D_2)\frac{C_2}{T_2}+(T_3-D_3)\frac{C_3}{T_3}}{1-U} =\\ 
+$L^*= \frac{(T_1-D_1)\frac{C_1}{T_1}+(T_2-D_2)\frac{C_2}{T_2}+(T_3-D_3)\frac{C_3}{T_3}}{1-U} =\\ 
 \frac{(4-3)\frac{1}{4}+(9-9)\frac{3}{9}+(12-10)\frac{\not3^1}{\not12^4}}{1-\frac{5}{6}}\\
 = \frac{\frac{1}{4}+ \frac{2}{4}}{\frac{1}{6}} = \frac{3}{\not4^2}\cdot \not6^3 = \frac{9}{2} = 4,5
-
-$$
+$
 
 **Deadlines $D_i + kT_i$** $\rightarrow (3)$
 
 - $i=1$ $\rightarrow 3$
 
-$$
-G(L)= \sum_{i=1}^n\lfloor\frac{L + T_i - D_i}{T_i}\rfloor C_i
-
-$$
+$G(L)= \sum_{i=1}^n\lfloor\frac{L + T_i - D_i}{T_i}\rfloor C_i
+$
 
 $L = 3 \rightarrow \lfloor\frac{3 + 4 - 3}{4}\rfloor 1 + \lfloor\frac{3 + 9 - 9}{9}\rfloor 3 +\lfloor\frac{3 + 12 - 10}{12}\rfloor 3 = 1\cdot 1 + 0 \cdot 3 + 0\cdot 3 = 1 \leq 3
 $
@@ -254,12 +250,10 @@ $H = lcm(6,8,12)=3\cdot2,2^3,2^2\cdot 3 = 3 \cdot 2^3 = 24$
 
 $U = \frac{2}{6}+\frac{2}{8}+\frac{4}{12}=\frac{8 + 6 + 8}{24}=\frac{\not 22^{11}}{\not 24^{12}} = \frac{11}{12}$
 
-$$
-L^*= \frac{(T_1-D_1)\frac{C_1}{T_1}+(T_2-D_2)\frac{C_2}{T_2}+(T_3-D_3)\frac{C_3}{T_3}}{1-U} =\\ 
+$L^*= \frac{(T_1-D_1)\frac{C_1}{T_1}+(T_2-D_2)\frac{C_2}{T_2}+(T_3-D_3)\frac{C_3}{T_3}}{1-U} =\\ 
 \frac{(6-5)\frac{2}{6}+(8-4)\frac{2}{4}+(12-8)\frac{4}{12}}{1-\frac{11}{12}}\\ 
 =\frac{\frac{\not2^1}{\not6^3}+\not4\cdot\frac{2}{\not4}+ 4\cdot\frac{\not4^1}{\not12^3}}{\frac{1}{12}} = \frac{\frac{1}{3}+2+\frac{4}{3}}{\frac{1}{12}} = \frac{\frac{2+6+8}{6}}{\frac{1}{12}} = \frac{16}{\not 6^1} \cdot \not{12}^2 = 32
-
-$$
+$
 
 **Deadlines $D_i + kT_i$** $\rightarrow (4,5,8,11,12,17,20,23)$
 
@@ -267,10 +261,8 @@ $$
 - $i=2$ $\rightarrow 4,12,20$
 - $i=3$ $\rightarrow 8,20$
 
-$$
-G(L)= \sum_{i=1}^n\lfloor\frac{L + T_i - D_i}{T_i}\rfloor C_i
-
-$$
+$G(L)= \sum_{i=1}^n\lfloor\frac{L + T_i - D_i}{T_i}\rfloor C_i
+$
 
 $L = 4 \rightarrow \lfloor\frac{4 + 6 - 5}{6}\rfloor 2 + \lfloor\frac{4 + 8 - 4}{8}\rfloor 2 +\lfloor\frac{4 + 12 - 8}{12}\rfloor 4 = 0\cdot 2 + 1 \cdot 2 + 0\cdot 4 = 2 \leq 4 
 $
@@ -313,12 +305,10 @@ $H = lcm(3,7,10)=3,7,2 \cdot 5 = 3 \cdot 7 \cdot 2 \cdot 5 = 210$
 
 $U = \frac{1}{3}+\frac{2}{7}+\frac{\not2^1}{\not10^5}=\frac{35 + 30 + 21}{105}=\frac{86}{105} = 0,81$
 
-$$
-L^*= \frac{(T_1-D_1)\frac{C_1}{T_1}+(T_2-D_2)\frac{C_2}{T_2}+(T_3-D_3)\frac{C_3}{T_3}}{1-U} =\\ 
-\frac{(3-2)\frac{1}{3}+(7-5,5)\frac{2}{7}+(10-6)\frac{\not2^1}{\not10^5}}{1-\frac{86}{105}}\\ 
+$L^*= \frac{(T_1-D_1)\frac{C_1}{T_1}+(T_2-D_2)\frac{C_2}{T_2}+(T_3-D_3)\frac{C_3}{T_3}}{1-U} = 
+\frac{(3-2)\frac{1}{3}+(7-5,5)\frac{2}{7}+(10-6)\frac{\not2^1}{\not10^5}}{1-\frac{86}{105}}
 =\frac{\frac{1}{3}+\frac{3}{7}+ \frac{4}{5}}{\frac{19}{105}} = \frac{\frac{35+45+84}{105}}{\frac{19}{105}} = \frac{\frac{164}{105}}{\frac{19}{105}} = \frac{164}{\not105^1} \cdot \frac{\not105^1}{19} = 8,63
-
-$$
+$
 
 **Deadlines $D_i + kT_i$** $\rightarrow (2,5, 5.5, 6, 8)$
 
@@ -326,10 +316,8 @@ $$
 - $i=2$ $\rightarrow 5.5$
 - $i=3$ $\rightarrow 6$
 
-$$
-G(L)= \sum_{i=1}^n\lfloor\frac{L + T_i - D_i}{T_i}\rfloor C_i
-
-$$
+$G(L)= \sum_{i=1}^n\lfloor\frac{L + T_i - D_i}{T_i}\rfloor C_i
+$
 
 $L = 2 \rightarrow \lfloor\frac{2 + 3 - 2}{3}\rfloor 1 + \lfloor\frac{2 + 7 - 5.5}{7}\rfloor 2 +\lfloor\frac{2 + 10 - 6}{10}\rfloor 2 = 1\cdot 1 + 0 \cdot 2 + 0\cdot 2 = 1 \leq 2 
 $
@@ -475,12 +463,10 @@ $H = lcm(5,9,6)=3,3^2,2 \cdot 3 = 5 \cdot 2 \cdot 3^2 = 90$
 
 $U = \frac{1}{5}+\frac{4}{9}+\frac{\not2^1}{\not6^3}=\frac{9 + 20 + 15}{45}=\frac{44}{45}$
 
-$$
-L^*= \frac{(T_1-D_1)\frac{C_1}{T_1}+(T_2-D_2)\frac{C_2}{T_2}+(T_3-D_3)\frac{C_3}{T_3}}{1-U} =\\ 
-\frac{(5-5)\frac{1}{5}+(9-8)\frac{4}{9}+(6-4)\frac{\not2^1}{\not6^3}}{1-\frac{44}{45}}\\ 
+$L^*= \frac{(T_1-D_1)\frac{C_1}{T_1}+(T_2-D_2)\frac{C_2}{T_2}+(T_3-D_3)\frac{C_3}{T_3}}{1-U} =  
+\frac{(5-5)\frac{1}{5}+(9-8)\frac{4}{9}+(6-4)\frac{\not2^1}{\not6^3}}{1-\frac{44}{45}} 
 =\frac{0+\frac{4}{9}+ \frac{2}{3}}{\frac{1}{45}} = \frac{\frac{4+6}{9}}{\frac{1}{45}} = \frac{\frac{10}{9}}{\frac{1}{45}} = \frac{10}{\not9^1} \cdot \not45^5 = 50
-
-$$
+$
 
 **Deadlines $D_i + kT_i$** $\rightarrow (4,5,8,10,16,17,20,22,25,26,28, 30,34,35,40,44,45,50)$
 
@@ -488,10 +474,8 @@ $$
 - $i=2$ $\rightarrow 8, 17, 26, 35, 44$
 - $i=3$ $\rightarrow 4, 10, 16, 22, 28, 34, 40, 46$
 
-$$
-G(L)= \sum_{i=1}^n\lfloor\frac{L + T_i - D_i}{T_i}\rfloor C_i
-
-$$
+$G(L)= \sum_{i=1}^n\lfloor\frac{L + T_i - D_i}{T_i}\rfloor C_i
+$
 
 $L = 50 \rightarrow \lfloor\frac{50 + 5 - 5}{5}\rfloor 1 + \lfloor\frac{50 + 9 - 8}{9}\rfloor 4 +\lfloor\frac{50 + 6 - 4}{6}\rfloor 2 = 10 + 20 + 16 = 46 \leq 50
 $

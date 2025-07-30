@@ -50,9 +50,24 @@
 8. [**🌐 Handling hybrid task sets**](/8.%20Handling%20hybrid%20task%20sets.md#handling-hybrid-task-sets)  
    *Scheduling di task set misti (periodici + aperiodici)*
 
-### Esercizi real-time scheduling
+### [Esercizi real-time scheduling](/exercices/scheduling/scheduling.md)
 
-- [***Questo task-set è schedulabile con Rate Monotonic?***](/exercices/scheduling/scheduling.md#questo-task-set-%C3%A8-schedulabile-con-rate-monotonic)
-- [***Questo task-set è schedulabile con Earliest Deadline First?***](/exercices/scheduling/scheduling.md#questo-task-set-%C3%A8-schedulabile-con-edf)
-- [***Questo task-set è schedulabile con Deadline Monotonic?***](/exercices/scheduling/scheduling.md#questo-task-set-%C3%A8-schedulabile-con-deadline-monotonic)
-- [***Bloccaggio con Priority Inheritance e con Priority Ceiling***](/exercices/scheduling/scheduling.md#bloccaggio-con-priority-inheritance-e-con-priority-ceiling)
+---
+
+## 🖥️ **Progetto d'Esame: Real-Time Data Center Security Monitor**
+
+Il progetto d'esame consiste nello sviluppo di un sistema embedded implementato su Raspberry Pi Pico con FreeRTOS e micro-ROS.  
+Il mio progetto integra sensori di temperatura/umidità (DHT11), rilevamento movimento (PIR), pulsante e LED RGB per la gestione della presenza di un tecnico.  
+I dati raccolti vengono pubblicati tramite ROS2 su topic dedicati e visualizzati in tempo reale su una dashboard web interattiva.
+
+**Approfondimento e dettagli:**  
+➡️ [Vai alla documentazione e codice del progetto Datacenter](datacenter/README.md)
+
+**Aspetti chiave trattati:**
+- Progettazione di task concorrenti e comunicazione tramite code in FreeRTOS
+- Gestione di eventi real-time e sincronizzazione tra sensori e attuatori
+- Pubblicazione dati e stato su topic ROS 2
+- Integrazione con una dashboard web per la visualizzazione live dei dati e degli eventi
+- Esempio pratico di architettura embedded distribuita per applicazioni di sicurezza
+
+---

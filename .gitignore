@@ -1,13 +1,7 @@
 *
 !/**/
 !*.*
-*.pdf
-*.jpeg
-*.JPG
-*.png
 .DS_Store
 *.vscode
-!images/*/*.png
-!images/*/*.jpeg
 !makefile
 practice.c

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Data Center Security Monitor</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Real-Time Data Center Security Monitor</h1>
+    <div id="status" class="status disconnected">Disconnesso</div>
+    
+    <div class="grid">
+        <div class="card" id="tempCard">
+            <h3>Temperatura</h3>
+            <div class="value"><span id="temp">--</span> °C</div>
+            <div id="tempStatus">In attesa...</div>
+        </div>
+        <div class="card" id="humCard">
+            <h3>Umidità</h3>
+            <div class="value"><span id="hum">--</span> %</div>
+            <div id="humStatus">In attesa...</div>
+        </div>
+        <div class="card">
+            <h3>Movimento</h3>
+            <div class="light" id="motionLight"></div>
+            <div id="motionStatus">Area Sicura</div>
+            <div id="motionAttribution" style="display: none; font-size: 0.8rem; color: #ff9800;">
+                Movimento attribuito al tecnico
+            </div>
+        </div>
+        <div class="card">
+            <h3>Tecnico <span class="counter" id="techCounter">0</span></h3>
+            <div class="light" id="techLight"></div>
+            <div id="techStatus">Fuori dal DataCenter</div>
+        </div>
+    </div>
+    
+    <div class="grid">
+        <div class="events">
+            <h3>Topic ROS2</h3>
+            <div id="topics">Caricamento...</div>
+        </div>
+        <div class="events">
+            <h3>Log Sistema</h3>
+            <div id="systemLogs">In attesa...</div>
+        </div>
+        <div class="events">
+            <h3>Eventi Sicurezza</h3>
+            <div id="securityEvents">Nessun evento</div>
+        </div>
+        <div class="events">
+            <h3>Attività Tecnico</h3>
+            <div id="techEvents">Nessuna attività</div>
+        </div>
+    </div>
+
+    <script>
+        class Dashboard {
+            constructor() {
+                this.ws = null;
+                this.systemLogs = [];
+                this.securityEvents = [];
+                this.techEvents = [];
+                this.lastTemperature = null;
+                this.lastHumidity = null;
+                this.lastMotion = null;
+                this.lastTechState = null;
+                this.lastMotionNormal = null;
+                this.init();
+            }
+
+            init() {
+                try {
+                    this.ws = new WebSocket('ws://localhost:8765');
+                    this.ws.onopen = () => this.setStatus(true);
+                    this.ws.onmessage = (e) => this.update(JSON.parse(e.data));
+                    this.ws.onclose = () => { this.setStatus(false); setTimeout(() => this.init(), 5000); };
+                } catch (e) {
+                    this.setStatus(false);
+                    setTimeout(() => this.init(), 5000);
+                }
+            }
+
+            setStatus(connected) {
+                const status = document.getElementById('status');
+                status.textContent = connected ? 'Connesso' : 'Disconnesso';
+                status.className = `status ${connected ? 'connected' : 'disconnected'}`;
+            }
+
+            addSystemLog(message, type = 'info') {
+                this.systemLogs.unshift({ 
+                    timestamp: new Date().toLocaleString('it-IT'), 
+                    message, 
+                    type 
+                });
+                if (this.systemLogs.length > 10) this.systemLogs = this.systemLogs.slice(0, 10);
+                this.updateSystemLogs();
+            }
+
+            addSecurityEvent(message, type = 'info') {
+                this.securityEvents.unshift({ 
+                    timestamp: new Date().toLocaleString('it-IT'), 
+                    message, 
+                    type 
+                });
+                if (this.securityEvents.length > 10) this.securityEvents = this.securityEvents.slice(0, 10);
+                this.updateSecurityEvents();
+            }
+
+            addTechEvent(message, type = 'info') {
+                this.techEvents.unshift({ 
+                    timestamp: new Date().toLocaleString('it-IT'), 
+                    message, 
+                    type 
+                });
+                if (this.techEvents.length > 10) this.techEvents = this.techEvents.slice(0, 10);
+                this.updateTechEvents();
+            }
+
+            updateSystemLogs() {
+                const logs = document.getElementById('systemLogs');
+                logs.innerHTML = this.systemLogs.map(log => 
+                    `<div class="event ${log.type === 'alert' ? 'alert' : ''}">
+                        <div class="event-time">${log.timestamp}</div>
+                        <div>${log.message}</div>
+                    </div>`
+                ).join('') || 'In attesa...';
+            }
+
+            updateSecurityEvents() {
+                const events = document.getElementById('securityEvents');
+                events.innerHTML = this.securityEvents.map(event => 
+                    `<div class="event ${event.type === 'alert' ? 'alert' : (event.type === 'tech-attributed' ? 'tech-attributed' : '')}">
+                        <div class="event-time">${event.timestamp}</div>
+                        <div>${event.message}</div>
+                    </div>`
+                ).join('') || 'Nessun evento';
+            }
+
+            updateTechEvents() {
+                const events = document.getElementById('techEvents');
+                events.innerHTML = this.techEvents.map(event => 
+                    `<div class="event ${event.type === 'tech-in' ? 'tech-in' : (event.type === 'tech-out' ? 'tech-out' : '')}">
+                        <div class="event-time">${event.timestamp}</div>
+                        <div>${event.message}</div>
+                    </div>`
+                ).join('') || 'Nessuna attività';
+            }
+
+            update(data) {
+                this.updateSensor('temp', data.temp, 18, 25, 'Temperatura');
+                this.updateSensor('hum', data.hum, 40, 60, 'Umidità');
+                this.updateMotion(data);
+                this.updateTech(data);
+                this.updateTopics(data);
+            }
+
+            updateSensor(type, value, min, max, label) {
+                if (value == null) return;
+                
+                const elem = document.getElementById(type);
+                const status = document.getElementById(type + 'Status');
+                const card = document.getElementById(type + 'Card');
+                
+                elem.textContent = value.toFixed(1);
+                
+                let state = 'normal', text = `${label} normale`;
+                
+                const lastValue = type === 'temp' ? this.lastTemperature : this.lastHumidity;
+                const hasChanged = lastValue !== value;
+                
+                if (value < min) {
+                    state = 'warning';
+                    text = `${label} bassa`;
+                    if (hasChanged) {
+                        this.addSystemLog(`${label}: ${value.toFixed(1)}${type === 'temp' ? '°C' : '%'} - Troppo bassa`, 'alert');
+                    }
+                } else if (value > max) {
+                    state = 'alert';
+                    text = `${label} alta`;
+                    if (hasChanged) {
+                        this.addSystemLog(`${label}: ${value.toFixed(1)}${type === 'temp' ? '°C' : '%'} - Troppo alta`, 'alert');
+                    }
+                } else {
+                    if (hasChanged && lastValue != null && (lastValue < min || lastValue > max)) {
+                        this.addSystemLog(`${label}: ${value.toFixed(1)}${type === 'temp' ? '°C' : '%'} - Ritornata normale`);
+                    }
+                }
+                
+                status.textContent = text;
+                card.className = `card ${state}`;
+                
+                if (type === 'temp') {
+                    this.lastTemperature = value;
+                } else {
+                    this.lastHumidity = value;
+                }
+            }
+
+            updateMotion(data) {
+                const light = document.getElementById('motionLight');
+                const status = document.getElementById('motionStatus');
+                const attribution = document.getElementById('motionAttribution');
+                
+                if (!data.pir_enabled) {
+                    light.className = 'light';
+                    status.textContent = 'PIR Disabilitato';
+                    attribution.style.display = 'none';
+                    
+                    if (this.lastMotion !== null && this.lastMotion !== 'disabled') {
+                        this.addSecurityEvent('PIR disabilitato - Tecnico nel datacenter');
+                    }
+                    this.lastMotion = 'disabled';
+                    
+                } else if (data.motion) {
+                    if (data.motion_attributed_to_tech) {
+                        light.className = 'light tech-attributed';
+                        status.textContent = 'Movimento (Tecnico)';
+                        attribution.style.display = 'block';
+                        
+                        if (this.lastMotionNormal !== true) {
+                            this.addSecurityEvent('Movimento rilevato - Attribuito al tecnico uscito', 'tech-attributed');
+                        }
+                        this.lastMotionNormal = true;
+                    } else {
+                        light.className = 'light alert';
+                        status.textContent = 'MOVIMENTO!';
+                        attribution.style.display = 'none';
+                        
+                        if (this.lastMotion !== true || this.lastMotionNormal === true) {
+                            this.addSecurityEvent('MOVIMENTO RILEVATO - Possibile intrusione!', 'alert');
+                        }
+                        this.lastMotionNormal = false;
+                    }
+                    this.lastMotion = true;
+                    
+                } else {
+                    light.className = 'light safe';
+                    status.textContent = 'Area Sicura';
+                    attribution.style.display = 'none';
+                    
+                    if (this.lastMotion === true) {
+                        this.addSecurityEvent('DataCenter sicuro - Nessun movimento');
+                    }
+                    this.lastMotion = false;
+                    this.lastMotionNormal = false;
+                }
+            }
+
+            updateTech(data) {
+                const light = document.getElementById('techLight');
+                const status = document.getElementById('techStatus');
+                const counter = document.getElementById('techCounter');
+                
+                const entryCount = data.technician_entry_counter || 0;
+                counter.textContent = entryCount;
+                
+                if (data.technician_inside) {
+                    light.className = 'light inside';
+                    status.textContent = 'Nel DataCenter';
+                    
+                    if (this.lastTechState !== true) {
+                        this.addTechEvent(`Tecnico ENTRATO nel datacenter.`, 'tech-in');
+                    }
+                    this.lastTechState = true;
+                } else {
+                    light.className = 'light';
+                    status.textContent = 'Fuori dal DataCenter';
+                    
+                    if (this.lastTechState === true) {
+                        this.addTechEvent(`Tecnico USCITO dal datacenter.`, 'tech-out');
+                    }
+                    this.lastTechState = false;
+                }
+            }
+            
+            updateTopics(data) {
+                const topics = document.getElementById('topics');
+                if (data.topics) {
+                    const topicCount = Object.keys(data.topics).length;
+                    
+                    let html = `<div style="margin-bottom: 5px; font-weight: bold;">Topic: ${topicCount}</div>`;
+                    html += Object.entries(data.topics).map(([name, info]) => 
+                        `<div class="topic">${name}</div>`
+                    ).join('');
+                    
+                    topics.innerHTML = html;
+                } else {
+                    topics.innerHTML = 'Caricamento...';
+                }
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => new Dashboard());
+    </script>
+</body>
+</html>
