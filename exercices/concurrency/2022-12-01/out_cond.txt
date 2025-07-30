@@ -1,5 +1,0 @@
-Giudice: aspetto il vincitore
-P2: Ho preso la bandierina!
-P1: Non sono riuscito a prendere la bandierina!
-P1: Ti ho preso!
-Giudice: il vincitore è 1
