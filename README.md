@@ -52,7 +52,6 @@
 
 ### [Esercizi real-time scheduling](/exercices/scheduling/scheduling.md)
 
-<<<<<<< HEAD
 ---
 
 ## 🖥️ **Progetto d'Esame: Real-Time Data Center Security Monitor**
@@ -77,4 +76,3 @@ I dati raccolti vengono pubblicati tramite ROS2 su topic dedicati e visualizzati
 - [***Questo task-set è schedulabile con Earliest Deadline First?***](/exercices/scheduling/scheduling.md#questo-task-set-%C3%A8-schedulabile-con-edf)
 - [***Questo task-set è schedulabile con Deadline Monotonic?***](/exercices/scheduling/scheduling.md#questo-task-set-%C3%A8-schedulabile-con-deadline-monotonic)
 - [***Bloccaggio con Priority Inheritance e con Priority Ceiling***](/exercices/scheduling/scheduling.md#bloccaggio-con-priority-inheritance-e-con-priority-ceiling)
->>>>>>> 13686c9cc64011edb0bdee4e8df25fa0e365887d
