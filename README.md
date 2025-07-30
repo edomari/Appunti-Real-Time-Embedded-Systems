@@ -1,21 +1,21 @@
-# 🚀 Appunti Real-Time Embedded Systems
+# Appunti Real-Time Embedded Systems
 *Appunti per il corso di Real-Time Embedded Systems, allineati alle slide del corso.*
 
 ---
 
-## 📚 **Scheduling in sistemi real-time**
+## **Scheduling in sistemi real-time**
 *Fondamenti e tecniche per la gestione di processi e thread in sistemi embedded*
 
-1. [**🧩 Processes and Threads**](/1.%20Processes%20and%20Threads.md#processi)  
+1. [**Processes and Threads**](/1.%20Processes%20and%20Threads.md#processi)  
    *Concetti base: processi, thread e gestione della memoria*
 
-2. [**⚡ Concurrency**](/2.%20Concurrency.md#concorrenza)  
+2. [**Concurrency**](/2.%20Concurrency.md#concorrenza)  
    *Problemi di concorrenza, race condition e sincronizzazione*
 
-3. [**🔧 Pthreads**](/3.%20Pthreads.md#pthread)  
+3. [**Pthreads**](/3.%20Pthreads.md#pthread)  
    *API Pthreads per la programmazione multi-thread in C*
 
-### 🎯 **Esercizi d'Esame**
+### **Esercizi d'Esame**
 *Raccolta esercizi d'esame di concorrenza e sincronizzazione*
 
 | Esercizio | Anno | Link |
@@ -32,22 +32,22 @@
 | 🚽 **Il bagno** | 2025-01-07 | [📝 Vai all'esercizio](/exercices/concurrency/2025-01-07/bagno.md#il-bagno---01072025) |
 ---
 
-## ⏱️ **Sistemi di Tempo Reale**
+## ⏱**Sistemi di Tempo Reale**
 *Teoria e algoritmi per lo scheduling in sistemi real-time*
 
-4. [**📌 Introduction to real-time scheduling** ](/4.%20Introduction%20to%20real-time%20scheduling.md#introduction-to-real-time-scheduling)  
+4. [**Introduction to real-time scheduling** ](/4.%20Introduction%20to%20real-time%20scheduling.md#introduction-to-real-time-scheduling)  
    *Definizioni e caratteristiche dei sistemi real-time*
 
-5. [**📊 General Scheduling**](/5.%20General%20Scheduling.md#general-scheduling)  
+5. [**General Scheduling**](/5.%20General%20Scheduling.md#general-scheduling)  
    *Algoritmi di scheduling generici*
 
-6. [**🔄 Scheduling of periodic tasks**](/6.%20Scheduling%20of%20periodic%20tasks.md#scheduling-of-periodic-tasks)  
+6. [**Scheduling of periodic tasks**](/6.%20Scheduling%20of%20periodic%20tasks.md#scheduling-of-periodic-tasks)  
    *Gestione di task periodici: Rate Monotonic, Deadline Monotonic, ecc*
 
-7. [**🔒 Resource access protocols**](/7.%20Resource%20access%20protocols.md#resource-access-protocols)  
+7. [**Resource access protocols**](/7.%20Resource%20access%20protocols.md#resource-access-protocols)  
    *Protocolli per l'accesso alle risorse: PIP, PCP, HLP, ecc*
 
-8. [**🌐 Handling hybrid task sets**](/8.%20Handling%20hybrid%20task%20sets.md#handling-hybrid-task-sets)  
+8. [**Handling hybrid task sets**](/8.%20Handling%20hybrid%20task%20sets.md#handling-hybrid-task-sets)  
    *Scheduling di task set misti (periodici + aperiodici)*
 
 ### [Esercizi real-time scheduling](/exercices/scheduling/scheduling.md)
